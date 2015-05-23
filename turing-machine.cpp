@@ -39,6 +39,11 @@ void load_program() {
     cin.sync_with_stdio(false);
     string line;
     while (getline(cin, line)) {
+        // skip empty lines
+        if (line.length() == 0) {
+            continue;
+        }
+        
         // lines begining with # are comments
         if (line.at(0) == '#') {
             continue;
@@ -119,6 +124,9 @@ void eval(string curr, int tp, int max) {
         cnt++;
         char s = read_tape(tp);
         Configuration c = {curr, s};
+        if (program.count(c) == 0) {
+            c = {curr, '*'};
+        }
         if (program.count(c) == 0) {
             break;
         }
