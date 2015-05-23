@@ -113,8 +113,10 @@ int perform_ops(int tp, string ops) {
     return tp;
 }
 
-void eval(string curr, int tp) {
-    while (true) {
+void eval(string curr, int tp, int max) {
+    int cnt = 0;
+    while (cnt < max) {
+        cnt++;
         char s = read_tape(tp);
         Configuration c = {curr, s};
         if (program.count(c) == 0) {
@@ -128,10 +130,10 @@ void eval(string curr, int tp) {
     }
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     load_program();
     print_program();
-    eval(start, 0);
+    eval(start, 0, 1000);
     print_tape();
     return 0;
 }
