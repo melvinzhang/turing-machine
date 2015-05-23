@@ -3,3 +3,6 @@ a.out: turing-machine.cpp
 
 %.run: a.out %.tm
 	cat $*.tm | ./a.out
+
+%.out: a.out %.tm
+	cat $*.tm | ./a.out > $@
