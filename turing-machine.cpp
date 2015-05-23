@@ -39,6 +39,11 @@ void load_program() {
     cin.sync_with_stdio(false);
     string line;
     while (getline(cin, line)) {
+        // lines begining with # are comments
+        if (line.at(0) == '#') {
+            continue;
+        }
+
         istringstream iss(line);
         string state, symbol, ops, fstate;
         iss >> state >> symbol >> ops >> fstate;
