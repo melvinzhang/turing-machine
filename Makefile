@@ -1,3 +1,5 @@
+SHELL=/bin/bash
+
 a.out: turing-machine.cpp
 	g++ --std=c++11 $^
 
@@ -6,3 +8,6 @@ a.out: turing-machine.cpp
 
 %.out: a.out %.tm
 	cat $*.tm | ./a.out > $@
+
+%.test: a.out %.tm
+	diff <(cat $*.tm | ./a.out) $*.out
