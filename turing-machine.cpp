@@ -4,9 +4,19 @@
  * Instruction set
  * ===============
  * m-config   symbol   operations   final m-config
- * string     char     op,...       string
+ * string     char     op1,op2,...  string
  *
- * op: L, R, P<symbol>, E
+ * op:
+ *   L - move left one step
+ *   R - move right one step
+ *   P<symbol> - print symbol on tap
+ *   E - erase symbol from tap
+ * symbol:
+ *   ~ - matches blank cell
+ *   * - matches any symbol
+ *   other char matches themselves
+ *
+ * Lines starting with # are ignored by the interpreter
  */
 
 #include <iostream>
