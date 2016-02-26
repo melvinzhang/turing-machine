@@ -12,5 +12,8 @@ a.out: turing-machine.cpp
 %.test: a.out %.tm
 	diff <(cat $*.tm | ./a.out) $*.out
 
+output:
+	for i in *.tm; do make `basename $$i .tm`.out; done
+
 tests:
 	for i in *.tm; do make `basename $$i .tm`.test; done
