@@ -126,7 +126,7 @@ struct Machine {
         return tp;
     }
 
-    void eval(int max) {
+    void run(int max) {
         int cnt = 0;
         while (cnt < max) {
             Configuration c = {curr, read_tape()};
@@ -155,6 +155,6 @@ int main(int argc, char *argv[]) {
     Machine m;
     m.load_program();
     m.print_program();
-    m.eval(1000);
+    m.run(1000);
     return 0;
 }
