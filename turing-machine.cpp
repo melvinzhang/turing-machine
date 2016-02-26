@@ -41,11 +41,14 @@ struct Action {
     string state;
 };
 
-string start;
-map< Configuration, Action > program;
-map< int, char > tape;
+struct Machine {
+    int tp = 0;
+    string start;
+    map< Configuration, Action > program;
+    map< int, char > tape;
+};
     
-void load_program() {
+void load_program(Machine &m) {
     cin.sync_with_stdio(false);
     string line;
     while (getline(cin, line)) {
@@ -63,18 +66,18 @@ void load_program() {
         string state, symbol, ops, fstate;
         iss >> state >> symbol >> ops >> fstate;
         
-        if (start.length() == 0) {
-            start = state;
+        if (m.start.length() == 0) {
+            m.start = state;
         }
         
         Configuration c = {state, symbol.at(0)};
         Action a = {ops, fstate};
-        program[c] = a;
+        m.program[c] = a;
     }
 }
 
-void print_program() {
-    for (auto it=program.begin(); it != program.end(); it++) {
+void print_program(const Machine &m) {
+    for (auto it=m.program.begin(); it != m.program.end(); it++) {
         cout << it->first.state << " ";
         cout << it->first.symbol << " ";
         cout << it->second.ops << " ";
@@ -82,9 +85,9 @@ void print_program() {
     }
 }
 
-void print_tape() {
+void print_tape(const Machine &m) {
     cout << "tape: ";
-    for (auto it=tape.begin(); it != tape.end(); it++) {
+    for (auto it=m.tape.begin(); it != m.tape.end(); it++) {
         cout << it->second;
     }
     cout << endl;
@@ -94,15 +97,15 @@ void print_config(Configuration c) {
     cout << "conf: " << c.state << " " << c.symbol << endl;
 }
 
-char read_tape(int tp) {
-    if (tape.count(tp)) {
-        return tape[tp];
+char read_tape(Machine &m, int tp) {
+    if (m.tape.count(tp)) {
+        return m.tape[tp];
     } else {
         return '~';
     }
 }
 
-int perform_ops(int tp, string ops) {
+int perform_ops(Machine &m, int tp, string ops) {
     for (int i = 0; i < ops.length(); i++) {
         char op = ops.at(i);
         switch (op) {
@@ -113,11 +116,11 @@ int perform_ops(int tp, string ops) {
                 tp--;
                 break;
             case 'E':
-                tape[tp] = '~';
+                m.tape[tp] = '~';
                 break;
             case 'P':
                 i++;
-                tape[tp] = ops.at(i);
+                m.tape[tp] = ops.at(i);
             case ',':
                 break;
             default:
@@ -128,30 +131,32 @@ int perform_ops(int tp, string ops) {
     return tp;
 }
 
-void eval(string curr, int tp, int max) {
+void eval(Machine &m, int max) {
+    string curr = m.start;
     int cnt = 0;
     while (cnt < max) {
         cnt++;
-        char s = read_tape(tp);
+        char s = read_tape(m, m.tp);
         Configuration c = {curr, s};
-        if (program.count(c) == 0) {
+        if (m.program.count(c) == 0) {
             c = {curr, '*'};
         }
-        if (program.count(c) == 0) {
+        if (m.program.count(c) == 0) {
             break;
         }
-        Action a = program[c];
-        tp = perform_ops(tp, a.ops);
+        Action a = m.program[c];
+        m.tp = perform_ops(m, m.tp, a.ops);
         curr = a.state;
         print_config(c);
-        print_tape();
+        print_tape(m);
     }
 }
 
 int main(int argc, char *argv[]) {
-    load_program();
-    print_program();
-    eval(start, 0, 1000);
-    print_tape();
+    Machine m;
+    load_program(m);
+    print_program(m);
+    eval(m, 1000);
+    print_tape(m);
     return 0;
 }
