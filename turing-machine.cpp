@@ -116,6 +116,7 @@ struct Machine {
                 case 'P':
                     i++;
                     tape[tp] = ops.at(i);
+                    break;
                 case ',':
                     break;
                 default:
