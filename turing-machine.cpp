@@ -144,6 +144,8 @@ struct Machine {
                 c = {curr, '*'};
             }
             if (program.count(c) == 0) {
+                c = {curr, read_tape()};
+                print_config(c);
                 break;
             }
             Action a = program[c];
