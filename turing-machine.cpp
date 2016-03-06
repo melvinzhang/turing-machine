@@ -167,6 +167,10 @@ int main(int argc, char *argv[]) {
     Machine m;
     m.load_program();
     m.print_program();
-    m.run(1000);
+    if (argc == 1) {
+        m.run(1000);
+    } else {
+        m.run(atoi(argv[1]));
+    }
     return 0;
 }
