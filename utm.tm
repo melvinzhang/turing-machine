@@ -1,3 +1,6 @@
+# based on
+#   http://www.rdrop.com/~half/General/UTM/
+#   http://cs.oswego.edu/~farina/utm.html
 1 0 P0,R 1
 1 1 P1,R 1
 1 c Pc,R 1
