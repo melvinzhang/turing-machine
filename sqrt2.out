@@ -1,0 +1,2068 @@
+add-finished * L,L add-finished
+add-finished @ R,R erase-old-x
+add-one * R,R add-one
+add-one r Pv add-finished
+add-one u Ps,R,R carry
+add-zero * R,R add-zero
+add-zero r Ps add-finished
+add-zero u Pv add-finished
+begin ~ P@,R,P1 new
+carry r Pu add-finished
+carry u Pr,R,R carry
+carry ~ Pu new-digit-is-zero
+cleanup * E,R,R cleanup
+cleanup ~ , new
+erase-old-x * R,R erase-old-x
+erase-old-x x E,L,L print-new-x
+erase-old-x z Py,L,L print-new-x
+erase-old-y * R,R erase-old-y
+erase-old-y y E,L,L print-new-y
+find-1st-digit x L found-1st-digit
+find-1st-digit y L found-1st-digit
+find-1st-digit z L found-2nd-digit
+find-1st-digit ~ R,R find-1st-digit
+find-2nd-digit x L found-2nd-digit
+find-2nd-digit y L found-2nd-digit
+find-2nd-digit ~ R,R find-2nd-digit
+find-digits * L,L find-digits
+find-digits @ R,R find-1st-digit
+find-x * L,L find-x
+find-x @ , find-digits
+find-x x E first-r
+first-r * R,R first-r
+first-r r R,R last-r
+flag-result-digits * R,R flag-result-digits
+flag-result-digits s Pt,R,R unflag-result-digits
+flag-result-digits v Pw,R,R unflag-result-digits
+found-1st-digit 0 R add-zero
+found-1st-digit 1 R,R,R find-2nd-digit
+found-2nd-digit 0 R add-zero
+found-2nd-digit 1 R add-one
+found-2nd-digit ~ R add-one
+last-r r R,R last-r
+last-r ~ Pr,R,R,Pr find-x
+mark-digits 0 R,Px,R mark-digits
+mark-digits 1 R,Px,R mark-digits
+mark-digits ~ R,Pz,R,R,Pr find-x
+new * L new
+new @ R mark-digits
+new-digit-is-one * L new-digit-is-one
+new-digit-is-one @ R print-one-digit
+new-digit-is-zero * L new-digit-is-zero
+new-digit-is-zero @ R print-zero-digit
+print-new-x @ R,R erase-old-y
+print-new-x y Pz find-digits
+print-new-x ~ Px find-digits
+print-new-y * Py,R reset-new-x
+print-new-y @ R new-digit-is-one
+print-one-digit 0 R,E,R print-one-digit
+print-one-digit 1 R,E,R print-one-digit
+print-one-digit ~ P1,R,R,R cleanup
+print-zero-digit 0 R,E,R print-zero-digit
+print-zero-digit 1 R,E,R print-zero-digit
+print-zero-digit ~ P0,R,R,R cleanup
+reset-new-x * R,R reset-new-x
+reset-new-x ~ R,Px flag-result-digits
+unflag-result-digits * , find-digits
+unflag-result-digits s Pr,R,R unflag-result-digits
+unflag-result-digits v Pu,R,R unflag-result-digits
+conf: begin ~
+tape: @1
+conf: new *
+tape: @1
+conf: new @
+tape: @1
+conf: mark-digits 1
+tape: @1x
+conf: mark-digits ~
+tape: @1xzr
+conf: find-x *
+tape: @1xzr
+conf: find-x *
+tape: @1xzr
+conf: find-x x
+tape: @1~zr
+conf: first-r *
+tape: @1~zr
+conf: first-r *
+tape: @1~zr
+conf: first-r r
+tape: @1~zr
+conf: last-r ~
+tape: @1~zrrr
+conf: find-x *
+tape: @1~zrrr
+conf: find-x *
+tape: @1~zrrr
+conf: find-x *
+tape: @1~zrrr
+conf: find-x *
+tape: @1~zrrr
+conf: find-x *
+tape: @1~zrrr
+conf: find-x @
+tape: @1~zrrr
+conf: find-digits @
+tape: @1~zrrr
+conf: find-1st-digit ~
+tape: @1~zrrr
+conf: find-1st-digit z
+tape: @1~zrrr
+conf: found-2nd-digit ~
+tape: @1~zrrr
+conf: add-one *
+tape: @1~zrrr
+conf: add-one r
+tape: @1~zvrr
+conf: add-finished *
+tape: @1~zvrr
+conf: add-finished *
+tape: @1~zvrr
+conf: add-finished *
+tape: @1~zvrr
+conf: add-finished @
+tape: @1~zvrr
+conf: erase-old-x *
+tape: @1~zvrr
+conf: erase-old-x z
+tape: @1~yvrr
+conf: print-new-x ~
+tape: @1xyvrr
+conf: find-digits *
+tape: @1xyvrr
+conf: find-digits @
+tape: @1xyvrr
+conf: find-1st-digit x
+tape: @1xyvrr
+conf: found-1st-digit 1
+tape: @1xyvrr
+conf: find-2nd-digit y
+tape: @1xyvrr
+conf: found-2nd-digit ~
+tape: @1xyvrr
+conf: add-one *
+tape: @1xyvrr
+conf: add-one *
+tape: @1xyvrr
+conf: add-one r
+tape: @1xyvvr
+conf: add-finished *
+tape: @1xyvvr
+conf: add-finished *
+tape: @1xyvvr
+conf: add-finished *
+tape: @1xyvvr
+conf: add-finished *
+tape: @1xyvvr
+conf: add-finished @
+tape: @1xyvvr
+conf: erase-old-x x
+tape: @1~yvvr
+conf: print-new-x @
+tape: @1~yvvr
+conf: erase-old-y *
+tape: @1~yvvr
+conf: erase-old-y y
+tape: @1~~vvr
+conf: print-new-y *
+tape: @1y~vvr
+conf: reset-new-x ~
+tape: @1yxvvr
+conf: flag-result-digits *
+tape: @1yxvvr
+conf: flag-result-digits v
+tape: @1yxwvr
+conf: unflag-result-digits v
+tape: @1yxwur
+conf: unflag-result-digits *
+tape: @1yxwur
+conf: find-digits *
+tape: @1yxwur
+conf: find-digits *
+tape: @1yxwur
+conf: find-digits *
+tape: @1yxwur
+conf: find-digits *
+tape: @1yxwur
+conf: find-digits *
+tape: @1yxwur
+conf: find-digits @
+tape: @1yxwur
+conf: find-1st-digit y
+tape: @1yxwur
+conf: found-1st-digit 1
+tape: @1yxwur
+conf: find-2nd-digit x
+tape: @1yxwur
+conf: found-2nd-digit ~
+tape: @1yxwur
+conf: add-one *
+tape: @1yxwur
+conf: add-one *
+tape: @1yxwur
+conf: add-one u
+tape: @1yxwsr
+conf: carry r
+tape: @1yxwsu
+conf: add-finished *
+tape: @1yxwsu
+conf: add-finished *
+tape: @1yxwsu
+conf: add-finished *
+tape: @1yxwsu
+conf: add-finished *
+tape: @1yxwsu
+conf: add-finished *
+tape: @1yxwsu
+conf: add-finished @
+tape: @1yxwsu
+conf: erase-old-x *
+tape: @1yxwsu
+conf: erase-old-x x
+tape: @1y~wsu
+conf: print-new-x y
+tape: @1z~wsu
+conf: find-digits *
+tape: @1z~wsu
+conf: find-digits @
+tape: @1z~wsu
+conf: find-1st-digit z
+tape: @1z~wsu
+conf: found-2nd-digit 1
+tape: @1z~wsu
+conf: add-one *
+tape: @1z~wsu
+conf: add-one *
+tape: @1z~wsu
+conf: add-one *
+tape: @1z~wsu
+conf: add-one *
+tape: @1z~wsu
+conf: add-one u
+tape: @1z~wss
+conf: carry ~
+tape: @1z~wssu
+conf: new-digit-is-zero *
+tape: @1z~wssu
+conf: new-digit-is-zero *
+tape: @1z~wssu
+conf: new-digit-is-zero *
+tape: @1z~wssu
+conf: new-digit-is-zero *
+tape: @1z~wssu
+conf: new-digit-is-zero *
+tape: @1z~wssu
+conf: new-digit-is-zero *
+tape: @1z~wssu
+conf: new-digit-is-zero *
+tape: @1z~wssu
+conf: new-digit-is-zero *
+tape: @1z~wssu
+conf: new-digit-is-zero *
+tape: @1z~wssu
+conf: new-digit-is-zero *
+tape: @1z~wssu
+conf: new-digit-is-zero *
+tape: @1z~wssu
+conf: new-digit-is-zero *
+tape: @1z~wssu
+conf: new-digit-is-zero @
+tape: @1z~wssu
+conf: print-zero-digit 1
+tape: @1~~wssu
+conf: print-zero-digit ~
+tape: @1~0~wssu
+conf: cleanup *
+tape: @1~0~~ssu
+conf: cleanup *
+tape: @1~0~~~su
+conf: cleanup *
+tape: @1~0~~~~u
+conf: cleanup *
+tape: @1~0~~~~~
+conf: cleanup ~
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new *
+tape: @1~0~~~~~
+conf: new @
+tape: @1~0~~~~~
+conf: mark-digits 1
+tape: @1x0~~~~~
+conf: mark-digits 0
+tape: @1x0x~~~~
+conf: mark-digits ~
+tape: @1x0xzr~~
+conf: find-x *
+tape: @1x0xzr~~
+conf: find-x *
+tape: @1x0xzr~~
+conf: find-x x
+tape: @1x0~zr~~
+conf: first-r *
+tape: @1x0~zr~~
+conf: first-r *
+tape: @1x0~zr~~
+conf: first-r r
+tape: @1x0~zr~~
+conf: last-r ~
+tape: @1x0~zrrr
+conf: find-x *
+tape: @1x0~zrrr
+conf: find-x *
+tape: @1x0~zrrr
+conf: find-x *
+tape: @1x0~zrrr
+conf: find-x *
+tape: @1x0~zrrr
+conf: find-x *
+tape: @1x0~zrrr
+conf: find-x x
+tape: @1~0~zrrr
+conf: first-r *
+tape: @1~0~zrrr
+conf: first-r *
+tape: @1~0~zrrr
+conf: first-r *
+tape: @1~0~zrrr
+conf: first-r r
+tape: @1~0~zrrr
+conf: last-r r
+tape: @1~0~zrrr
+conf: last-r r
+tape: @1~0~zrrr
+conf: last-r ~
+tape: @1~0~zrrrrr
+conf: find-x *
+tape: @1~0~zrrrrr
+conf: find-x *
+tape: @1~0~zrrrrr
+conf: find-x *
+tape: @1~0~zrrrrr
+conf: find-x *
+tape: @1~0~zrrrrr
+conf: find-x *
+tape: @1~0~zrrrrr
+conf: find-x *
+tape: @1~0~zrrrrr
+conf: find-x *
+tape: @1~0~zrrrrr
+conf: find-x *
+tape: @1~0~zrrrrr
+conf: find-x @
+tape: @1~0~zrrrrr
+conf: find-digits @
+tape: @1~0~zrrrrr
+conf: find-1st-digit ~
+tape: @1~0~zrrrrr
+conf: find-1st-digit ~
+tape: @1~0~zrrrrr
+conf: find-1st-digit z
+tape: @1~0~zrrrrr
+conf: found-2nd-digit ~
+tape: @1~0~zrrrrr
+conf: add-one *
+tape: @1~0~zrrrrr
+conf: add-one r
+tape: @1~0~zvrrrr
+conf: add-finished *
+tape: @1~0~zvrrrr
+conf: add-finished *
+tape: @1~0~zvrrrr
+conf: add-finished *
+tape: @1~0~zvrrrr
+conf: add-finished *
+tape: @1~0~zvrrrr
+conf: add-finished @
+tape: @1~0~zvrrrr
+conf: erase-old-x *
+tape: @1~0~zvrrrr
+conf: erase-old-x *
+tape: @1~0~zvrrrr
+conf: erase-old-x z
+tape: @1~0~yvrrrr
+conf: print-new-x ~
+tape: @1~0xyvrrrr
+conf: find-digits *
+tape: @1~0xyvrrrr
+conf: find-digits *
+tape: @1~0xyvrrrr
+conf: find-digits @
+tape: @1~0xyvrrrr
+conf: find-1st-digit ~
+tape: @1~0xyvrrrr
+conf: find-1st-digit x
+tape: @1~0xyvrrrr
+conf: found-1st-digit 0
+tape: @1~0xyvrrrr
+conf: add-zero *
+tape: @1~0xyvrrrr
+conf: add-zero *
+tape: @1~0xyvrrrr
+conf: add-zero *
+tape: @1~0xyvrrrr
+conf: add-zero r
+tape: @1~0xyvsrrr
+conf: add-finished *
+tape: @1~0xyvsrrr
+conf: add-finished *
+tape: @1~0xyvsrrr
+conf: add-finished *
+tape: @1~0xyvsrrr
+conf: add-finished *
+tape: @1~0xyvsrrr
+conf: add-finished *
+tape: @1~0xyvsrrr
+conf: add-finished @
+tape: @1~0xyvsrrr
+conf: erase-old-x *
+tape: @1~0xyvsrrr
+conf: erase-old-x x
+tape: @1~0~yvsrrr
+conf: print-new-x ~
+tape: @1x0~yvsrrr
+conf: find-digits *
+tape: @1x0~yvsrrr
+conf: find-digits @
+tape: @1x0~yvsrrr
+conf: find-1st-digit x
+tape: @1x0~yvsrrr
+conf: found-1st-digit 1
+tape: @1x0~yvsrrr
+conf: find-2nd-digit ~
+tape: @1x0~yvsrrr
+conf: find-2nd-digit y
+tape: @1x0~yvsrrr
+conf: found-2nd-digit ~
+tape: @1x0~yvsrrr
+conf: add-one *
+tape: @1x0~yvsrrr
+conf: add-one *
+tape: @1x0~yvsrrr
+conf: add-one *
+tape: @1x0~yvsrrr
+conf: add-one r
+tape: @1x0~yvsvrr
+conf: add-finished *
+tape: @1x0~yvsvrr
+conf: add-finished *
+tape: @1x0~yvsvrr
+conf: add-finished *
+tape: @1x0~yvsvrr
+conf: add-finished *
+tape: @1x0~yvsvrr
+conf: add-finished *
+tape: @1x0~yvsvrr
+conf: add-finished *
+tape: @1x0~yvsvrr
+conf: add-finished @
+tape: @1x0~yvsvrr
+conf: erase-old-x x
+tape: @1~0~yvsvrr
+conf: print-new-x @
+tape: @1~0~yvsvrr
+conf: erase-old-y *
+tape: @1~0~yvsvrr
+conf: erase-old-y *
+tape: @1~0~yvsvrr
+conf: erase-old-y y
+tape: @1~0~~vsvrr
+conf: print-new-y *
+tape: @1~0y~vsvrr
+conf: reset-new-x ~
+tape: @1~0yxvsvrr
+conf: flag-result-digits *
+tape: @1~0yxvsvrr
+conf: flag-result-digits v
+tape: @1~0yxwsvrr
+conf: unflag-result-digits s
+tape: @1~0yxwrvrr
+conf: unflag-result-digits v
+tape: @1~0yxwrurr
+conf: unflag-result-digits *
+tape: @1~0yxwrurr
+conf: find-digits *
+tape: @1~0yxwrurr
+conf: find-digits *
+tape: @1~0yxwrurr
+conf: find-digits *
+tape: @1~0yxwrurr
+conf: find-digits *
+tape: @1~0yxwrurr
+conf: find-digits *
+tape: @1~0yxwrurr
+conf: find-digits *
+tape: @1~0yxwrurr
+conf: find-digits *
+tape: @1~0yxwrurr
+conf: find-digits @
+tape: @1~0yxwrurr
+conf: find-1st-digit ~
+tape: @1~0yxwrurr
+conf: find-1st-digit y
+tape: @1~0yxwrurr
+conf: found-1st-digit 0
+tape: @1~0yxwrurr
+conf: add-zero *
+tape: @1~0yxwrurr
+conf: add-zero *
+tape: @1~0yxwrurr
+conf: add-zero *
+tape: @1~0yxwrurr
+conf: add-zero r
+tape: @1~0yxwsurr
+conf: add-finished *
+tape: @1~0yxwsurr
+conf: add-finished *
+tape: @1~0yxwsurr
+conf: add-finished *
+tape: @1~0yxwsurr
+conf: add-finished *
+tape: @1~0yxwsurr
+conf: add-finished *
+tape: @1~0yxwsurr
+conf: add-finished @
+tape: @1~0yxwsurr
+conf: erase-old-x *
+tape: @1~0yxwsurr
+conf: erase-old-x *
+tape: @1~0yxwsurr
+conf: erase-old-x x
+tape: @1~0y~wsurr
+conf: print-new-x y
+tape: @1~0z~wsurr
+conf: find-digits *
+tape: @1~0z~wsurr
+conf: find-digits *
+tape: @1~0z~wsurr
+conf: find-digits @
+tape: @1~0z~wsurr
+conf: find-1st-digit ~
+tape: @1~0z~wsurr
+conf: find-1st-digit z
+tape: @1~0z~wsurr
+conf: found-2nd-digit 0
+tape: @1~0z~wsurr
+conf: add-zero *
+tape: @1~0z~wsurr
+conf: add-zero *
+tape: @1~0z~wsurr
+conf: add-zero *
+tape: @1~0z~wsurr
+conf: add-zero *
+tape: @1~0z~wsurr
+conf: add-zero u
+tape: @1~0z~wsvrr
+conf: add-finished *
+tape: @1~0z~wsvrr
+conf: add-finished *
+tape: @1~0z~wsvrr
+conf: add-finished *
+tape: @1~0z~wsvrr
+conf: add-finished *
+tape: @1~0z~wsvrr
+conf: add-finished *
+tape: @1~0z~wsvrr
+conf: add-finished *
+tape: @1~0z~wsvrr
+conf: add-finished @
+tape: @1~0z~wsvrr
+conf: erase-old-x *
+tape: @1~0z~wsvrr
+conf: erase-old-x z
+tape: @1~0y~wsvrr
+conf: print-new-x ~
+tape: @1x0y~wsvrr
+conf: find-digits *
+tape: @1x0y~wsvrr
+conf: find-digits @
+tape: @1x0y~wsvrr
+conf: find-1st-digit x
+tape: @1x0y~wsvrr
+conf: found-1st-digit 1
+tape: @1x0y~wsvrr
+conf: find-2nd-digit y
+tape: @1x0y~wsvrr
+conf: found-2nd-digit 0
+tape: @1x0y~wsvrr
+conf: add-zero *
+tape: @1x0y~wsvrr
+conf: add-zero *
+tape: @1x0y~wsvrr
+conf: add-zero *
+tape: @1x0y~wsvrr
+conf: add-zero *
+tape: @1x0y~wsvrr
+conf: add-zero *
+tape: @1x0y~wsvrr
+conf: add-zero r
+tape: @1x0y~wsvsr
+conf: add-finished *
+tape: @1x0y~wsvsr
+conf: add-finished *
+tape: @1x0y~wsvsr
+conf: add-finished *
+tape: @1x0y~wsvsr
+conf: add-finished *
+tape: @1x0y~wsvsr
+conf: add-finished *
+tape: @1x0y~wsvsr
+conf: add-finished *
+tape: @1x0y~wsvsr
+conf: add-finished *
+tape: @1x0y~wsvsr
+conf: add-finished @
+tape: @1x0y~wsvsr
+conf: erase-old-x x
+tape: @1~0y~wsvsr
+conf: print-new-x @
+tape: @1~0y~wsvsr
+conf: erase-old-y *
+tape: @1~0y~wsvsr
+conf: erase-old-y y
+tape: @1~0~~wsvsr
+conf: print-new-y *
+tape: @1y0~~wsvsr
+conf: reset-new-x *
+tape: @1y0~~wsvsr
+conf: reset-new-x ~
+tape: @1y0~xwsvsr
+conf: flag-result-digits *
+tape: @1y0~xwsvsr
+conf: flag-result-digits *
+tape: @1y0~xwsvsr
+conf: flag-result-digits s
+tape: @1y0~xwtvsr
+conf: unflag-result-digits v
+tape: @1y0~xwtusr
+conf: unflag-result-digits s
+tape: @1y0~xwturr
+conf: unflag-result-digits *
+tape: @1y0~xwturr
+conf: find-digits *
+tape: @1y0~xwturr
+conf: find-digits *
+tape: @1y0~xwturr
+conf: find-digits *
+tape: @1y0~xwturr
+conf: find-digits *
+tape: @1y0~xwturr
+conf: find-digits *
+tape: @1y0~xwturr
+conf: find-digits *
+tape: @1y0~xwturr
+conf: find-digits *
+tape: @1y0~xwturr
+conf: find-digits *
+tape: @1y0~xwturr
+conf: find-digits @
+tape: @1y0~xwturr
+conf: find-1st-digit y
+tape: @1y0~xwturr
+conf: found-1st-digit 1
+tape: @1y0~xwturr
+conf: find-2nd-digit ~
+tape: @1y0~xwturr
+conf: find-2nd-digit x
+tape: @1y0~xwturr
+conf: found-2nd-digit ~
+tape: @1y0~xwturr
+conf: add-one *
+tape: @1y0~xwturr
+conf: add-one *
+tape: @1y0~xwturr
+conf: add-one *
+tape: @1y0~xwturr
+conf: add-one u
+tape: @1y0~xwtsrr
+conf: carry r
+tape: @1y0~xwtsur
+conf: add-finished *
+tape: @1y0~xwtsur
+conf: add-finished *
+tape: @1y0~xwtsur
+conf: add-finished *
+tape: @1y0~xwtsur
+conf: add-finished *
+tape: @1y0~xwtsur
+conf: add-finished *
+tape: @1y0~xwtsur
+conf: add-finished *
+tape: @1y0~xwtsur
+conf: add-finished *
+tape: @1y0~xwtsur
+conf: add-finished @
+tape: @1y0~xwtsur
+conf: erase-old-x *
+tape: @1y0~xwtsur
+conf: erase-old-x *
+tape: @1y0~xwtsur
+conf: erase-old-x x
+tape: @1y0~~wtsur
+conf: print-new-x ~
+tape: @1y0x~wtsur
+conf: find-digits *
+tape: @1y0x~wtsur
+conf: find-digits *
+tape: @1y0x~wtsur
+conf: find-digits @
+tape: @1y0x~wtsur
+conf: find-1st-digit y
+tape: @1y0x~wtsur
+conf: found-1st-digit 1
+tape: @1y0x~wtsur
+conf: find-2nd-digit x
+tape: @1y0x~wtsur
+conf: found-2nd-digit 0
+tape: @1y0x~wtsur
+conf: add-zero *
+tape: @1y0x~wtsur
+conf: add-zero *
+tape: @1y0x~wtsur
+conf: add-zero *
+tape: @1y0x~wtsur
+conf: add-zero *
+tape: @1y0x~wtsur
+conf: add-zero *
+tape: @1y0x~wtsur
+conf: add-zero u
+tape: @1y0x~wtsvr
+conf: add-finished *
+tape: @1y0x~wtsvr
+conf: add-finished *
+tape: @1y0x~wtsvr
+conf: add-finished *
+tape: @1y0x~wtsvr
+conf: add-finished *
+tape: @1y0x~wtsvr
+conf: add-finished *
+tape: @1y0x~wtsvr
+conf: add-finished *
+tape: @1y0x~wtsvr
+conf: add-finished *
+tape: @1y0x~wtsvr
+conf: add-finished @
+tape: @1y0x~wtsvr
+conf: erase-old-x *
+tape: @1y0x~wtsvr
+conf: erase-old-x x
+tape: @1y0~~wtsvr
+conf: print-new-x y
+tape: @1z0~~wtsvr
+conf: find-digits *
+tape: @1z0~~wtsvr
+conf: find-digits @
+tape: @1z0~~wtsvr
+conf: find-1st-digit z
+tape: @1z0~~wtsvr
+conf: found-2nd-digit 1
+tape: @1z0~~wtsvr
+conf: add-one *
+tape: @1z0~~wtsvr
+conf: add-one *
+tape: @1z0~~wtsvr
+conf: add-one *
+tape: @1z0~~wtsvr
+conf: add-one *
+tape: @1z0~~wtsvr
+conf: add-one *
+tape: @1z0~~wtsvr
+conf: add-one *
+tape: @1z0~~wtsvr
+conf: add-one *
+tape: @1z0~~wtsvr
+conf: add-one r
+tape: @1z0~~wtsvv
+conf: add-finished *
+tape: @1z0~~wtsvv
+conf: add-finished *
+tape: @1z0~~wtsvv
+conf: add-finished *
+tape: @1z0~~wtsvv
+conf: add-finished *
+tape: @1z0~~wtsvv
+conf: add-finished *
+tape: @1z0~~wtsvv
+conf: add-finished *
+tape: @1z0~~wtsvv
+conf: add-finished *
+tape: @1z0~~wtsvv
+conf: add-finished *
+tape: @1z0~~wtsvv
+conf: add-finished @
+tape: @1z0~~wtsvv
+conf: erase-old-x z
+tape: @1y0~~wtsvv
+conf: print-new-x @
+tape: @1y0~~wtsvv
+conf: erase-old-y y
+tape: @1~0~~wtsvv
+conf: print-new-y @
+tape: @1~0~~wtsvv
+conf: new-digit-is-one *
+tape: @1~0~~wtsvv
+conf: new-digit-is-one @
+tape: @1~0~~wtsvv
+conf: print-one-digit 1
+tape: @1~0~~wtsvv
+conf: print-one-digit 0
+tape: @1~0~~wtsvv
+conf: print-one-digit ~
+tape: @1~0~1~wtsvv
+conf: cleanup *
+tape: @1~0~1~~tsvv
+conf: cleanup *
+tape: @1~0~1~~~svv
+conf: cleanup *
+tape: @1~0~1~~~~vv
+conf: cleanup *
+tape: @1~0~1~~~~~v
+conf: cleanup *
+tape: @1~0~1~~~~~~
+conf: cleanup ~
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new *
+tape: @1~0~1~~~~~~
+conf: new @
+tape: @1~0~1~~~~~~
+conf: mark-digits 1
+tape: @1x0~1~~~~~~
+conf: mark-digits 0
+tape: @1x0x1~~~~~~
+conf: mark-digits 1
+tape: @1x0x1x~~~~~
+conf: mark-digits ~
+tape: @1x0x1xzr~~~
+conf: find-x *
+tape: @1x0x1xzr~~~
+conf: find-x *
+tape: @1x0x1xzr~~~
+conf: find-x x
+tape: @1x0x1~zr~~~
+conf: first-r *
+tape: @1x0x1~zr~~~
+conf: first-r *
+tape: @1x0x1~zr~~~
+conf: first-r r
+tape: @1x0x1~zr~~~
+conf: last-r ~
+tape: @1x0x1~zrrr~
+conf: find-x *
+tape: @1x0x1~zrrr~
+conf: find-x *
+tape: @1x0x1~zrrr~
+conf: find-x *
+tape: @1x0x1~zrrr~
+conf: find-x *
+tape: @1x0x1~zrrr~
+conf: find-x *
+tape: @1x0x1~zrrr~
+conf: find-x x
+tape: @1x0~1~zrrr~
+conf: first-r *
+tape: @1x0~1~zrrr~
+conf: first-r *
+tape: @1x0~1~zrrr~
+conf: first-r *
+tape: @1x0~1~zrrr~
+conf: first-r r
+tape: @1x0~1~zrrr~
+conf: last-r r
+tape: @1x0~1~zrrr~
+conf: last-r r
+tape: @1x0~1~zrrr~
+conf: last-r ~
+tape: @1x0~1~zrrrrr
+conf: find-x *
+tape: @1x0~1~zrrrrr
+conf: find-x *
+tape: @1x0~1~zrrrrr
+conf: find-x *
+tape: @1x0~1~zrrrrr
+conf: find-x *
+tape: @1x0~1~zrrrrr
+conf: find-x *
+tape: @1x0~1~zrrrrr
+conf: find-x *
+tape: @1x0~1~zrrrrr
+conf: find-x *
+tape: @1x0~1~zrrrrr
+conf: find-x *
+tape: @1x0~1~zrrrrr
+conf: find-x x
+tape: @1~0~1~zrrrrr
+conf: first-r *
+tape: @1~0~1~zrrrrr
+conf: first-r *
+tape: @1~0~1~zrrrrr
+conf: first-r *
+tape: @1~0~1~zrrrrr
+conf: first-r *
+tape: @1~0~1~zrrrrr
+conf: first-r r
+tape: @1~0~1~zrrrrr
+conf: last-r r
+tape: @1~0~1~zrrrrr
+conf: last-r r
+tape: @1~0~1~zrrrrr
+conf: last-r r
+tape: @1~0~1~zrrrrr
+conf: last-r r
+tape: @1~0~1~zrrrrr
+conf: last-r ~
+tape: @1~0~1~zrrrrrrr
+conf: find-x *
+tape: @1~0~1~zrrrrrrr
+conf: find-x *
+tape: @1~0~1~zrrrrrrr
+conf: find-x *
+tape: @1~0~1~zrrrrrrr
+conf: find-x *
+tape: @1~0~1~zrrrrrrr
+conf: find-x *
+tape: @1~0~1~zrrrrrrr
+conf: find-x *
+tape: @1~0~1~zrrrrrrr
+conf: find-x *
+tape: @1~0~1~zrrrrrrr
+conf: find-x *
+tape: @1~0~1~zrrrrrrr
+conf: find-x *
+tape: @1~0~1~zrrrrrrr
+conf: find-x *
+tape: @1~0~1~zrrrrrrr
+conf: find-x *
+tape: @1~0~1~zrrrrrrr
+conf: find-x @
+tape: @1~0~1~zrrrrrrr
+conf: find-digits @
+tape: @1~0~1~zrrrrrrr
+conf: find-1st-digit ~
+tape: @1~0~1~zrrrrrrr
+conf: find-1st-digit ~
+tape: @1~0~1~zrrrrrrr
+conf: find-1st-digit ~
+tape: @1~0~1~zrrrrrrr
+conf: find-1st-digit z
+tape: @1~0~1~zrrrrrrr
+conf: found-2nd-digit ~
+tape: @1~0~1~zrrrrrrr
+conf: add-one *
+tape: @1~0~1~zrrrrrrr
+conf: add-one r
+tape: @1~0~1~zvrrrrrr
+conf: add-finished *
+tape: @1~0~1~zvrrrrrr
+conf: add-finished *
+tape: @1~0~1~zvrrrrrr
+conf: add-finished *
+tape: @1~0~1~zvrrrrrr
+conf: add-finished *
+tape: @1~0~1~zvrrrrrr
+conf: add-finished *
+tape: @1~0~1~zvrrrrrr
+conf: add-finished @
+tape: @1~0~1~zvrrrrrr
+conf: erase-old-x *
+tape: @1~0~1~zvrrrrrr
+conf: erase-old-x *
+tape: @1~0~1~zvrrrrrr
+conf: erase-old-x *
+tape: @1~0~1~zvrrrrrr
+conf: erase-old-x z
+tape: @1~0~1~yvrrrrrr
+conf: print-new-x ~
+tape: @1~0~1xyvrrrrrr
+conf: find-digits *
+tape: @1~0~1xyvrrrrrr
+conf: find-digits *
+tape: @1~0~1xyvrrrrrr
+conf: find-digits *
+tape: @1~0~1xyvrrrrrr
+conf: find-digits @
+tape: @1~0~1xyvrrrrrr
+conf: find-1st-digit ~
+tape: @1~0~1xyvrrrrrr
+conf: find-1st-digit ~
+tape: @1~0~1xyvrrrrrr
+conf: find-1st-digit x
+tape: @1~0~1xyvrrrrrr
+conf: found-1st-digit 1
+tape: @1~0~1xyvrrrrrr
+conf: find-2nd-digit y
+tape: @1~0~1xyvrrrrrr
+conf: found-2nd-digit ~
+tape: @1~0~1xyvrrrrrr
+conf: add-one *
+tape: @1~0~1xyvrrrrrr
+conf: add-one *
+tape: @1~0~1xyvrrrrrr
+conf: add-one r
+tape: @1~0~1xyvvrrrrr
+conf: add-finished *
+tape: @1~0~1xyvvrrrrr
+conf: add-finished *
+tape: @1~0~1xyvvrrrrr
+conf: add-finished *
+tape: @1~0~1xyvvrrrrr
+conf: add-finished *
+tape: @1~0~1xyvvrrrrr
+conf: add-finished *
+tape: @1~0~1xyvvrrrrr
+conf: add-finished *
+tape: @1~0~1xyvvrrrrr
+conf: add-finished @
+tape: @1~0~1xyvvrrrrr
+conf: erase-old-x *
+tape: @1~0~1xyvvrrrrr
+conf: erase-old-x *
+tape: @1~0~1xyvvrrrrr
+conf: erase-old-x x
+tape: @1~0~1~yvvrrrrr
+conf: print-new-x ~
+tape: @1~0x1~yvvrrrrr
+conf: find-digits *
+tape: @1~0x1~yvvrrrrr
+conf: find-digits *
+tape: @1~0x1~yvvrrrrr
+conf: find-digits @
+tape: @1~0x1~yvvrrrrr
+conf: find-1st-digit ~
+tape: @1~0x1~yvvrrrrr
+conf: find-1st-digit x
+tape: @1~0x1~yvvrrrrr
+conf: found-1st-digit 0
+tape: @1~0x1~yvvrrrrr
+conf: add-zero *
+tape: @1~0x1~yvvrrrrr
+conf: add-zero *
+tape: @1~0x1~yvvrrrrr
+conf: add-zero *
+tape: @1~0x1~yvvrrrrr
+conf: add-zero *
+tape: @1~0x1~yvvrrrrr
+conf: add-zero *
+tape: @1~0x1~yvvrrrrr
+conf: add-zero r
+tape: @1~0x1~yvvsrrrr
+conf: add-finished *
+tape: @1~0x1~yvvsrrrr
+conf: add-finished *
+tape: @1~0x1~yvvsrrrr
+conf: add-finished *
+tape: @1~0x1~yvvsrrrr
+conf: add-finished *
+tape: @1~0x1~yvvsrrrr
+conf: add-finished *
+tape: @1~0x1~yvvsrrrr
+conf: add-finished *
+tape: @1~0x1~yvvsrrrr
+conf: add-finished *
+tape: @1~0x1~yvvsrrrr
+conf: add-finished @
+tape: @1~0x1~yvvsrrrr
+conf: erase-old-x *
+tape: @1~0x1~yvvsrrrr
+conf: erase-old-x x
+tape: @1~0~1~yvvsrrrr
+conf: print-new-x ~
+tape: @1x0~1~yvvsrrrr
+conf: find-digits *
+tape: @1x0~1~yvvsrrrr
+conf: find-digits @
+tape: @1x0~1~yvvsrrrr
+conf: find-1st-digit x
+tape: @1x0~1~yvvsrrrr
+conf: found-1st-digit 1
+tape: @1x0~1~yvvsrrrr
+conf: find-2nd-digit ~
+tape: @1x0~1~yvvsrrrr
+conf: find-2nd-digit ~
+tape: @1x0~1~yvvsrrrr
+conf: find-2nd-digit y
+tape: @1x0~1~yvvsrrrr
+conf: found-2nd-digit ~
+tape: @1x0~1~yvvsrrrr
+conf: add-one *
+tape: @1x0~1~yvvsrrrr
+conf: add-one *
+tape: @1x0~1~yvvsrrrr
+conf: add-one *
+tape: @1x0~1~yvvsrrrr
+conf: add-one *
+tape: @1x0~1~yvvsrrrr
+conf: add-one r
+tape: @1x0~1~yvvsvrrr
+conf: add-finished *
+tape: @1x0~1~yvvsvrrr
+conf: add-finished *
+tape: @1x0~1~yvvsvrrr
+conf: add-finished *
+tape: @1x0~1~yvvsvrrr
+conf: add-finished *
+tape: @1x0~1~yvvsvrrr
+conf: add-finished *
+tape: @1x0~1~yvvsvrrr
+conf: add-finished *
+tape: @1x0~1~yvvsvrrr
+conf: add-finished *
+tape: @1x0~1~yvvsvrrr
+conf: add-finished *
+tape: @1x0~1~yvvsvrrr
+conf: add-finished @
+tape: @1x0~1~yvvsvrrr
+conf: erase-old-x x
+tape: @1~0~1~yvvsvrrr
+conf: print-new-x @
+tape: @1~0~1~yvvsvrrr
+conf: erase-old-y *
+tape: @1~0~1~yvvsvrrr
+conf: erase-old-y *
+tape: @1~0~1~yvvsvrrr
+conf: erase-old-y *
+tape: @1~0~1~yvvsvrrr
+conf: erase-old-y y
+tape: @1~0~1~~vvsvrrr
+conf: print-new-y *
+tape: @1~0~1y~vvsvrrr
+conf: reset-new-x ~
+tape: @1~0~1yxvvsvrrr
+conf: flag-result-digits *
+tape: @1~0~1yxvvsvrrr
+conf: flag-result-digits v
+tape: @1~0~1yxwvsvrrr
+conf: unflag-result-digits v
+tape: @1~0~1yxwusvrrr
+conf: unflag-result-digits s
+tape: @1~0~1yxwurvrrr
+conf: unflag-result-digits v
+tape: @1~0~1yxwururrr
+conf: unflag-result-digits *
+tape: @1~0~1yxwururrr
+conf: find-digits *
+tape: @1~0~1yxwururrr
+conf: find-digits *
+tape: @1~0~1yxwururrr
+conf: find-digits *
+tape: @1~0~1yxwururrr
+conf: find-digits *
+tape: @1~0~1yxwururrr
+conf: find-digits *
+tape: @1~0~1yxwururrr
+conf: find-digits *
+tape: @1~0~1yxwururrr
+conf: find-digits *
+tape: @1~0~1yxwururrr
+conf: find-digits *
+tape: @1~0~1yxwururrr
+conf: find-digits *
+tape: @1~0~1yxwururrr
+conf: find-digits @
+tape: @1~0~1yxwururrr
+conf: find-1st-digit ~
+tape: @1~0~1yxwururrr
+conf: find-1st-digit ~
+tape: @1~0~1yxwururrr
+conf: find-1st-digit y
+tape: @1~0~1yxwururrr
+conf: found-1st-digit 1
+tape: @1~0~1yxwururrr
+conf: find-2nd-digit x
+tape: @1~0~1yxwururrr
+conf: found-2nd-digit ~
+tape: @1~0~1yxwururrr
+conf: add-one *
+tape: @1~0~1yxwururrr
+conf: add-one *
+tape: @1~0~1yxwururrr
+conf: add-one u
+tape: @1~0~1yxwsrurrr
+conf: carry r
+tape: @1~0~1yxwsuurrr
+conf: add-finished *
+tape: @1~0~1yxwsuurrr
+conf: add-finished *
+tape: @1~0~1yxwsuurrr
+conf: add-finished *
+tape: @1~0~1yxwsuurrr
+conf: add-finished *
+tape: @1~0~1yxwsuurrr
+conf: add-finished *
+tape: @1~0~1yxwsuurrr
+conf: add-finished *
+tape: @1~0~1yxwsuurrr
+conf: add-finished *
+tape: @1~0~1yxwsuurrr
+conf: add-finished @
+tape: @1~0~1yxwsuurrr
+conf: erase-old-x *
+tape: @1~0~1yxwsuurrr
+conf: erase-old-x *
+tape: @1~0~1yxwsuurrr
+conf: erase-old-x *
+tape: @1~0~1yxwsuurrr
+conf: erase-old-x x
+tape: @1~0~1y~wsuurrr
+conf: print-new-x y
+tape: @1~0~1z~wsuurrr
+conf: find-digits *
+tape: @1~0~1z~wsuurrr
+conf: find-digits *
+tape: @1~0~1z~wsuurrr
+conf: find-digits *
+tape: @1~0~1z~wsuurrr
+conf: find-digits @
+tape: @1~0~1z~wsuurrr
+conf: find-1st-digit ~
+tape: @1~0~1z~wsuurrr
+conf: find-1st-digit ~
+tape: @1~0~1z~wsuurrr
+conf: find-1st-digit z
+tape: @1~0~1z~wsuurrr
+conf: found-2nd-digit 1
+tape: @1~0~1z~wsuurrr
+conf: add-one *
+tape: @1~0~1z~wsuurrr
+conf: add-one *
+tape: @1~0~1z~wsuurrr
+conf: add-one *
+tape: @1~0~1z~wsuurrr
+conf: add-one *
+tape: @1~0~1z~wsuurrr
+conf: add-one u
+tape: @1~0~1z~wssurrr
+conf: carry u
+tape: @1~0~1z~wssrrrr
+conf: carry r
+tape: @1~0~1z~wssrurr
+conf: add-finished *
+tape: @1~0~1z~wssrurr
+conf: add-finished *
+tape: @1~0~1z~wssrurr
+conf: add-finished *
+tape: @1~0~1z~wssrurr
+conf: add-finished *
+tape: @1~0~1z~wssrurr
+conf: add-finished *
+tape: @1~0~1z~wssrurr
+conf: add-finished *
+tape: @1~0~1z~wssrurr
+conf: add-finished *
+tape: @1~0~1z~wssrurr
+conf: add-finished *
+tape: @1~0~1z~wssrurr
+conf: add-finished *
+tape: @1~0~1z~wssrurr
+conf: add-finished @
+tape: @1~0~1z~wssrurr
+conf: erase-old-x *
+tape: @1~0~1z~wssrurr
+conf: erase-old-x *
+tape: @1~0~1z~wssrurr
+conf: erase-old-x z
+tape: @1~0~1y~wssrurr
+conf: print-new-x ~
+tape: @1~0x1y~wssrurr
+conf: find-digits *
+tape: @1~0x1y~wssrurr
+conf: find-digits *
+tape: @1~0x1y~wssrurr
+conf: find-digits @
+tape: @1~0x1y~wssrurr
+conf: find-1st-digit ~
+tape: @1~0x1y~wssrurr
+conf: find-1st-digit x
+tape: @1~0x1y~wssrurr
+conf: found-1st-digit 0
+tape: @1~0x1y~wssrurr
+conf: add-zero *
+tape: @1~0x1y~wssrurr
+conf: add-zero *
+tape: @1~0x1y~wssrurr
+conf: add-zero *
+tape: @1~0x1y~wssrurr
+conf: add-zero *
+tape: @1~0x1y~wssrurr
+conf: add-zero *
+tape: @1~0x1y~wssrurr
+conf: add-zero *
+tape: @1~0x1y~wssrurr
+conf: add-zero r
+tape: @1~0x1y~wsssurr
+conf: add-finished *
+tape: @1~0x1y~wsssurr
+conf: add-finished *
+tape: @1~0x1y~wsssurr
+conf: add-finished *
+tape: @1~0x1y~wsssurr
+conf: add-finished *
+tape: @1~0x1y~wsssurr
+conf: add-finished *
+tape: @1~0x1y~wsssurr
+conf: add-finished *
+tape: @1~0x1y~wsssurr
+conf: add-finished *
+tape: @1~0x1y~wsssurr
+conf: add-finished *
+tape: @1~0x1y~wsssurr
+conf: add-finished @
+tape: @1~0x1y~wsssurr
+conf: erase-old-x *
+tape: @1~0x1y~wsssurr
+conf: erase-old-x x
+tape: @1~0~1y~wsssurr
+conf: print-new-x ~
+tape: @1x0~1y~wsssurr
+conf: find-digits *
+tape: @1x0~1y~wsssurr
+conf: find-digits @
+tape: @1x0~1y~wsssurr
+conf: find-1st-digit x
+tape: @1x0~1y~wsssurr
+conf: found-1st-digit 1
+tape: @1x0~1y~wsssurr
+conf: find-2nd-digit ~
+tape: @1x0~1y~wsssurr
+conf: find-2nd-digit y
+tape: @1x0~1y~wsssurr
+conf: found-2nd-digit 1
+tape: @1x0~1y~wsssurr
+conf: add-one *
+tape: @1x0~1y~wsssurr
+conf: add-one *
+tape: @1x0~1y~wsssurr
+conf: add-one *
+tape: @1x0~1y~wsssurr
+conf: add-one *
+tape: @1x0~1y~wsssurr
+conf: add-one *
+tape: @1x0~1y~wsssurr
+conf: add-one *
+tape: @1x0~1y~wsssurr
+conf: add-one u
+tape: @1x0~1y~wssssrr
+conf: carry r
+tape: @1x0~1y~wssssur
+conf: add-finished *
+tape: @1x0~1y~wssssur
+conf: add-finished *
+tape: @1x0~1y~wssssur
+conf: add-finished *
+tape: @1x0~1y~wssssur
+conf: add-finished *
+tape: @1x0~1y~wssssur
+conf: add-finished *
+tape: @1x0~1y~wssssur
+conf: add-finished *
+tape: @1x0~1y~wssssur
+conf: add-finished *
+tape: @1x0~1y~wssssur
+conf: add-finished *
+tape: @1x0~1y~wssssur
+conf: add-finished *
+tape: @1x0~1y~wssssur
+conf: add-finished *
+tape: @1x0~1y~wssssur
+conf: add-finished @
+tape: @1x0~1y~wssssur
+conf: erase-old-x x
+tape: @1~0~1y~wssssur
+conf: print-new-x @
+tape: @1~0~1y~wssssur
+conf: erase-old-y *
+tape: @1~0~1y~wssssur
+conf: erase-old-y *
+tape: @1~0~1y~wssssur
+conf: erase-old-y y
+tape: @1~0~1~~wssssur
+conf: print-new-y *
+tape: @1~0y1~~wssssur
+conf: reset-new-x *
+tape: @1~0y1~~wssssur
+conf: reset-new-x ~
+tape: @1~0y1~xwssssur
+conf: flag-result-digits *
+tape: @1~0y1~xwssssur
+conf: flag-result-digits *
+tape: @1~0y1~xwssssur
+conf: flag-result-digits s
+tape: @1~0y1~xwtsssur
+conf: unflag-result-digits s
+tape: @1~0y1~xwtrssur
+conf: unflag-result-digits s
+tape: @1~0y1~xwtrrsur
+conf: unflag-result-digits s
+tape: @1~0y1~xwtrrrur
+conf: unflag-result-digits *
+tape: @1~0y1~xwtrrrur
+conf: find-digits *
+tape: @1~0y1~xwtrrrur
+conf: find-digits *
+tape: @1~0y1~xwtrrrur
+conf: find-digits *
+tape: @1~0y1~xwtrrrur
+conf: find-digits *
+tape: @1~0y1~xwtrrrur
+conf: find-digits *
+tape: @1~0y1~xwtrrrur
+conf: find-digits *
+tape: @1~0y1~xwtrrrur
+conf: find-digits *
+tape: @1~0y1~xwtrrrur
+conf: find-digits *
+tape: @1~0y1~xwtrrrur
+conf: find-digits *
+tape: @1~0y1~xwtrrrur
+conf: find-digits *
+tape: @1~0y1~xwtrrrur
+conf: find-digits @
+tape: @1~0y1~xwtrrrur
+conf: find-1st-digit ~
+tape: @1~0y1~xwtrrrur
+conf: find-1st-digit y
+tape: @1~0y1~xwtrrrur
+conf: found-1st-digit 0
+tape: @1~0y1~xwtrrrur
+conf: add-zero *
+tape: @1~0y1~xwtrrrur
+conf: add-zero *
+tape: @1~0y1~xwtrrrur
+conf: add-zero *
+tape: @1~0y1~xwtrrrur
+conf: add-zero *
+tape: @1~0y1~xwtrrrur
+conf: add-zero *
+tape: @1~0y1~xwtrrrur
+conf: add-zero r
+tape: @1~0y1~xwtsrrur
+conf: add-finished *
+tape: @1~0y1~xwtsrrur
+conf: add-finished *
+tape: @1~0y1~xwtsrrur
+conf: add-finished *
+tape: @1~0y1~xwtsrrur
+conf: add-finished *
+tape: @1~0y1~xwtsrrur
+conf: add-finished *
+tape: @1~0y1~xwtsrrur
+conf: add-finished *
+tape: @1~0y1~xwtsrrur
+conf: add-finished *
+tape: @1~0y1~xwtsrrur
+conf: add-finished @
+tape: @1~0y1~xwtsrrur
+conf: erase-old-x *
+tape: @1~0y1~xwtsrrur
+conf: erase-old-x *
+tape: @1~0y1~xwtsrrur
+conf: erase-old-x *
+tape: @1~0y1~xwtsrrur
+conf: erase-old-x x
+tape: @1~0y1~~wtsrrur
+conf: print-new-x ~
+tape: @1~0y1x~wtsrrur
+conf: find-digits *
+tape: @1~0y1x~wtsrrur
+conf: find-digits *
+tape: @1~0y1x~wtsrrur
+conf: find-digits *
+tape: @1~0y1x~wtsrrur
+conf: find-digits @
+tape: @1~0y1x~wtsrrur
+conf: find-1st-digit ~
+tape: @1~0y1x~wtsrrur
+conf: find-1st-digit y
+tape: @1~0y1x~wtsrrur
+conf: found-1st-digit 0
+tape: @1~0y1x~wtsrrur
+conf: add-zero *
+tape: @1~0y1x~wtsrrur
+conf: add-zero *
+tape: @1~0y1x~wtsrrur
+conf: add-zero *
+tape: @1~0y1x~wtsrrur
+conf: add-zero *
+tape: @1~0y1x~wtsrrur
+conf: add-zero *
+tape: @1~0y1x~wtsrrur
+conf: add-zero *
+tape: @1~0y1x~wtsrrur
+conf: add-zero r
+tape: @1~0y1x~wtssrur
+conf: add-finished *
+tape: @1~0y1x~wtssrur
+conf: add-finished *
+tape: @1~0y1x~wtssrur
+conf: add-finished *
+tape: @1~0y1x~wtssrur
+conf: add-finished *
+tape: @1~0y1x~wtssrur
+conf: add-finished *
+tape: @1~0y1x~wtssrur
+conf: add-finished *
+tape: @1~0y1x~wtssrur
+conf: add-finished *
+tape: @1~0y1x~wtssrur
+conf: add-finished *
+tape: @1~0y1x~wtssrur
+conf: add-finished @
+tape: @1~0y1x~wtssrur
+conf: erase-old-x *
+tape: @1~0y1x~wtssrur
+conf: erase-old-x *
+tape: @1~0y1x~wtssrur
+conf: erase-old-x x
+tape: @1~0y1~~wtssrur
+conf: print-new-x y
+tape: @1~0z1~~wtssrur
+conf: find-digits *
+tape: @1~0z1~~wtssrur
+conf: find-digits *
+tape: @1~0z1~~wtssrur
+conf: find-digits @
+tape: @1~0z1~~wtssrur
+conf: find-1st-digit ~
+tape: @1~0z1~~wtssrur
+conf: find-1st-digit z
+tape: @1~0z1~~wtssrur
+conf: found-2nd-digit 0
+tape: @1~0z1~~wtssrur
+conf: add-zero *
+tape: @1~0z1~~wtssrur
+conf: add-zero *
+tape: @1~0z1~~wtssrur
+conf: add-zero *
+tape: @1~0z1~~wtssrur
+conf: add-zero *
+tape: @1~0z1~~wtssrur
+conf: add-zero *
+tape: @1~0z1~~wtssrur
+conf: add-zero *
+tape: @1~0z1~~wtssrur
+conf: add-zero *
+tape: @1~0z1~~wtssrur
+conf: add-zero r
+tape: @1~0z1~~wtsssur
+conf: add-finished *
+tape: @1~0z1~~wtsssur
+conf: add-finished *
+tape: @1~0z1~~wtsssur
+conf: add-finished *
+tape: @1~0z1~~wtsssur
+conf: add-finished *
+tape: @1~0z1~~wtsssur
+conf: add-finished *
+tape: @1~0z1~~wtsssur
+conf: add-finished *
+tape: @1~0z1~~wtsssur
+conf: add-finished *
+tape: @1~0z1~~wtsssur
+conf: add-finished *
+tape: @1~0z1~~wtsssur
+conf: add-finished *
+tape: @1~0z1~~wtsssur
+conf: add-finished @
+tape: @1~0z1~~wtsssur
+conf: erase-old-x *
+tape: @1~0z1~~wtsssur
+conf: erase-old-x z
+tape: @1~0y1~~wtsssur
+conf: print-new-x ~
+tape: @1x0y1~~wtsssur
+conf: find-digits *
+tape: @1x0y1~~wtsssur
+conf: find-digits @
+tape: @1x0y1~~wtsssur
+conf: find-1st-digit x
+tape: @1x0y1~~wtsssur
+conf: found-1st-digit 1
+tape: @1x0y1~~wtsssur
+conf: find-2nd-digit y
+tape: @1x0y1~~wtsssur
+conf: found-2nd-digit 0
+tape: @1x0y1~~wtsssur
+conf: add-zero *
+tape: @1x0y1~~wtsssur
+conf: add-zero *
+tape: @1x0y1~~wtsssur
+conf: add-zero *
+tape: @1x0y1~~wtsssur
+conf: add-zero *
+tape: @1x0y1~~wtsssur
+conf: add-zero *
+tape: @1x0y1~~wtsssur
+conf: add-zero *
+tape: @1x0y1~~wtsssur
+conf: add-zero *
+tape: @1x0y1~~wtsssur
+conf: add-zero *
+tape: @1x0y1~~wtsssur
+conf: add-zero u
+tape: @1x0y1~~wtsssvr
+conf: add-finished *
+tape: @1x0y1~~wtsssvr
+conf: add-finished *
+tape: @1x0y1~~wtsssvr
+conf: add-finished *
+tape: @1x0y1~~wtsssvr
+conf: add-finished *
+tape: @1x0y1~~wtsssvr
+conf: add-finished *
+tape: @1x0y1~~wtsssvr
+conf: add-finished *
+tape: @1x0y1~~wtsssvr
+conf: add-finished *
+tape: @1x0y1~~wtsssvr
+conf: add-finished *
+tape: @1x0y1~~wtsssvr
+conf: add-finished *
+tape: @1x0y1~~wtsssvr
+conf: add-finished *
+tape: @1x0y1~~wtsssvr
+conf: add-finished @
+tape: @1x0y1~~wtsssvr
+conf: erase-old-x x
+tape: @1~0y1~~wtsssvr
+conf: print-new-x @
+tape: @1~0y1~~wtsssvr
+conf: erase-old-y *
+tape: @1~0y1~~wtsssvr
+conf: erase-old-y y
+tape: @1~0~1~~wtsssvr
+conf: print-new-y *
+tape: @1y0~1~~wtsssvr
+conf: reset-new-x *
+tape: @1y0~1~~wtsssvr
+conf: reset-new-x *
+tape: @1y0~1~~wtsssvr
+conf: reset-new-x ~
+tape: @1y0~1~xwtsssvr
+conf: flag-result-digits *
+tape: @1y0~1~xwtsssvr
+conf: flag-result-digits *
+tape: @1y0~1~xwtsssvr
+conf: flag-result-digits *
+tape: @1y0~1~xwtsssvr
+conf: flag-result-digits s
+tape: @1y0~1~xwttssvr
+conf: unflag-result-digits s
+tape: @1y0~1~xwttrsvr
+conf: unflag-result-digits s
+tape: @1y0~1~xwttrrvr
+conf: unflag-result-digits v
+tape: @1y0~1~xwttrrur
+conf: unflag-result-digits *
+tape: @1y0~1~xwttrrur
+conf: find-digits *
+tape: @1y0~1~xwttrrur
+conf: find-digits *
+tape: @1y0~1~xwttrrur
+conf: find-digits *
+tape: @1y0~1~xwttrrur
+conf: find-digits *
+tape: @1y0~1~xwttrrur
+conf: find-digits *
+tape: @1y0~1~xwttrrur
+conf: find-digits *
+tape: @1y0~1~xwttrrur
+conf: find-digits *
+tape: @1y0~1~xwttrrur
+conf: find-digits *
+tape: @1y0~1~xwttrrur
+conf: find-digits *
+tape: @1y0~1~xwttrrur
+conf: find-digits *
+tape: @1y0~1~xwttrrur
+conf: find-digits *
+tape: @1y0~1~xwttrrur
+conf: find-digits @
+tape: @1y0~1~xwttrrur
+conf: find-1st-digit y
+tape: @1y0~1~xwttrrur
+conf: found-1st-digit 1
+tape: @1y0~1~xwttrrur
+conf: find-2nd-digit ~
+tape: @1y0~1~xwttrrur
+conf: find-2nd-digit ~
+tape: @1y0~1~xwttrrur
+conf: find-2nd-digit x
+tape: @1y0~1~xwttrrur
+conf: found-2nd-digit ~
+tape: @1y0~1~xwttrrur
+conf: add-one *
+tape: @1y0~1~xwttrrur
+conf: add-one *
+tape: @1y0~1~xwttrrur
+conf: add-one *
+tape: @1y0~1~xwttrrur
+conf: add-one *
+tape: @1y0~1~xwttrrur
+conf: add-one r
+tape: @1y0~1~xwttvrur
+conf: add-finished *
+tape: @1y0~1~xwttvrur
+conf: add-finished *
+tape: @1y0~1~xwttvrur
+conf: add-finished *
+tape: @1y0~1~xwttvrur
+conf: add-finished *
+tape: @1y0~1~xwttvrur
+conf: add-finished *
+tape: @1y0~1~xwttvrur
+conf: add-finished *
+tape: @1y0~1~xwttvrur
+conf: add-finished *
+tape: @1y0~1~xwttvrur
+conf: add-finished *
+tape: @1y0~1~xwttvrur
+conf: add-finished @
+tape: @1y0~1~xwttvrur
+conf: erase-old-x *
+tape: @1y0~1~xwttvrur
+conf: erase-old-x *
+tape: @1y0~1~xwttvrur
+conf: erase-old-x *
+tape: @1y0~1~xwttvrur
+conf: erase-old-x x
+tape: @1y0~1~~wttvrur
+conf: print-new-x ~
+tape: @1y0~1x~wttvrur
+conf: find-digits *
+tape: @1y0~1x~wttvrur
+conf: find-digits *
+tape: @1y0~1x~wttvrur
+conf: find-digits *
+tape: @1y0~1x~wttvrur
+conf: find-digits @
+tape: @1y0~1x~wttvrur
+conf: find-1st-digit y
+tape: @1y0~1x~wttvrur
+conf: found-1st-digit 1
+tape: @1y0~1x~wttvrur
+conf: find-2nd-digit ~
+tape: @1y0~1x~wttvrur
+conf: find-2nd-digit x
+tape: @1y0~1x~wttvrur
+conf: found-2nd-digit 1
+tape: @1y0~1x~wttvrur
+conf: add-one *
+tape: @1y0~1x~wttvrur
+conf: add-one *
+tape: @1y0~1x~wttvrur
+conf: add-one *
+tape: @1y0~1x~wttvrur
+conf: add-one *
+tape: @1y0~1x~wttvrur
+conf: add-one *
+tape: @1y0~1x~wttvrur
+conf: add-one *
+tape: @1y0~1x~wttvrur
+conf: add-one r
+tape: @1y0~1x~wttvvur
+conf: add-finished *
+tape: @1y0~1x~wttvvur
+conf: add-finished *
+tape: @1y0~1x~wttvvur
+conf: add-finished *
+tape: @1y0~1x~wttvvur
+conf: add-finished *
+tape: @1y0~1x~wttvvur
+conf: add-finished *
+tape: @1y0~1x~wttvvur
+conf: add-finished *
+tape: @1y0~1x~wttvvur
+conf: add-finished *
+tape: @1y0~1x~wttvvur
+conf: add-finished *
+tape: @1y0~1x~wttvvur
+conf: add-finished *
+tape: @1y0~1x~wttvvur
+conf: add-finished @
+tape: @1y0~1x~wttvvur
+conf: erase-old-x *
+tape: @1y0~1x~wttvvur
+conf: erase-old-x *
+tape: @1y0~1x~wttvvur
+conf: erase-old-x x
+tape: @1y0~1~~wttvvur
+conf: print-new-x ~
+tape: @1y0x1~~wttvvur
+conf: find-digits *
+tape: @1y0x1~~wttvvur
+conf: find-digits *
+tape: @1y0x1~~wttvvur
+conf: find-digits @
+tape: @1y0x1~~wttvvur
+conf: find-1st-digit y
+tape: @1y0x1~~wttvvur
+conf: found-1st-digit 1
+tape: @1y0x1~~wttvvur
+conf: find-2nd-digit x
+tape: @1y0x1~~wttvvur
+conf: found-2nd-digit 0
+tape: @1y0x1~~wttvvur
+conf: add-zero *
+tape: @1y0x1~~wttvvur
+conf: add-zero *
+tape: @1y0x1~~wttvvur
+conf: add-zero *
+tape: @1y0x1~~wttvvur
+conf: add-zero *
+tape: @1y0x1~~wttvvur
+conf: add-zero *
+tape: @1y0x1~~wttvvur
+conf: add-zero *
+tape: @1y0x1~~wttvvur
+conf: add-zero *
+tape: @1y0x1~~wttvvur
+conf: add-zero *
+tape: @1y0x1~~wttvvur
+conf: add-zero u
+tape: @1y0x1~~wttvvvr
+conf: add-finished *
+tape: @1y0x1~~wttvvvr
+conf: add-finished *
+tape: @1y0x1~~wttvvvr
+conf: add-finished *
+tape: @1y0x1~~wttvvvr
+conf: add-finished *
+tape: @1y0x1~~wttvvvr
+conf: add-finished *
+tape: @1y0x1~~wttvvvr
+conf: add-finished *
+tape: @1y0x1~~wttvvvr
+conf: add-finished *
+tape: @1y0x1~~wttvvvr
+conf: add-finished *
+tape: @1y0x1~~wttvvvr
+conf: add-finished *
+tape: @1y0x1~~wttvvvr
+conf: add-finished *
+tape: @1y0x1~~wttvvvr
+conf: add-finished @
+tape: @1y0x1~~wttvvvr
+conf: erase-old-x *
+tape: @1y0x1~~wttvvvr
+conf: erase-old-x x
+tape: @1y0~1~~wttvvvr
+conf: print-new-x y
+tape: @1z0~1~~wttvvvr
+conf: find-digits *
+tape: @1z0~1~~wttvvvr
+conf: find-digits @
+tape: @1z0~1~~wttvvvr
+conf: find-1st-digit z
+tape: @1z0~1~~wttvvvr
+conf: found-2nd-digit 1
+tape: @1z0~1~~wttvvvr
+conf: add-one *
+tape: @1z0~1~~wttvvvr
+conf: add-one *
+tape: @1z0~1~~wttvvvr
+conf: add-one *
+tape: @1z0~1~~wttvvvr
+conf: add-one *
+tape: @1z0~1~~wttvvvr
+conf: add-one *
+tape: @1z0~1~~wttvvvr
+conf: add-one *
+tape: @1z0~1~~wttvvvr
+conf: add-one *
+tape: @1z0~1~~wttvvvr
+conf: add-one *
+tape: @1z0~1~~wttvvvr
+conf: add-one *
+tape: @1z0~1~~wttvvvr
+conf: add-one *
+tape: @1z0~1~~wttvvvr
+conf: add-one r
+tape: @1z0~1~~wttvvvv
+conf: add-finished *
+tape: @1z0~1~~wttvvvv
+conf: add-finished *
+tape: @1z0~1~~wttvvvv
+conf: add-finished *
+tape: @1z0~1~~wttvvvv
+conf: add-finished *
+tape: @1z0~1~~wttvvvv
+conf: add-finished *
+tape: @1z0~1~~wttvvvv
+conf: add-finished *
+tape: @1z0~1~~wttvvvv
+conf: add-finished *
+tape: @1z0~1~~wttvvvv
+conf: add-finished *
+tape: @1z0~1~~wttvvvv
+conf: add-finished *
+tape: @1z0~1~~wttvvvv
+conf: add-finished *
+tape: @1z0~1~~wttvvvv
+conf: add-finished *
+tape: @1z0~1~~wttvvvv
+conf: add-finished @
+tape: @1z0~1~~wttvvvv
+conf: erase-old-x z
+tape: @1y0~1~~wttvvvv
+conf: print-new-x @
+tape: @1y0~1~~wttvvvv
+conf: erase-old-y y
+tape: @1~0~1~~wttvvvv
+conf: print-new-y @
+tape: @1~0~1~~wttvvvv
+conf: new-digit-is-one *
+tape: @1~0~1~~wttvvvv
+conf: new-digit-is-one @
+tape: @1~0~1~~wttvvvv
+conf: print-one-digit 1
+tape: @1~0~1~~wttvvvv
+conf: print-one-digit 0
+tape: @1~0~1~~wttvvvv
+conf: print-one-digit 1
+tape: @1~0~1~~wttvvvv
+conf: print-one-digit ~
+tape: @1~0~1~1~wttvvvv
+conf: cleanup *
+tape: @1~0~1~1~~ttvvvv
+conf: cleanup *
+tape: @1~0~1~1~~~tvvvv
+conf: cleanup *
+tape: @1~0~1~1~~~~vvvv
+conf: cleanup *
+tape: @1~0~1~1~~~~~vvv
+conf: cleanup *
+tape: @1~0~1~1~~~~~~vv
+conf: cleanup *
+tape: @1~0~1~1~~~~~~~v
+conf: cleanup *
+tape: @1~0~1~1~~~~~~~~
+conf: cleanup ~
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new *
+tape: @1~0~1~1~~~~~~~~
+conf: new @
+tape: @1~0~1~1~~~~~~~~
+conf: mark-digits 1
+tape: @1x0~1~1~~~~~~~~
+conf: mark-digits 0
+tape: @1x0x1~1~~~~~~~~
+conf: mark-digits 1
+tape: @1x0x1x1~~~~~~~~
+conf: mark-digits 1
+tape: @1x0x1x1x~~~~~~~
+conf: mark-digits ~
+tape: @1x0x1x1xzr~~~~~
+conf: find-x *
+tape: @1x0x1x1xzr~~~~~
+conf: find-x *
+tape: @1x0x1x1xzr~~~~~
+conf: find-x x
+tape: @1x0x1x1~zr~~~~~
+conf: first-r *
+tape: @1x0x1x1~zr~~~~~
+conf: first-r *
+tape: @1x0x1x1~zr~~~~~
