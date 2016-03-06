@@ -20,3 +20,6 @@ tests:
 
 utm.tm: states.utm
 	awk -f states2tm.awk < $^  > $@
+
+%.run: a.out %.tape
+	cat utm.tm $*.tape | ./a.out
