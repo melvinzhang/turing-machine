@@ -17,3 +17,6 @@ output:
 
 tests:
 	for i in *.tm; do make `basename $$i .tm`.test; done
+
+utm.tm: states.utm
+	awk -f states2tm.awk < $^  > $@
