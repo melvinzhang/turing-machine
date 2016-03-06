@@ -61,6 +61,15 @@ struct Machine {
                 continue;
             }
 
+            // initial tap appears after ---
+            if (line.compare("---") == 0) {
+                getline(cin, line);
+                for (int i = 0; i < line.length(); i++) {
+                    tape[i] = line.at(i);
+                }
+                break;
+            }
+
             istringstream iss(line);
             string state, symbol, ops, fstate;
             iss >> state >> symbol >> ops >> fstate;
