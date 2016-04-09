@@ -26,6 +26,7 @@
 #include <vector>
 #include <queue>
 #include <algorithm>
+#include <unistd.h>
 
 using namespace std;
 
@@ -157,7 +158,7 @@ struct Machine {
         return tp;
     }
 
-    void run(int max) {
+    void run(int max, int fps) {
         int cnt = 0;
         while (cnt < max) {
             Configuration c = {curr, read_tape(tp)};
@@ -172,9 +173,20 @@ struct Machine {
             curr = a.state;
 
             cnt++;
+            if (cnt > 1 && fps > 0) {
+                clear_previous(fps);
+            }
             print_action(a);
             print_head();
             print_tape();
+        }
+    }
+
+    void clear_previous(int fps) {
+        usleep(1000000 / fps);
+        for (int i = 0; i < 3; i++) {
+            cout << "\x1B[1A"; // Move the cursor up one line
+            cout << "\x1B[2K"; // Erase the entire current line
         }
     }
 
@@ -191,10 +203,13 @@ int main(int argc, char *argv[]) {
     Machine m;
     m.load_program();
     m.print_program();
+    cout << endl;
     if (argc == 1) {
-        m.run(1000);
-    } else {
-        m.run(atoi(argv[1]));
+        m.run(1000, 10);
+    } else if (argc == 2) {
+        m.run(atoi(argv[1]), 10);
+    } else if (argc == 3) {
+        m.run(atoi(argv[1]), atoi(argv[2]));
     }
     return 0;
 }
