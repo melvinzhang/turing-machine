@@ -205,9 +205,9 @@ int main(int argc, char *argv[]) {
     m.print_program();
     cout << endl;
     if (argc == 1) {
-        m.run(1000, 10);
+        m.run(1000, 0);
     } else if (argc == 2) {
-        m.run(atoi(argv[1]), 10);
+        m.run(atoi(argv[1]), 0);
     } else if (argc == 3) {
         m.run(atoi(argv[1]), atoi(argv[2]));
     }
