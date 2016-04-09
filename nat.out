@@ -5,2003 +5,3004 @@ increment ~ P1 rewind
 rewind 0 R rewind
 rewind 1 R rewind
 rewind ~ L increment
-conf: begin ~
+
+ops : P0
+head: v (increment)
 tape: 0
-conf: increment 0
+ops : P1
+head: v (rewind)
 tape: 1
-conf: rewind 1
+ops : R
+head:  v (rewind)
+tape: 1~
+ops : L
+head: v (increment)
 tape: 1
-conf: rewind ~
-tape: 1
-conf: increment 1
-tape: 0
-conf: increment ~
+ops : P0,L
+head: v (increment)
+tape: ~0
+ops : P1
+head: v (rewind)
 tape: 10
-conf: rewind 1
+ops : R
+head:  v (rewind)
 tape: 10
-conf: rewind 0
+ops : R
+head:   v (rewind)
+tape: 10~
+ops : L
+head:  v (increment)
 tape: 10
-conf: rewind ~
-tape: 10
-conf: increment 0
+ops : P1
+head:  v (rewind)
 tape: 11
-conf: rewind 1
+ops : R
+head:   v (rewind)
+tape: 11~
+ops : L
+head:  v (increment)
 tape: 11
-conf: rewind ~
-tape: 11
-conf: increment 1
+ops : P0,L
+head: v (increment)
 tape: 10
-conf: increment 1
-tape: 00
-conf: increment ~
+ops : P0,L
+head: v (increment)
+tape: ~00
+ops : P1
+head: v (rewind)
 tape: 100
-conf: rewind 1
+ops : R
+head:  v (rewind)
 tape: 100
-conf: rewind 0
+ops : R
+head:   v (rewind)
 tape: 100
-conf: rewind 0
+ops : R
+head:    v (rewind)
+tape: 100~
+ops : L
+head:   v (increment)
 tape: 100
-conf: rewind ~
-tape: 100
-conf: increment 0
+ops : P1
+head:   v (rewind)
 tape: 101
-conf: rewind 1
+ops : R
+head:    v (rewind)
+tape: 101~
+ops : L
+head:   v (increment)
 tape: 101
-conf: rewind ~
-tape: 101
-conf: increment 1
+ops : P0,L
+head:  v (increment)
 tape: 100
-conf: increment 0
+ops : P1
+head:  v (rewind)
 tape: 110
-conf: rewind 1
+ops : R
+head:   v (rewind)
 tape: 110
-conf: rewind 0
+ops : R
+head:    v (rewind)
+tape: 110~
+ops : L
+head:   v (increment)
 tape: 110
-conf: rewind ~
-tape: 110
-conf: increment 0
+ops : P1
+head:   v (rewind)
 tape: 111
-conf: rewind 1
+ops : R
+head:    v (rewind)
+tape: 111~
+ops : L
+head:   v (increment)
 tape: 111
-conf: rewind ~
-tape: 111
-conf: increment 1
+ops : P0,L
+head:  v (increment)
 tape: 110
-conf: increment 1
+ops : P0,L
+head: v (increment)
 tape: 100
-conf: increment 1
-tape: 000
-conf: increment ~
+ops : P0,L
+head: v (increment)
+tape: ~000
+ops : P1
+head: v (rewind)
 tape: 1000
-conf: rewind 1
+ops : R
+head:  v (rewind)
 tape: 1000
-conf: rewind 0
+ops : R
+head:   v (rewind)
 tape: 1000
-conf: rewind 0
+ops : R
+head:    v (rewind)
 tape: 1000
-conf: rewind 0
+ops : R
+head:     v (rewind)
+tape: 1000~
+ops : L
+head:    v (increment)
 tape: 1000
-conf: rewind ~
-tape: 1000
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 1001
-conf: rewind 1
+ops : R
+head:     v (rewind)
+tape: 1001~
+ops : L
+head:    v (increment)
 tape: 1001
-conf: rewind ~
-tape: 1001
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 1000
-conf: increment 0
+ops : P1
+head:   v (rewind)
 tape: 1010
-conf: rewind 1
+ops : R
+head:    v (rewind)
 tape: 1010
-conf: rewind 0
+ops : R
+head:     v (rewind)
+tape: 1010~
+ops : L
+head:    v (increment)
 tape: 1010
-conf: rewind ~
-tape: 1010
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 1011
-conf: rewind 1
+ops : R
+head:     v (rewind)
+tape: 1011~
+ops : L
+head:    v (increment)
 tape: 1011
-conf: rewind ~
-tape: 1011
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 1010
-conf: increment 1
+ops : P0,L
+head:  v (increment)
 tape: 1000
-conf: increment 0
+ops : P1
+head:  v (rewind)
 tape: 1100
-conf: rewind 1
+ops : R
+head:   v (rewind)
 tape: 1100
-conf: rewind 0
+ops : R
+head:    v (rewind)
 tape: 1100
-conf: rewind 0
+ops : R
+head:     v (rewind)
+tape: 1100~
+ops : L
+head:    v (increment)
 tape: 1100
-conf: rewind ~
-tape: 1100
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 1101
-conf: rewind 1
+ops : R
+head:     v (rewind)
+tape: 1101~
+ops : L
+head:    v (increment)
 tape: 1101
-conf: rewind ~
-tape: 1101
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 1100
-conf: increment 0
+ops : P1
+head:   v (rewind)
 tape: 1110
-conf: rewind 1
+ops : R
+head:    v (rewind)
 tape: 1110
-conf: rewind 0
+ops : R
+head:     v (rewind)
+tape: 1110~
+ops : L
+head:    v (increment)
 tape: 1110
-conf: rewind ~
-tape: 1110
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 1111
-conf: rewind 1
+ops : R
+head:     v (rewind)
+tape: 1111~
+ops : L
+head:    v (increment)
 tape: 1111
-conf: rewind ~
-tape: 1111
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 1110
-conf: increment 1
+ops : P0,L
+head:  v (increment)
 tape: 1100
-conf: increment 1
+ops : P0,L
+head: v (increment)
 tape: 1000
-conf: increment 1
-tape: 0000
-conf: increment ~
+ops : P0,L
+head: v (increment)
+tape: ~0000
+ops : P1
+head: v (rewind)
 tape: 10000
-conf: rewind 1
+ops : R
+head:  v (rewind)
 tape: 10000
-conf: rewind 0
+ops : R
+head:   v (rewind)
 tape: 10000
-conf: rewind 0
+ops : R
+head:    v (rewind)
 tape: 10000
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 10000
-conf: rewind 0
+ops : R
+head:      v (rewind)
+tape: 10000~
+ops : L
+head:     v (increment)
 tape: 10000
-conf: rewind ~
-tape: 10000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 10001
-conf: rewind 1
+ops : R
+head:      v (rewind)
+tape: 10001~
+ops : L
+head:     v (increment)
 tape: 10001
-conf: rewind ~
-tape: 10001
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 10000
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 10010
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 10010
-conf: rewind 0
+ops : R
+head:      v (rewind)
+tape: 10010~
+ops : L
+head:     v (increment)
 tape: 10010
-conf: rewind ~
-tape: 10010
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 10011
-conf: rewind 1
+ops : R
+head:      v (rewind)
+tape: 10011~
+ops : L
+head:     v (increment)
 tape: 10011
-conf: rewind ~
-tape: 10011
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 10010
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 10000
-conf: increment 0
+ops : P1
+head:   v (rewind)
 tape: 10100
-conf: rewind 1
+ops : R
+head:    v (rewind)
 tape: 10100
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 10100
-conf: rewind 0
+ops : R
+head:      v (rewind)
+tape: 10100~
+ops : L
+head:     v (increment)
 tape: 10100
-conf: rewind ~
-tape: 10100
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 10101
-conf: rewind 1
+ops : R
+head:      v (rewind)
+tape: 10101~
+ops : L
+head:     v (increment)
 tape: 10101
-conf: rewind ~
-tape: 10101
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 10100
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 10110
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 10110
-conf: rewind 0
+ops : R
+head:      v (rewind)
+tape: 10110~
+ops : L
+head:     v (increment)
 tape: 10110
-conf: rewind ~
-tape: 10110
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 10111
-conf: rewind 1
+ops : R
+head:      v (rewind)
+tape: 10111~
+ops : L
+head:     v (increment)
 tape: 10111
-conf: rewind ~
-tape: 10111
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 10110
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 10100
-conf: increment 1
+ops : P0,L
+head:  v (increment)
 tape: 10000
-conf: increment 0
+ops : P1
+head:  v (rewind)
 tape: 11000
-conf: rewind 1
+ops : R
+head:   v (rewind)
 tape: 11000
-conf: rewind 0
+ops : R
+head:    v (rewind)
 tape: 11000
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 11000
-conf: rewind 0
+ops : R
+head:      v (rewind)
+tape: 11000~
+ops : L
+head:     v (increment)
 tape: 11000
-conf: rewind ~
-tape: 11000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 11001
-conf: rewind 1
+ops : R
+head:      v (rewind)
+tape: 11001~
+ops : L
+head:     v (increment)
 tape: 11001
-conf: rewind ~
-tape: 11001
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 11000
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 11010
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 11010
-conf: rewind 0
+ops : R
+head:      v (rewind)
+tape: 11010~
+ops : L
+head:     v (increment)
 tape: 11010
-conf: rewind ~
-tape: 11010
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 11011
-conf: rewind 1
+ops : R
+head:      v (rewind)
+tape: 11011~
+ops : L
+head:     v (increment)
 tape: 11011
-conf: rewind ~
-tape: 11011
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 11010
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 11000
-conf: increment 0
+ops : P1
+head:   v (rewind)
 tape: 11100
-conf: rewind 1
+ops : R
+head:    v (rewind)
 tape: 11100
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 11100
-conf: rewind 0
+ops : R
+head:      v (rewind)
+tape: 11100~
+ops : L
+head:     v (increment)
 tape: 11100
-conf: rewind ~
-tape: 11100
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 11101
-conf: rewind 1
+ops : R
+head:      v (rewind)
+tape: 11101~
+ops : L
+head:     v (increment)
 tape: 11101
-conf: rewind ~
-tape: 11101
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 11100
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 11110
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 11110
-conf: rewind 0
+ops : R
+head:      v (rewind)
+tape: 11110~
+ops : L
+head:     v (increment)
 tape: 11110
-conf: rewind ~
-tape: 11110
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 11111
-conf: rewind 1
+ops : R
+head:      v (rewind)
+tape: 11111~
+ops : L
+head:     v (increment)
 tape: 11111
-conf: rewind ~
-tape: 11111
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 11110
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 11100
-conf: increment 1
+ops : P0,L
+head:  v (increment)
 tape: 11000
-conf: increment 1
+ops : P0,L
+head: v (increment)
 tape: 10000
-conf: increment 1
-tape: 00000
-conf: increment ~
+ops : P0,L
+head: v (increment)
+tape: ~00000
+ops : P1
+head: v (rewind)
 tape: 100000
-conf: rewind 1
+ops : R
+head:  v (rewind)
 tape: 100000
-conf: rewind 0
+ops : R
+head:   v (rewind)
 tape: 100000
-conf: rewind 0
+ops : R
+head:    v (rewind)
 tape: 100000
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 100000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 100000
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 100000~
+ops : L
+head:      v (increment)
 tape: 100000
-conf: rewind ~
-tape: 100000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 100001
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 100001~
+ops : L
+head:      v (increment)
 tape: 100001
-conf: rewind ~
-tape: 100001
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 100000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 100010
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 100010
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 100010~
+ops : L
+head:      v (increment)
 tape: 100010
-conf: rewind ~
-tape: 100010
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 100011
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 100011~
+ops : L
+head:      v (increment)
 tape: 100011
-conf: rewind ~
-tape: 100011
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 100010
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 100000
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 100100
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 100100
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 100100
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 100100~
+ops : L
+head:      v (increment)
 tape: 100100
-conf: rewind ~
-tape: 100100
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 100101
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 100101~
+ops : L
+head:      v (increment)
 tape: 100101
-conf: rewind ~
-tape: 100101
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 100100
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 100110
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 100110
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 100110~
+ops : L
+head:      v (increment)
 tape: 100110
-conf: rewind ~
-tape: 100110
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 100111
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 100111~
+ops : L
+head:      v (increment)
 tape: 100111
-conf: rewind ~
-tape: 100111
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 100110
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 100100
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 100000
-conf: increment 0
+ops : P1
+head:   v (rewind)
 tape: 101000
-conf: rewind 1
+ops : R
+head:    v (rewind)
 tape: 101000
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 101000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 101000
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 101000~
+ops : L
+head:      v (increment)
 tape: 101000
-conf: rewind ~
-tape: 101000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 101001
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 101001~
+ops : L
+head:      v (increment)
 tape: 101001
-conf: rewind ~
-tape: 101001
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 101000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 101010
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 101010
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 101010~
+ops : L
+head:      v (increment)
 tape: 101010
-conf: rewind ~
-tape: 101010
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 101011
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 101011~
+ops : L
+head:      v (increment)
 tape: 101011
-conf: rewind ~
-tape: 101011
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 101010
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 101000
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 101100
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 101100
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 101100
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 101100~
+ops : L
+head:      v (increment)
 tape: 101100
-conf: rewind ~
-tape: 101100
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 101101
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 101101~
+ops : L
+head:      v (increment)
 tape: 101101
-conf: rewind ~
-tape: 101101
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 101100
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 101110
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 101110
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 101110~
+ops : L
+head:      v (increment)
 tape: 101110
-conf: rewind ~
-tape: 101110
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 101111
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 101111~
+ops : L
+head:      v (increment)
 tape: 101111
-conf: rewind ~
-tape: 101111
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 101110
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 101100
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 101000
-conf: increment 1
+ops : P0,L
+head:  v (increment)
 tape: 100000
-conf: increment 0
+ops : P1
+head:  v (rewind)
 tape: 110000
-conf: rewind 1
+ops : R
+head:   v (rewind)
 tape: 110000
-conf: rewind 0
+ops : R
+head:    v (rewind)
 tape: 110000
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 110000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 110000
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 110000~
+ops : L
+head:      v (increment)
 tape: 110000
-conf: rewind ~
-tape: 110000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 110001
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 110001~
+ops : L
+head:      v (increment)
 tape: 110001
-conf: rewind ~
-tape: 110001
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 110000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 110010
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 110010
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 110010~
+ops : L
+head:      v (increment)
 tape: 110010
-conf: rewind ~
-tape: 110010
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 110011
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 110011~
+ops : L
+head:      v (increment)
 tape: 110011
-conf: rewind ~
-tape: 110011
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 110010
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 110000
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 110100
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 110100
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 110100
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 110100~
+ops : L
+head:      v (increment)
 tape: 110100
-conf: rewind ~
-tape: 110100
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 110101
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 110101~
+ops : L
+head:      v (increment)
 tape: 110101
-conf: rewind ~
-tape: 110101
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 110100
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 110110
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 110110
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 110110~
+ops : L
+head:      v (increment)
 tape: 110110
-conf: rewind ~
-tape: 110110
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 110111
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 110111~
+ops : L
+head:      v (increment)
 tape: 110111
-conf: rewind ~
-tape: 110111
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 110110
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 110100
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 110000
-conf: increment 0
+ops : P1
+head:   v (rewind)
 tape: 111000
-conf: rewind 1
+ops : R
+head:    v (rewind)
 tape: 111000
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 111000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 111000
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 111000~
+ops : L
+head:      v (increment)
 tape: 111000
-conf: rewind ~
-tape: 111000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 111001
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 111001~
+ops : L
+head:      v (increment)
 tape: 111001
-conf: rewind ~
-tape: 111001
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 111000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 111010
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 111010
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 111010~
+ops : L
+head:      v (increment)
 tape: 111010
-conf: rewind ~
-tape: 111010
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 111011
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 111011~
+ops : L
+head:      v (increment)
 tape: 111011
-conf: rewind ~
-tape: 111011
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 111010
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 111000
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 111100
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 111100
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 111100
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 111100~
+ops : L
+head:      v (increment)
 tape: 111100
-conf: rewind ~
-tape: 111100
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 111101
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 111101~
+ops : L
+head:      v (increment)
 tape: 111101
-conf: rewind ~
-tape: 111101
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 111100
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 111110
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 111110
-conf: rewind 0
+ops : R
+head:       v (rewind)
+tape: 111110~
+ops : L
+head:      v (increment)
 tape: 111110
-conf: rewind ~
-tape: 111110
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 111111
-conf: rewind 1
+ops : R
+head:       v (rewind)
+tape: 111111~
+ops : L
+head:      v (increment)
 tape: 111111
-conf: rewind ~
-tape: 111111
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 111110
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 111100
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 111000
-conf: increment 1
+ops : P0,L
+head:  v (increment)
 tape: 110000
-conf: increment 1
+ops : P0,L
+head: v (increment)
 tape: 100000
-conf: increment 1
-tape: 000000
-conf: increment ~
+ops : P0,L
+head: v (increment)
+tape: ~000000
+ops : P1
+head: v (rewind)
 tape: 1000000
-conf: rewind 1
+ops : R
+head:  v (rewind)
 tape: 1000000
-conf: rewind 0
+ops : R
+head:   v (rewind)
 tape: 1000000
-conf: rewind 0
+ops : R
+head:    v (rewind)
 tape: 1000000
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 1000000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 1000000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1000000
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1000000~
+ops : L
+head:       v (increment)
 tape: 1000000
-conf: rewind ~
-tape: 1000000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1000001
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1000001~
+ops : L
+head:       v (increment)
 tape: 1000001
-conf: rewind ~
-tape: 1000001
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1000000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1000010
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1000010
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1000010~
+ops : L
+head:       v (increment)
 tape: 1000010
-conf: rewind ~
-tape: 1000010
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1000011
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1000011~
+ops : L
+head:       v (increment)
 tape: 1000011
-conf: rewind ~
-tape: 1000011
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1000010
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1000000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 1000100
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 1000100
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1000100
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1000100~
+ops : L
+head:       v (increment)
 tape: 1000100
-conf: rewind ~
-tape: 1000100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1000101
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1000101~
+ops : L
+head:       v (increment)
 tape: 1000101
-conf: rewind ~
-tape: 1000101
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1000100
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1000110
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1000110
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1000110~
+ops : L
+head:       v (increment)
 tape: 1000110
-conf: rewind ~
-tape: 1000110
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1000111
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1000111~
+ops : L
+head:       v (increment)
 tape: 1000111
-conf: rewind ~
-tape: 1000111
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1000110
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1000100
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 1000000
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 1001000
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 1001000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 1001000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1001000
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1001000~
+ops : L
+head:       v (increment)
 tape: 1001000
-conf: rewind ~
-tape: 1001000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1001001
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1001001~
+ops : L
+head:       v (increment)
 tape: 1001001
-conf: rewind ~
-tape: 1001001
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1001000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1001010
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1001010
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1001010~
+ops : L
+head:       v (increment)
 tape: 1001010
-conf: rewind ~
-tape: 1001010
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1001011
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1001011~
+ops : L
+head:       v (increment)
 tape: 1001011
-conf: rewind ~
-tape: 1001011
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1001010
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1001000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 1001100
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 1001100
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1001100
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1001100~
+ops : L
+head:       v (increment)
 tape: 1001100
-conf: rewind ~
-tape: 1001100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1001101
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1001101~
+ops : L
+head:       v (increment)
 tape: 1001101
-conf: rewind ~
-tape: 1001101
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1001100
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1001110
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1001110
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1001110~
+ops : L
+head:       v (increment)
 tape: 1001110
-conf: rewind ~
-tape: 1001110
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1001111
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1001111~
+ops : L
+head:       v (increment)
 tape: 1001111
-conf: rewind ~
-tape: 1001111
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1001110
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1001100
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 1001000
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 1000000
-conf: increment 0
+ops : P1
+head:   v (rewind)
 tape: 1010000
-conf: rewind 1
+ops : R
+head:    v (rewind)
 tape: 1010000
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 1010000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 1010000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1010000
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1010000~
+ops : L
+head:       v (increment)
 tape: 1010000
-conf: rewind ~
-tape: 1010000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1010001
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1010001~
+ops : L
+head:       v (increment)
 tape: 1010001
-conf: rewind ~
-tape: 1010001
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1010000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1010010
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1010010
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1010010~
+ops : L
+head:       v (increment)
 tape: 1010010
-conf: rewind ~
-tape: 1010010
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1010011
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1010011~
+ops : L
+head:       v (increment)
 tape: 1010011
-conf: rewind ~
-tape: 1010011
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1010010
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1010000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 1010100
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 1010100
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1010100
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1010100~
+ops : L
+head:       v (increment)
 tape: 1010100
-conf: rewind ~
-tape: 1010100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1010101
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1010101~
+ops : L
+head:       v (increment)
 tape: 1010101
-conf: rewind ~
-tape: 1010101
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1010100
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1010110
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1010110
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1010110~
+ops : L
+head:       v (increment)
 tape: 1010110
-conf: rewind ~
-tape: 1010110
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1010111
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1010111~
+ops : L
+head:       v (increment)
 tape: 1010111
-conf: rewind ~
-tape: 1010111
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1010110
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1010100
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 1010000
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 1011000
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 1011000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 1011000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1011000
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1011000~
+ops : L
+head:       v (increment)
 tape: 1011000
-conf: rewind ~
-tape: 1011000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1011001
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1011001~
+ops : L
+head:       v (increment)
 tape: 1011001
-conf: rewind ~
-tape: 1011001
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1011000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1011010
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1011010
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1011010~
+ops : L
+head:       v (increment)
 tape: 1011010
-conf: rewind ~
-tape: 1011010
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1011011
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1011011~
+ops : L
+head:       v (increment)
 tape: 1011011
-conf: rewind ~
-tape: 1011011
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1011010
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1011000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 1011100
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 1011100
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1011100
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1011100~
+ops : L
+head:       v (increment)
 tape: 1011100
-conf: rewind ~
-tape: 1011100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1011101
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1011101~
+ops : L
+head:       v (increment)
 tape: 1011101
-conf: rewind ~
-tape: 1011101
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1011100
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1011110
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1011110
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1011110~
+ops : L
+head:       v (increment)
 tape: 1011110
-conf: rewind ~
-tape: 1011110
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1011111
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1011111~
+ops : L
+head:       v (increment)
 tape: 1011111
-conf: rewind ~
-tape: 1011111
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1011110
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1011100
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 1011000
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 1010000
-conf: increment 1
+ops : P0,L
+head:  v (increment)
 tape: 1000000
-conf: increment 0
+ops : P1
+head:  v (rewind)
 tape: 1100000
-conf: rewind 1
+ops : R
+head:   v (rewind)
 tape: 1100000
-conf: rewind 0
+ops : R
+head:    v (rewind)
 tape: 1100000
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 1100000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 1100000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1100000
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1100000~
+ops : L
+head:       v (increment)
 tape: 1100000
-conf: rewind ~
-tape: 1100000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1100001
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1100001~
+ops : L
+head:       v (increment)
 tape: 1100001
-conf: rewind ~
-tape: 1100001
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1100000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1100010
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1100010
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1100010~
+ops : L
+head:       v (increment)
 tape: 1100010
-conf: rewind ~
-tape: 1100010
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1100011
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1100011~
+ops : L
+head:       v (increment)
 tape: 1100011
-conf: rewind ~
-tape: 1100011
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1100010
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1100000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 1100100
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 1100100
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1100100
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1100100~
+ops : L
+head:       v (increment)
 tape: 1100100
-conf: rewind ~
-tape: 1100100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1100101
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1100101~
+ops : L
+head:       v (increment)
 tape: 1100101
-conf: rewind ~
-tape: 1100101
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1100100
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1100110
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1100110
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1100110~
+ops : L
+head:       v (increment)
 tape: 1100110
-conf: rewind ~
-tape: 1100110
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1100111
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1100111~
+ops : L
+head:       v (increment)
 tape: 1100111
-conf: rewind ~
-tape: 1100111
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1100110
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1100100
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 1100000
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 1101000
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 1101000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 1101000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1101000
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1101000~
+ops : L
+head:       v (increment)
 tape: 1101000
-conf: rewind ~
-tape: 1101000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1101001
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1101001~
+ops : L
+head:       v (increment)
 tape: 1101001
-conf: rewind ~
-tape: 1101001
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1101000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1101010
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1101010
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1101010~
+ops : L
+head:       v (increment)
 tape: 1101010
-conf: rewind ~
-tape: 1101010
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1101011
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1101011~
+ops : L
+head:       v (increment)
 tape: 1101011
-conf: rewind ~
-tape: 1101011
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1101010
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1101000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 1101100
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 1101100
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1101100
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1101100~
+ops : L
+head:       v (increment)
 tape: 1101100
-conf: rewind ~
-tape: 1101100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1101101
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1101101~
+ops : L
+head:       v (increment)
 tape: 1101101
-conf: rewind ~
-tape: 1101101
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1101100
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1101110
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1101110
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1101110~
+ops : L
+head:       v (increment)
 tape: 1101110
-conf: rewind ~
-tape: 1101110
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1101111
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1101111~
+ops : L
+head:       v (increment)
 tape: 1101111
-conf: rewind ~
-tape: 1101111
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1101110
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1101100
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 1101000
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 1100000
-conf: increment 0
+ops : P1
+head:   v (rewind)
 tape: 1110000
-conf: rewind 1
+ops : R
+head:    v (rewind)
 tape: 1110000
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 1110000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 1110000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1110000
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1110000~
+ops : L
+head:       v (increment)
 tape: 1110000
-conf: rewind ~
-tape: 1110000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1110001
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1110001~
+ops : L
+head:       v (increment)
 tape: 1110001
-conf: rewind ~
-tape: 1110001
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1110000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1110010
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1110010
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1110010~
+ops : L
+head:       v (increment)
 tape: 1110010
-conf: rewind ~
-tape: 1110010
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1110011
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1110011~
+ops : L
+head:       v (increment)
 tape: 1110011
-conf: rewind ~
-tape: 1110011
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1110010
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1110000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 1110100
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 1110100
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1110100
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1110100~
+ops : L
+head:       v (increment)
 tape: 1110100
-conf: rewind ~
-tape: 1110100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1110101
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1110101~
+ops : L
+head:       v (increment)
 tape: 1110101
-conf: rewind ~
-tape: 1110101
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1110100
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1110110
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1110110
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1110110~
+ops : L
+head:       v (increment)
 tape: 1110110
-conf: rewind ~
-tape: 1110110
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1110111
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1110111~
+ops : L
+head:       v (increment)
 tape: 1110111
-conf: rewind ~
-tape: 1110111
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1110110
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1110100
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 1110000
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 1111000
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 1111000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 1111000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1111000
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1111000~
+ops : L
+head:       v (increment)
 tape: 1111000
-conf: rewind ~
-tape: 1111000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1111001
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1111001~
+ops : L
+head:       v (increment)
 tape: 1111001
-conf: rewind ~
-tape: 1111001
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1111000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1111010
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1111010
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1111010~
+ops : L
+head:       v (increment)
 tape: 1111010
-conf: rewind ~
-tape: 1111010
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1111011
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1111011~
+ops : L
+head:       v (increment)
 tape: 1111011
-conf: rewind ~
-tape: 1111011
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1111010
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1111000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 1111100
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 1111100
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 1111100
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1111100~
+ops : L
+head:       v (increment)
 tape: 1111100
-conf: rewind ~
-tape: 1111100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1111101
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1111101~
+ops : L
+head:       v (increment)
 tape: 1111101
-conf: rewind ~
-tape: 1111101
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1111100
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 1111110
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 1111110
-conf: rewind 0
+ops : R
+head:        v (rewind)
+tape: 1111110~
+ops : L
+head:       v (increment)
 tape: 1111110
-conf: rewind ~
-tape: 1111110
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 1111111
-conf: rewind 1
+ops : R
+head:        v (rewind)
+tape: 1111111~
+ops : L
+head:       v (increment)
 tape: 1111111
-conf: rewind ~
-tape: 1111111
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 1111110
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 1111100
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 1111000
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 1110000
-conf: increment 1
+ops : P0,L
+head:  v (increment)
 tape: 1100000
-conf: increment 1
+ops : P0,L
+head: v (increment)
 tape: 1000000
-conf: increment 1
-tape: 0000000
-conf: increment ~
+ops : P0,L
+head: v (increment)
+tape: ~0000000
+ops : P1
+head: v (rewind)
 tape: 10000000
-conf: rewind 1
+ops : R
+head:  v (rewind)
 tape: 10000000
-conf: rewind 0
+ops : R
+head:   v (rewind)
 tape: 10000000
-conf: rewind 0
+ops : R
+head:    v (rewind)
 tape: 10000000
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 10000000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 10000000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 10000000
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10000000
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10000000~
+ops : L
+head:        v (increment)
 tape: 10000000
-conf: rewind ~
-tape: 10000000
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10000001
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10000001~
+ops : L
+head:        v (increment)
 tape: 10000001
-conf: rewind ~
-tape: 10000001
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10000000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10000010
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10000010
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10000010~
+ops : L
+head:        v (increment)
 tape: 10000010
-conf: rewind ~
-tape: 10000010
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10000011
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10000011~
+ops : L
+head:        v (increment)
 tape: 10000011
-conf: rewind ~
-tape: 10000011
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10000010
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10000000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 10000100
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 10000100
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10000100
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10000100~
+ops : L
+head:        v (increment)
 tape: 10000100
-conf: rewind ~
-tape: 10000100
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10000101
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10000101~
+ops : L
+head:        v (increment)
 tape: 10000101
-conf: rewind ~
-tape: 10000101
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10000100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10000110
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10000110
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10000110~
+ops : L
+head:        v (increment)
 tape: 10000110
-conf: rewind ~
-tape: 10000110
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10000111
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10000111~
+ops : L
+head:        v (increment)
 tape: 10000111
-conf: rewind ~
-tape: 10000111
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10000110
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10000100
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 10000000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 10001000
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 10001000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 10001000
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10001000
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10001000~
+ops : L
+head:        v (increment)
 tape: 10001000
-conf: rewind ~
-tape: 10001000
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10001001
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10001001~
+ops : L
+head:        v (increment)
 tape: 10001001
-conf: rewind ~
-tape: 10001001
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10001000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10001010
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10001010
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10001010~
+ops : L
+head:        v (increment)
 tape: 10001010
-conf: rewind ~
-tape: 10001010
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10001011
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10001011~
+ops : L
+head:        v (increment)
 tape: 10001011
-conf: rewind ~
-tape: 10001011
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10001010
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10001000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 10001100
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 10001100
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10001100
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10001100~
+ops : L
+head:        v (increment)
 tape: 10001100
-conf: rewind ~
-tape: 10001100
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10001101
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10001101~
+ops : L
+head:        v (increment)
 tape: 10001101
-conf: rewind ~
-tape: 10001101
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10001100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10001110
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10001110
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10001110~
+ops : L
+head:        v (increment)
 tape: 10001110
-conf: rewind ~
-tape: 10001110
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10001111
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10001111~
+ops : L
+head:        v (increment)
 tape: 10001111
-conf: rewind ~
-tape: 10001111
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10001110
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10001100
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 10001000
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 10000000
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 10010000
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 10010000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 10010000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 10010000
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10010000
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10010000~
+ops : L
+head:        v (increment)
 tape: 10010000
-conf: rewind ~
-tape: 10010000
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10010001
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10010001~
+ops : L
+head:        v (increment)
 tape: 10010001
-conf: rewind ~
-tape: 10010001
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10010000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10010010
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10010010
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10010010~
+ops : L
+head:        v (increment)
 tape: 10010010
-conf: rewind ~
-tape: 10010010
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10010011
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10010011~
+ops : L
+head:        v (increment)
 tape: 10010011
-conf: rewind ~
-tape: 10010011
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10010010
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10010000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 10010100
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 10010100
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10010100
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10010100~
+ops : L
+head:        v (increment)
 tape: 10010100
-conf: rewind ~
-tape: 10010100
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10010101
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10010101~
+ops : L
+head:        v (increment)
 tape: 10010101
-conf: rewind ~
-tape: 10010101
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10010100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10010110
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10010110
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10010110~
+ops : L
+head:        v (increment)
 tape: 10010110
-conf: rewind ~
-tape: 10010110
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10010111
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10010111~
+ops : L
+head:        v (increment)
 tape: 10010111
-conf: rewind ~
-tape: 10010111
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10010110
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10010100
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 10010000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 10011000
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 10011000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 10011000
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10011000
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10011000~
+ops : L
+head:        v (increment)
 tape: 10011000
-conf: rewind ~
-tape: 10011000
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10011001
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10011001~
+ops : L
+head:        v (increment)
 tape: 10011001
-conf: rewind ~
-tape: 10011001
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10011000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10011010
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10011010
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10011010~
+ops : L
+head:        v (increment)
 tape: 10011010
-conf: rewind ~
-tape: 10011010
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10011011
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10011011~
+ops : L
+head:        v (increment)
 tape: 10011011
-conf: rewind ~
-tape: 10011011
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10011010
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10011000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 10011100
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 10011100
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10011100
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10011100~
+ops : L
+head:        v (increment)
 tape: 10011100
-conf: rewind ~
-tape: 10011100
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10011101
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10011101~
+ops : L
+head:        v (increment)
 tape: 10011101
-conf: rewind ~
-tape: 10011101
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10011100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10011110
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10011110
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10011110~
+ops : L
+head:        v (increment)
 tape: 10011110
-conf: rewind ~
-tape: 10011110
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10011111
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10011111~
+ops : L
+head:        v (increment)
 tape: 10011111
-conf: rewind ~
-tape: 10011111
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10011110
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10011100
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 10011000
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 10010000
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 10000000
-conf: increment 0
+ops : P1
+head:   v (rewind)
 tape: 10100000
-conf: rewind 1
+ops : R
+head:    v (rewind)
 tape: 10100000
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 10100000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 10100000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 10100000
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10100000
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10100000~
+ops : L
+head:        v (increment)
 tape: 10100000
-conf: rewind ~
-tape: 10100000
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10100001
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10100001~
+ops : L
+head:        v (increment)
 tape: 10100001
-conf: rewind ~
-tape: 10100001
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10100000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10100010
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10100010
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10100010~
+ops : L
+head:        v (increment)
 tape: 10100010
-conf: rewind ~
-tape: 10100010
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10100011
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10100011~
+ops : L
+head:        v (increment)
 tape: 10100011
-conf: rewind ~
-tape: 10100011
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10100010
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10100000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 10100100
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 10100100
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10100100
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10100100~
+ops : L
+head:        v (increment)
 tape: 10100100
-conf: rewind ~
-tape: 10100100
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10100101
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10100101~
+ops : L
+head:        v (increment)
 tape: 10100101
-conf: rewind ~
-tape: 10100101
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10100100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10100110
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10100110
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10100110~
+ops : L
+head:        v (increment)
 tape: 10100110
-conf: rewind ~
-tape: 10100110
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10100111
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10100111~
+ops : L
+head:        v (increment)
 tape: 10100111
-conf: rewind ~
-tape: 10100111
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10100110
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10100100
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 10100000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 10101000
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 10101000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 10101000
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10101000
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10101000~
+ops : L
+head:        v (increment)
 tape: 10101000
-conf: rewind ~
-tape: 10101000
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10101001
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10101001~
+ops : L
+head:        v (increment)
 tape: 10101001
-conf: rewind ~
-tape: 10101001
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10101000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10101010
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10101010
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10101010~
+ops : L
+head:        v (increment)
 tape: 10101010
-conf: rewind ~
-tape: 10101010
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10101011
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10101011~
+ops : L
+head:        v (increment)
 tape: 10101011
-conf: rewind ~
-tape: 10101011
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10101010
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10101000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 10101100
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 10101100
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10101100
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10101100~
+ops : L
+head:        v (increment)
 tape: 10101100
-conf: rewind ~
-tape: 10101100
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10101101
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10101101~
+ops : L
+head:        v (increment)
 tape: 10101101
-conf: rewind ~
-tape: 10101101
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10101100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10101110
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10101110
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10101110~
+ops : L
+head:        v (increment)
 tape: 10101110
-conf: rewind ~
-tape: 10101110
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10101111
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10101111~
+ops : L
+head:        v (increment)
 tape: 10101111
-conf: rewind ~
-tape: 10101111
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10101110
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10101100
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 10101000
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 10100000
-conf: increment 0
+ops : P1
+head:    v (rewind)
 tape: 10110000
-conf: rewind 1
+ops : R
+head:     v (rewind)
 tape: 10110000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 10110000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 10110000
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10110000
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10110000~
+ops : L
+head:        v (increment)
 tape: 10110000
-conf: rewind ~
-tape: 10110000
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10110001
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10110001~
+ops : L
+head:        v (increment)
 tape: 10110001
-conf: rewind ~
-tape: 10110001
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10110000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10110010
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10110010
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10110010~
+ops : L
+head:        v (increment)
 tape: 10110010
-conf: rewind ~
-tape: 10110010
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10110011
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10110011~
+ops : L
+head:        v (increment)
 tape: 10110011
-conf: rewind ~
-tape: 10110011
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10110010
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10110000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 10110100
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 10110100
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10110100
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10110100~
+ops : L
+head:        v (increment)
 tape: 10110100
-conf: rewind ~
-tape: 10110100
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10110101
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10110101~
+ops : L
+head:        v (increment)
 tape: 10110101
-conf: rewind ~
-tape: 10110101
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10110100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10110110
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10110110
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10110110~
+ops : L
+head:        v (increment)
 tape: 10110110
-conf: rewind ~
-tape: 10110110
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10110111
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10110111~
+ops : L
+head:        v (increment)
 tape: 10110111
-conf: rewind ~
-tape: 10110111
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10110110
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10110100
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 10110000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 10111000
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 10111000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 10111000
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10111000
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10111000~
+ops : L
+head:        v (increment)
 tape: 10111000
-conf: rewind ~
-tape: 10111000
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10111001
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10111001~
+ops : L
+head:        v (increment)
 tape: 10111001
-conf: rewind ~
-tape: 10111001
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10111000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10111010
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10111010
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10111010~
+ops : L
+head:        v (increment)
 tape: 10111010
-conf: rewind ~
-tape: 10111010
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10111011
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10111011~
+ops : L
+head:        v (increment)
 tape: 10111011
-conf: rewind ~
-tape: 10111011
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10111010
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10111000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 10111100
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 10111100
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 10111100
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10111100~
+ops : L
+head:        v (increment)
 tape: 10111100
-conf: rewind ~
-tape: 10111100
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10111101
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10111101~
+ops : L
+head:        v (increment)
 tape: 10111101
-conf: rewind ~
-tape: 10111101
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10111100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 10111110
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 10111110
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 10111110~
+ops : L
+head:        v (increment)
 tape: 10111110
-conf: rewind ~
-tape: 10111110
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 10111111
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 10111111~
+ops : L
+head:        v (increment)
 tape: 10111111
-conf: rewind ~
-tape: 10111111
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 10111110
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 10111100
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 10111000
-conf: increment 1
+ops : P0,L
+head:    v (increment)
 tape: 10110000
-conf: increment 1
+ops : P0,L
+head:   v (increment)
 tape: 10100000
-conf: increment 1
+ops : P0,L
+head:  v (increment)
 tape: 10000000
-conf: increment 0
+ops : P1
+head:  v (rewind)
 tape: 11000000
-conf: rewind 1
+ops : R
+head:   v (rewind)
 tape: 11000000
-conf: rewind 0
+ops : R
+head:    v (rewind)
 tape: 11000000
-conf: rewind 0
+ops : R
+head:     v (rewind)
 tape: 11000000
-conf: rewind 0
+ops : R
+head:      v (rewind)
 tape: 11000000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 11000000
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 11000000
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 11000000~
+ops : L
+head:        v (increment)
 tape: 11000000
-conf: rewind ~
-tape: 11000000
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 11000001
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 11000001~
+ops : L
+head:        v (increment)
 tape: 11000001
-conf: rewind ~
-tape: 11000001
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 11000000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 11000010
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 11000010
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 11000010~
+ops : L
+head:        v (increment)
 tape: 11000010
-conf: rewind ~
-tape: 11000010
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 11000011
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 11000011~
+ops : L
+head:        v (increment)
 tape: 11000011
-conf: rewind ~
-tape: 11000011
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 11000010
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 11000000
-conf: increment 0
+ops : P1
+head:      v (rewind)
 tape: 11000100
-conf: rewind 1
+ops : R
+head:       v (rewind)
 tape: 11000100
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 11000100
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 11000100~
+ops : L
+head:        v (increment)
 tape: 11000100
-conf: rewind ~
-tape: 11000100
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 11000101
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 11000101~
+ops : L
+head:        v (increment)
 tape: 11000101
-conf: rewind ~
-tape: 11000101
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 11000100
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 11000110
-conf: rewind 1
+ops : R
+head:        v (rewind)
 tape: 11000110
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 11000110~
+ops : L
+head:        v (increment)
 tape: 11000110
-conf: rewind ~
-tape: 11000110
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 11000111
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 11000111~
+ops : L
+head:        v (increment)
 tape: 11000111
-conf: rewind ~
-tape: 11000111
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 11000110
-conf: increment 1
+ops : P0,L
+head:      v (increment)
 tape: 11000100
-conf: increment 1
+ops : P0,L
+head:     v (increment)
 tape: 11000000
-conf: increment 0
+ops : P1
+head:     v (rewind)
 tape: 11001000
-conf: rewind 1
+ops : R
+head:      v (rewind)
 tape: 11001000
-conf: rewind 0
+ops : R
+head:       v (rewind)
 tape: 11001000
-conf: rewind 0
+ops : R
+head:        v (rewind)
 tape: 11001000
-conf: rewind 0
+ops : R
+head:         v (rewind)
+tape: 11001000~
+ops : L
+head:        v (increment)
 tape: 11001000
-conf: rewind ~
-tape: 11001000
-conf: increment 0
+ops : P1
+head:        v (rewind)
 tape: 11001001
-conf: rewind 1
+ops : R
+head:         v (rewind)
+tape: 11001001~
+ops : L
+head:        v (increment)
 tape: 11001001
-conf: rewind ~
-tape: 11001001
-conf: increment 1
+ops : P0,L
+head:       v (increment)
 tape: 11001000
-conf: increment 0
+ops : P1
+head:       v (rewind)
 tape: 11001010

@@ -66,2003 +66,3004 @@ reset-new-x ~ R,Px flag-result-digits
 unflag-result-digits * , find-digits
 unflag-result-digits s Pr,R,R unflag-result-digits
 unflag-result-digits v Pu,R,R unflag-result-digits
-conf: begin ~
+
+ops : P@,R,P1
+head:  v (new)
 tape: @1
-conf: new *
+ops : L
+head: v (new)
 tape: @1
-conf: new @
+ops : R
+head:  v (mark-digits)
 tape: @1
-conf: mark-digits 1
-tape: @1x
-conf: mark-digits ~
-tape: @1xzr
-conf: find-x *
-tape: @1xzr
-conf: find-x *
-tape: @1xzr
-conf: find-x x
-tape: @1~zr
-conf: first-r *
-tape: @1~zr
-conf: first-r *
-tape: @1~zr
-conf: first-r r
-tape: @1~zr
-conf: last-r ~
-tape: @1~zrrr
-conf: find-x *
-tape: @1~zrrr
-conf: find-x *
-tape: @1~zrrr
-conf: find-x *
-tape: @1~zrrr
-conf: find-x *
-tape: @1~zrrr
-conf: find-x *
-tape: @1~zrrr
-conf: find-x @
-tape: @1~zrrr
-conf: find-digits @
-tape: @1~zrrr
-conf: find-1st-digit ~
-tape: @1~zrrr
-conf: find-1st-digit z
-tape: @1~zrrr
-conf: found-2nd-digit ~
-tape: @1~zrrr
-conf: add-one *
-tape: @1~zrrr
-conf: add-one r
-tape: @1~zvrr
-conf: add-finished *
-tape: @1~zvrr
-conf: add-finished *
-tape: @1~zvrr
-conf: add-finished *
-tape: @1~zvrr
-conf: add-finished @
-tape: @1~zvrr
-conf: erase-old-x *
-tape: @1~zvrr
-conf: erase-old-x z
-tape: @1~yvrr
-conf: print-new-x ~
-tape: @1xyvrr
-conf: find-digits *
-tape: @1xyvrr
-conf: find-digits @
-tape: @1xyvrr
-conf: find-1st-digit x
-tape: @1xyvrr
-conf: found-1st-digit 1
-tape: @1xyvrr
-conf: find-2nd-digit y
-tape: @1xyvrr
-conf: found-2nd-digit ~
-tape: @1xyvrr
-conf: add-one *
-tape: @1xyvrr
-conf: add-one *
-tape: @1xyvrr
-conf: add-one r
-tape: @1xyvvr
-conf: add-finished *
-tape: @1xyvvr
-conf: add-finished *
-tape: @1xyvvr
-conf: add-finished *
-tape: @1xyvvr
-conf: add-finished *
-tape: @1xyvvr
-conf: add-finished @
-tape: @1xyvvr
-conf: erase-old-x x
-tape: @1~yvvr
-conf: print-new-x @
-tape: @1~yvvr
-conf: erase-old-y *
-tape: @1~yvvr
-conf: erase-old-y y
-tape: @1~~vvr
-conf: print-new-y *
-tape: @1y~vvr
-conf: reset-new-x ~
-tape: @1yxvvr
-conf: flag-result-digits *
-tape: @1yxvvr
-conf: flag-result-digits v
-tape: @1yxwvr
-conf: unflag-result-digits v
-tape: @1yxwur
-conf: unflag-result-digits *
-tape: @1yxwur
-conf: find-digits *
-tape: @1yxwur
-conf: find-digits *
-tape: @1yxwur
-conf: find-digits *
-tape: @1yxwur
-conf: find-digits *
-tape: @1yxwur
-conf: find-digits *
-tape: @1yxwur
-conf: find-digits @
-tape: @1yxwur
-conf: find-1st-digit y
-tape: @1yxwur
-conf: found-1st-digit 1
-tape: @1yxwur
-conf: find-2nd-digit x
-tape: @1yxwur
-conf: found-2nd-digit ~
-tape: @1yxwur
-conf: add-one *
-tape: @1yxwur
-conf: add-one *
-tape: @1yxwur
-conf: add-one u
-tape: @1yxwsr
-conf: carry r
-tape: @1yxwsu
-conf: add-finished *
-tape: @1yxwsu
-conf: add-finished *
-tape: @1yxwsu
-conf: add-finished *
-tape: @1yxwsu
-conf: add-finished *
-tape: @1yxwsu
-conf: add-finished *
-tape: @1yxwsu
-conf: add-finished @
-tape: @1yxwsu
-conf: erase-old-x *
-tape: @1yxwsu
-conf: erase-old-x x
-tape: @1y~wsu
-conf: print-new-x y
-tape: @1z~wsu
-conf: find-digits *
-tape: @1z~wsu
-conf: find-digits @
-tape: @1z~wsu
-conf: find-1st-digit z
-tape: @1z~wsu
-conf: found-2nd-digit 1
-tape: @1z~wsu
-conf: add-one *
-tape: @1z~wsu
-conf: add-one *
-tape: @1z~wsu
-conf: add-one *
-tape: @1z~wsu
-conf: add-one *
-tape: @1z~wsu
-conf: add-one u
-tape: @1z~wss
-conf: carry ~
-tape: @1z~wssu
-conf: new-digit-is-zero *
-tape: @1z~wssu
-conf: new-digit-is-zero *
-tape: @1z~wssu
-conf: new-digit-is-zero *
-tape: @1z~wssu
-conf: new-digit-is-zero *
-tape: @1z~wssu
-conf: new-digit-is-zero *
-tape: @1z~wssu
-conf: new-digit-is-zero *
-tape: @1z~wssu
-conf: new-digit-is-zero *
-tape: @1z~wssu
-conf: new-digit-is-zero *
-tape: @1z~wssu
-conf: new-digit-is-zero *
-tape: @1z~wssu
-conf: new-digit-is-zero *
-tape: @1z~wssu
-conf: new-digit-is-zero *
-tape: @1z~wssu
-conf: new-digit-is-zero *
-tape: @1z~wssu
-conf: new-digit-is-zero @
-tape: @1z~wssu
-conf: print-zero-digit 1
-tape: @1~~wssu
-conf: print-zero-digit ~
-tape: @1~0~wssu
-conf: cleanup *
-tape: @1~0~~ssu
-conf: cleanup *
-tape: @1~0~~~su
-conf: cleanup *
-tape: @1~0~~~~u
-conf: cleanup *
-tape: @1~0~~~~~
-conf: cleanup ~
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new *
-tape: @1~0~~~~~
-conf: new @
-tape: @1~0~~~~~
-conf: mark-digits 1
-tape: @1x0~~~~~
-conf: mark-digits 0
-tape: @1x0x~~~~
-conf: mark-digits ~
-tape: @1x0xzr~~
-conf: find-x *
-tape: @1x0xzr~~
-conf: find-x *
-tape: @1x0xzr~~
-conf: find-x x
-tape: @1x0~zr~~
-conf: first-r *
-tape: @1x0~zr~~
-conf: first-r *
-tape: @1x0~zr~~
-conf: first-r r
-tape: @1x0~zr~~
-conf: last-r ~
-tape: @1x0~zrrr
-conf: find-x *
-tape: @1x0~zrrr
-conf: find-x *
-tape: @1x0~zrrr
-conf: find-x *
-tape: @1x0~zrrr
-conf: find-x *
-tape: @1x0~zrrr
-conf: find-x *
-tape: @1x0~zrrr
-conf: find-x x
-tape: @1~0~zrrr
-conf: first-r *
-tape: @1~0~zrrr
-conf: first-r *
-tape: @1~0~zrrr
-conf: first-r *
-tape: @1~0~zrrr
-conf: first-r r
-tape: @1~0~zrrr
-conf: last-r r
-tape: @1~0~zrrr
-conf: last-r r
-tape: @1~0~zrrr
-conf: last-r ~
-tape: @1~0~zrrrrr
-conf: find-x *
-tape: @1~0~zrrrrr
-conf: find-x *
-tape: @1~0~zrrrrr
-conf: find-x *
-tape: @1~0~zrrrrr
-conf: find-x *
-tape: @1~0~zrrrrr
-conf: find-x *
-tape: @1~0~zrrrrr
-conf: find-x *
-tape: @1~0~zrrrrr
-conf: find-x *
-tape: @1~0~zrrrrr
-conf: find-x *
-tape: @1~0~zrrrrr
-conf: find-x @
-tape: @1~0~zrrrrr
-conf: find-digits @
-tape: @1~0~zrrrrr
-conf: find-1st-digit ~
-tape: @1~0~zrrrrr
-conf: find-1st-digit ~
-tape: @1~0~zrrrrr
-conf: find-1st-digit z
-tape: @1~0~zrrrrr
-conf: found-2nd-digit ~
-tape: @1~0~zrrrrr
-conf: add-one *
-tape: @1~0~zrrrrr
-conf: add-one r
-tape: @1~0~zvrrrr
-conf: add-finished *
-tape: @1~0~zvrrrr
-conf: add-finished *
-tape: @1~0~zvrrrr
-conf: add-finished *
-tape: @1~0~zvrrrr
-conf: add-finished *
-tape: @1~0~zvrrrr
-conf: add-finished @
-tape: @1~0~zvrrrr
-conf: erase-old-x *
-tape: @1~0~zvrrrr
-conf: erase-old-x *
-tape: @1~0~zvrrrr
-conf: erase-old-x z
-tape: @1~0~yvrrrr
-conf: print-new-x ~
-tape: @1~0xyvrrrr
-conf: find-digits *
-tape: @1~0xyvrrrr
-conf: find-digits *
-tape: @1~0xyvrrrr
-conf: find-digits @
-tape: @1~0xyvrrrr
-conf: find-1st-digit ~
-tape: @1~0xyvrrrr
-conf: find-1st-digit x
-tape: @1~0xyvrrrr
-conf: found-1st-digit 0
-tape: @1~0xyvrrrr
-conf: add-zero *
-tape: @1~0xyvrrrr
-conf: add-zero *
-tape: @1~0xyvrrrr
-conf: add-zero *
-tape: @1~0xyvrrrr
-conf: add-zero r
-tape: @1~0xyvsrrr
-conf: add-finished *
-tape: @1~0xyvsrrr
-conf: add-finished *
-tape: @1~0xyvsrrr
-conf: add-finished *
-tape: @1~0xyvsrrr
-conf: add-finished *
-tape: @1~0xyvsrrr
-conf: add-finished *
-tape: @1~0xyvsrrr
-conf: add-finished @
-tape: @1~0xyvsrrr
-conf: erase-old-x *
-tape: @1~0xyvsrrr
-conf: erase-old-x x
-tape: @1~0~yvsrrr
-conf: print-new-x ~
-tape: @1x0~yvsrrr
-conf: find-digits *
-tape: @1x0~yvsrrr
-conf: find-digits @
-tape: @1x0~yvsrrr
-conf: find-1st-digit x
-tape: @1x0~yvsrrr
-conf: found-1st-digit 1
-tape: @1x0~yvsrrr
-conf: find-2nd-digit ~
-tape: @1x0~yvsrrr
-conf: find-2nd-digit y
-tape: @1x0~yvsrrr
-conf: found-2nd-digit ~
-tape: @1x0~yvsrrr
-conf: add-one *
-tape: @1x0~yvsrrr
-conf: add-one *
-tape: @1x0~yvsrrr
-conf: add-one *
-tape: @1x0~yvsrrr
-conf: add-one r
-tape: @1x0~yvsvrr
-conf: add-finished *
-tape: @1x0~yvsvrr
-conf: add-finished *
-tape: @1x0~yvsvrr
-conf: add-finished *
-tape: @1x0~yvsvrr
-conf: add-finished *
-tape: @1x0~yvsvrr
-conf: add-finished *
-tape: @1x0~yvsvrr
-conf: add-finished *
-tape: @1x0~yvsvrr
-conf: add-finished @
-tape: @1x0~yvsvrr
-conf: erase-old-x x
-tape: @1~0~yvsvrr
-conf: print-new-x @
-tape: @1~0~yvsvrr
-conf: erase-old-y *
-tape: @1~0~yvsvrr
-conf: erase-old-y *
-tape: @1~0~yvsvrr
-conf: erase-old-y y
-tape: @1~0~~vsvrr
-conf: print-new-y *
-tape: @1~0y~vsvrr
-conf: reset-new-x ~
-tape: @1~0yxvsvrr
-conf: flag-result-digits *
-tape: @1~0yxvsvrr
-conf: flag-result-digits v
-tape: @1~0yxwsvrr
-conf: unflag-result-digits s
-tape: @1~0yxwrvrr
-conf: unflag-result-digits v
-tape: @1~0yxwrurr
-conf: unflag-result-digits *
-tape: @1~0yxwrurr
-conf: find-digits *
-tape: @1~0yxwrurr
-conf: find-digits *
-tape: @1~0yxwrurr
-conf: find-digits *
-tape: @1~0yxwrurr
-conf: find-digits *
-tape: @1~0yxwrurr
-conf: find-digits *
-tape: @1~0yxwrurr
-conf: find-digits *
-tape: @1~0yxwrurr
-conf: find-digits *
-tape: @1~0yxwrurr
-conf: find-digits @
-tape: @1~0yxwrurr
-conf: find-1st-digit ~
-tape: @1~0yxwrurr
-conf: find-1st-digit y
-tape: @1~0yxwrurr
-conf: found-1st-digit 0
-tape: @1~0yxwrurr
-conf: add-zero *
-tape: @1~0yxwrurr
-conf: add-zero *
-tape: @1~0yxwrurr
-conf: add-zero *
-tape: @1~0yxwrurr
-conf: add-zero r
-tape: @1~0yxwsurr
-conf: add-finished *
-tape: @1~0yxwsurr
-conf: add-finished *
-tape: @1~0yxwsurr
-conf: add-finished *
-tape: @1~0yxwsurr
-conf: add-finished *
-tape: @1~0yxwsurr
-conf: add-finished *
-tape: @1~0yxwsurr
-conf: add-finished @
-tape: @1~0yxwsurr
-conf: erase-old-x *
-tape: @1~0yxwsurr
-conf: erase-old-x *
-tape: @1~0yxwsurr
-conf: erase-old-x x
-tape: @1~0y~wsurr
-conf: print-new-x y
-tape: @1~0z~wsurr
-conf: find-digits *
-tape: @1~0z~wsurr
-conf: find-digits *
-tape: @1~0z~wsurr
-conf: find-digits @
-tape: @1~0z~wsurr
-conf: find-1st-digit ~
-tape: @1~0z~wsurr
-conf: find-1st-digit z
-tape: @1~0z~wsurr
-conf: found-2nd-digit 0
-tape: @1~0z~wsurr
-conf: add-zero *
-tape: @1~0z~wsurr
-conf: add-zero *
-tape: @1~0z~wsurr
-conf: add-zero *
-tape: @1~0z~wsurr
-conf: add-zero *
-tape: @1~0z~wsurr
-conf: add-zero u
-tape: @1~0z~wsvrr
-conf: add-finished *
-tape: @1~0z~wsvrr
-conf: add-finished *
-tape: @1~0z~wsvrr
-conf: add-finished *
-tape: @1~0z~wsvrr
-conf: add-finished *
-tape: @1~0z~wsvrr
-conf: add-finished *
-tape: @1~0z~wsvrr
-conf: add-finished *
-tape: @1~0z~wsvrr
-conf: add-finished @
-tape: @1~0z~wsvrr
-conf: erase-old-x *
-tape: @1~0z~wsvrr
-conf: erase-old-x z
-tape: @1~0y~wsvrr
-conf: print-new-x ~
-tape: @1x0y~wsvrr
-conf: find-digits *
-tape: @1x0y~wsvrr
-conf: find-digits @
-tape: @1x0y~wsvrr
-conf: find-1st-digit x
-tape: @1x0y~wsvrr
-conf: found-1st-digit 1
-tape: @1x0y~wsvrr
-conf: find-2nd-digit y
-tape: @1x0y~wsvrr
-conf: found-2nd-digit 0
-tape: @1x0y~wsvrr
-conf: add-zero *
-tape: @1x0y~wsvrr
-conf: add-zero *
-tape: @1x0y~wsvrr
-conf: add-zero *
-tape: @1x0y~wsvrr
-conf: add-zero *
-tape: @1x0y~wsvrr
-conf: add-zero *
-tape: @1x0y~wsvrr
-conf: add-zero r
-tape: @1x0y~wsvsr
-conf: add-finished *
-tape: @1x0y~wsvsr
-conf: add-finished *
-tape: @1x0y~wsvsr
-conf: add-finished *
-tape: @1x0y~wsvsr
-conf: add-finished *
-tape: @1x0y~wsvsr
-conf: add-finished *
-tape: @1x0y~wsvsr
-conf: add-finished *
-tape: @1x0y~wsvsr
-conf: add-finished *
-tape: @1x0y~wsvsr
-conf: add-finished @
-tape: @1x0y~wsvsr
-conf: erase-old-x x
-tape: @1~0y~wsvsr
-conf: print-new-x @
-tape: @1~0y~wsvsr
-conf: erase-old-y *
-tape: @1~0y~wsvsr
-conf: erase-old-y y
-tape: @1~0~~wsvsr
-conf: print-new-y *
-tape: @1y0~~wsvsr
-conf: reset-new-x *
-tape: @1y0~~wsvsr
-conf: reset-new-x ~
-tape: @1y0~xwsvsr
-conf: flag-result-digits *
-tape: @1y0~xwsvsr
-conf: flag-result-digits *
-tape: @1y0~xwsvsr
-conf: flag-result-digits s
-tape: @1y0~xwtvsr
-conf: unflag-result-digits v
-tape: @1y0~xwtusr
-conf: unflag-result-digits s
-tape: @1y0~xwturr
-conf: unflag-result-digits *
-tape: @1y0~xwturr
-conf: find-digits *
-tape: @1y0~xwturr
-conf: find-digits *
-tape: @1y0~xwturr
-conf: find-digits *
-tape: @1y0~xwturr
-conf: find-digits *
-tape: @1y0~xwturr
-conf: find-digits *
-tape: @1y0~xwturr
-conf: find-digits *
-tape: @1y0~xwturr
-conf: find-digits *
-tape: @1y0~xwturr
-conf: find-digits *
-tape: @1y0~xwturr
-conf: find-digits @
-tape: @1y0~xwturr
-conf: find-1st-digit y
-tape: @1y0~xwturr
-conf: found-1st-digit 1
-tape: @1y0~xwturr
-conf: find-2nd-digit ~
-tape: @1y0~xwturr
-conf: find-2nd-digit x
-tape: @1y0~xwturr
-conf: found-2nd-digit ~
-tape: @1y0~xwturr
-conf: add-one *
-tape: @1y0~xwturr
-conf: add-one *
-tape: @1y0~xwturr
-conf: add-one *
-tape: @1y0~xwturr
-conf: add-one u
-tape: @1y0~xwtsrr
-conf: carry r
-tape: @1y0~xwtsur
-conf: add-finished *
-tape: @1y0~xwtsur
-conf: add-finished *
-tape: @1y0~xwtsur
-conf: add-finished *
-tape: @1y0~xwtsur
-conf: add-finished *
-tape: @1y0~xwtsur
-conf: add-finished *
-tape: @1y0~xwtsur
-conf: add-finished *
-tape: @1y0~xwtsur
-conf: add-finished *
-tape: @1y0~xwtsur
-conf: add-finished @
-tape: @1y0~xwtsur
-conf: erase-old-x *
-tape: @1y0~xwtsur
-conf: erase-old-x *
-tape: @1y0~xwtsur
-conf: erase-old-x x
-tape: @1y0~~wtsur
-conf: print-new-x ~
-tape: @1y0x~wtsur
-conf: find-digits *
-tape: @1y0x~wtsur
-conf: find-digits *
-tape: @1y0x~wtsur
-conf: find-digits @
-tape: @1y0x~wtsur
-conf: find-1st-digit y
-tape: @1y0x~wtsur
-conf: found-1st-digit 1
-tape: @1y0x~wtsur
-conf: find-2nd-digit x
-tape: @1y0x~wtsur
-conf: found-2nd-digit 0
-tape: @1y0x~wtsur
-conf: add-zero *
-tape: @1y0x~wtsur
-conf: add-zero *
-tape: @1y0x~wtsur
-conf: add-zero *
-tape: @1y0x~wtsur
-conf: add-zero *
-tape: @1y0x~wtsur
-conf: add-zero *
-tape: @1y0x~wtsur
-conf: add-zero u
-tape: @1y0x~wtsvr
-conf: add-finished *
-tape: @1y0x~wtsvr
-conf: add-finished *
-tape: @1y0x~wtsvr
-conf: add-finished *
-tape: @1y0x~wtsvr
-conf: add-finished *
-tape: @1y0x~wtsvr
-conf: add-finished *
-tape: @1y0x~wtsvr
-conf: add-finished *
-tape: @1y0x~wtsvr
-conf: add-finished *
-tape: @1y0x~wtsvr
-conf: add-finished @
-tape: @1y0x~wtsvr
-conf: erase-old-x *
-tape: @1y0x~wtsvr
-conf: erase-old-x x
-tape: @1y0~~wtsvr
-conf: print-new-x y
-tape: @1z0~~wtsvr
-conf: find-digits *
-tape: @1z0~~wtsvr
-conf: find-digits @
-tape: @1z0~~wtsvr
-conf: find-1st-digit z
-tape: @1z0~~wtsvr
-conf: found-2nd-digit 1
-tape: @1z0~~wtsvr
-conf: add-one *
-tape: @1z0~~wtsvr
-conf: add-one *
-tape: @1z0~~wtsvr
-conf: add-one *
-tape: @1z0~~wtsvr
-conf: add-one *
-tape: @1z0~~wtsvr
-conf: add-one *
-tape: @1z0~~wtsvr
-conf: add-one *
-tape: @1z0~~wtsvr
-conf: add-one *
-tape: @1z0~~wtsvr
-conf: add-one r
-tape: @1z0~~wtsvv
-conf: add-finished *
-tape: @1z0~~wtsvv
-conf: add-finished *
-tape: @1z0~~wtsvv
-conf: add-finished *
-tape: @1z0~~wtsvv
-conf: add-finished *
-tape: @1z0~~wtsvv
-conf: add-finished *
-tape: @1z0~~wtsvv
-conf: add-finished *
-tape: @1z0~~wtsvv
-conf: add-finished *
-tape: @1z0~~wtsvv
-conf: add-finished *
-tape: @1z0~~wtsvv
-conf: add-finished @
-tape: @1z0~~wtsvv
-conf: erase-old-x z
-tape: @1y0~~wtsvv
-conf: print-new-x @
-tape: @1y0~~wtsvv
-conf: erase-old-y y
-tape: @1~0~~wtsvv
-conf: print-new-y @
-tape: @1~0~~wtsvv
-conf: new-digit-is-one *
-tape: @1~0~~wtsvv
-conf: new-digit-is-one @
-tape: @1~0~~wtsvv
-conf: print-one-digit 1
-tape: @1~0~~wtsvv
-conf: print-one-digit 0
-tape: @1~0~~wtsvv
-conf: print-one-digit ~
-tape: @1~0~1~wtsvv
-conf: cleanup *
-tape: @1~0~1~~tsvv
-conf: cleanup *
-tape: @1~0~1~~~svv
-conf: cleanup *
-tape: @1~0~1~~~~vv
-conf: cleanup *
-tape: @1~0~1~~~~~v
-conf: cleanup *
-tape: @1~0~1~~~~~~
-conf: cleanup ~
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new *
-tape: @1~0~1~~~~~~
-conf: new @
-tape: @1~0~1~~~~~~
-conf: mark-digits 1
-tape: @1x0~1~~~~~~
-conf: mark-digits 0
-tape: @1x0x1~~~~~~
-conf: mark-digits 1
-tape: @1x0x1x~~~~~
-conf: mark-digits ~
-tape: @1x0x1xzr~~~
-conf: find-x *
-tape: @1x0x1xzr~~~
-conf: find-x *
-tape: @1x0x1xzr~~~
-conf: find-x x
-tape: @1x0x1~zr~~~
-conf: first-r *
-tape: @1x0x1~zr~~~
-conf: first-r *
-tape: @1x0x1~zr~~~
-conf: first-r r
-tape: @1x0x1~zr~~~
-conf: last-r ~
-tape: @1x0x1~zrrr~
-conf: find-x *
-tape: @1x0x1~zrrr~
-conf: find-x *
-tape: @1x0x1~zrrr~
-conf: find-x *
-tape: @1x0x1~zrrr~
-conf: find-x *
-tape: @1x0x1~zrrr~
-conf: find-x *
-tape: @1x0x1~zrrr~
-conf: find-x x
-tape: @1x0~1~zrrr~
-conf: first-r *
-tape: @1x0~1~zrrr~
-conf: first-r *
-tape: @1x0~1~zrrr~
-conf: first-r *
-tape: @1x0~1~zrrr~
-conf: first-r r
-tape: @1x0~1~zrrr~
-conf: last-r r
-tape: @1x0~1~zrrr~
-conf: last-r r
-tape: @1x0~1~zrrr~
-conf: last-r ~
-tape: @1x0~1~zrrrrr
-conf: find-x *
-tape: @1x0~1~zrrrrr
-conf: find-x *
-tape: @1x0~1~zrrrrr
-conf: find-x *
-tape: @1x0~1~zrrrrr
-conf: find-x *
-tape: @1x0~1~zrrrrr
-conf: find-x *
-tape: @1x0~1~zrrrrr
-conf: find-x *
-tape: @1x0~1~zrrrrr
-conf: find-x *
-tape: @1x0~1~zrrrrr
-conf: find-x *
-tape: @1x0~1~zrrrrr
-conf: find-x x
-tape: @1~0~1~zrrrrr
-conf: first-r *
-tape: @1~0~1~zrrrrr
-conf: first-r *
-tape: @1~0~1~zrrrrr
-conf: first-r *
-tape: @1~0~1~zrrrrr
-conf: first-r *
-tape: @1~0~1~zrrrrr
-conf: first-r r
-tape: @1~0~1~zrrrrr
-conf: last-r r
-tape: @1~0~1~zrrrrr
-conf: last-r r
-tape: @1~0~1~zrrrrr
-conf: last-r r
-tape: @1~0~1~zrrrrr
-conf: last-r r
-tape: @1~0~1~zrrrrr
-conf: last-r ~
-tape: @1~0~1~zrrrrrrr
-conf: find-x *
-tape: @1~0~1~zrrrrrrr
-conf: find-x *
-tape: @1~0~1~zrrrrrrr
-conf: find-x *
-tape: @1~0~1~zrrrrrrr
-conf: find-x *
-tape: @1~0~1~zrrrrrrr
-conf: find-x *
-tape: @1~0~1~zrrrrrrr
-conf: find-x *
-tape: @1~0~1~zrrrrrrr
-conf: find-x *
-tape: @1~0~1~zrrrrrrr
-conf: find-x *
-tape: @1~0~1~zrrrrrrr
-conf: find-x *
-tape: @1~0~1~zrrrrrrr
-conf: find-x *
-tape: @1~0~1~zrrrrrrr
-conf: find-x *
-tape: @1~0~1~zrrrrrrr
-conf: find-x @
-tape: @1~0~1~zrrrrrrr
-conf: find-digits @
-tape: @1~0~1~zrrrrrrr
-conf: find-1st-digit ~
-tape: @1~0~1~zrrrrrrr
-conf: find-1st-digit ~
-tape: @1~0~1~zrrrrrrr
-conf: find-1st-digit ~
-tape: @1~0~1~zrrrrrrr
-conf: find-1st-digit z
-tape: @1~0~1~zrrrrrrr
-conf: found-2nd-digit ~
-tape: @1~0~1~zrrrrrrr
-conf: add-one *
-tape: @1~0~1~zrrrrrrr
-conf: add-one r
-tape: @1~0~1~zvrrrrrr
-conf: add-finished *
-tape: @1~0~1~zvrrrrrr
-conf: add-finished *
-tape: @1~0~1~zvrrrrrr
-conf: add-finished *
-tape: @1~0~1~zvrrrrrr
-conf: add-finished *
-tape: @1~0~1~zvrrrrrr
-conf: add-finished *
-tape: @1~0~1~zvrrrrrr
-conf: add-finished @
-tape: @1~0~1~zvrrrrrr
-conf: erase-old-x *
-tape: @1~0~1~zvrrrrrr
-conf: erase-old-x *
-tape: @1~0~1~zvrrrrrr
-conf: erase-old-x *
-tape: @1~0~1~zvrrrrrr
-conf: erase-old-x z
-tape: @1~0~1~yvrrrrrr
-conf: print-new-x ~
-tape: @1~0~1xyvrrrrrr
-conf: find-digits *
-tape: @1~0~1xyvrrrrrr
-conf: find-digits *
-tape: @1~0~1xyvrrrrrr
-conf: find-digits *
-tape: @1~0~1xyvrrrrrr
-conf: find-digits @
-tape: @1~0~1xyvrrrrrr
-conf: find-1st-digit ~
-tape: @1~0~1xyvrrrrrr
-conf: find-1st-digit ~
-tape: @1~0~1xyvrrrrrr
-conf: find-1st-digit x
-tape: @1~0~1xyvrrrrrr
-conf: found-1st-digit 1
-tape: @1~0~1xyvrrrrrr
-conf: find-2nd-digit y
-tape: @1~0~1xyvrrrrrr
-conf: found-2nd-digit ~
-tape: @1~0~1xyvrrrrrr
-conf: add-one *
-tape: @1~0~1xyvrrrrrr
-conf: add-one *
-tape: @1~0~1xyvrrrrrr
-conf: add-one r
-tape: @1~0~1xyvvrrrrr
-conf: add-finished *
-tape: @1~0~1xyvvrrrrr
-conf: add-finished *
-tape: @1~0~1xyvvrrrrr
-conf: add-finished *
-tape: @1~0~1xyvvrrrrr
-conf: add-finished *
-tape: @1~0~1xyvvrrrrr
-conf: add-finished *
-tape: @1~0~1xyvvrrrrr
-conf: add-finished *
-tape: @1~0~1xyvvrrrrr
-conf: add-finished @
-tape: @1~0~1xyvvrrrrr
-conf: erase-old-x *
-tape: @1~0~1xyvvrrrrr
-conf: erase-old-x *
-tape: @1~0~1xyvvrrrrr
-conf: erase-old-x x
-tape: @1~0~1~yvvrrrrr
-conf: print-new-x ~
-tape: @1~0x1~yvvrrrrr
-conf: find-digits *
-tape: @1~0x1~yvvrrrrr
-conf: find-digits *
-tape: @1~0x1~yvvrrrrr
-conf: find-digits @
-tape: @1~0x1~yvvrrrrr
-conf: find-1st-digit ~
-tape: @1~0x1~yvvrrrrr
-conf: find-1st-digit x
-tape: @1~0x1~yvvrrrrr
-conf: found-1st-digit 0
-tape: @1~0x1~yvvrrrrr
-conf: add-zero *
-tape: @1~0x1~yvvrrrrr
-conf: add-zero *
-tape: @1~0x1~yvvrrrrr
-conf: add-zero *
-tape: @1~0x1~yvvrrrrr
-conf: add-zero *
-tape: @1~0x1~yvvrrrrr
-conf: add-zero *
-tape: @1~0x1~yvvrrrrr
-conf: add-zero r
-tape: @1~0x1~yvvsrrrr
-conf: add-finished *
-tape: @1~0x1~yvvsrrrr
-conf: add-finished *
-tape: @1~0x1~yvvsrrrr
-conf: add-finished *
-tape: @1~0x1~yvvsrrrr
-conf: add-finished *
-tape: @1~0x1~yvvsrrrr
-conf: add-finished *
-tape: @1~0x1~yvvsrrrr
-conf: add-finished *
-tape: @1~0x1~yvvsrrrr
-conf: add-finished *
-tape: @1~0x1~yvvsrrrr
-conf: add-finished @
-tape: @1~0x1~yvvsrrrr
-conf: erase-old-x *
-tape: @1~0x1~yvvsrrrr
-conf: erase-old-x x
-tape: @1~0~1~yvvsrrrr
-conf: print-new-x ~
-tape: @1x0~1~yvvsrrrr
-conf: find-digits *
-tape: @1x0~1~yvvsrrrr
-conf: find-digits @
-tape: @1x0~1~yvvsrrrr
-conf: find-1st-digit x
-tape: @1x0~1~yvvsrrrr
-conf: found-1st-digit 1
-tape: @1x0~1~yvvsrrrr
-conf: find-2nd-digit ~
-tape: @1x0~1~yvvsrrrr
-conf: find-2nd-digit ~
-tape: @1x0~1~yvvsrrrr
-conf: find-2nd-digit y
-tape: @1x0~1~yvvsrrrr
-conf: found-2nd-digit ~
-tape: @1x0~1~yvvsrrrr
-conf: add-one *
-tape: @1x0~1~yvvsrrrr
-conf: add-one *
-tape: @1x0~1~yvvsrrrr
-conf: add-one *
-tape: @1x0~1~yvvsrrrr
-conf: add-one *
-tape: @1x0~1~yvvsrrrr
-conf: add-one r
-tape: @1x0~1~yvvsvrrr
-conf: add-finished *
-tape: @1x0~1~yvvsvrrr
-conf: add-finished *
-tape: @1x0~1~yvvsvrrr
-conf: add-finished *
-tape: @1x0~1~yvvsvrrr
-conf: add-finished *
-tape: @1x0~1~yvvsvrrr
-conf: add-finished *
-tape: @1x0~1~yvvsvrrr
-conf: add-finished *
-tape: @1x0~1~yvvsvrrr
-conf: add-finished *
-tape: @1x0~1~yvvsvrrr
-conf: add-finished *
-tape: @1x0~1~yvvsvrrr
-conf: add-finished @
-tape: @1x0~1~yvvsvrrr
-conf: erase-old-x x
-tape: @1~0~1~yvvsvrrr
-conf: print-new-x @
-tape: @1~0~1~yvvsvrrr
-conf: erase-old-y *
-tape: @1~0~1~yvvsvrrr
-conf: erase-old-y *
-tape: @1~0~1~yvvsvrrr
-conf: erase-old-y *
-tape: @1~0~1~yvvsvrrr
-conf: erase-old-y y
-tape: @1~0~1~~vvsvrrr
-conf: print-new-y *
-tape: @1~0~1y~vvsvrrr
-conf: reset-new-x ~
-tape: @1~0~1yxvvsvrrr
-conf: flag-result-digits *
-tape: @1~0~1yxvvsvrrr
-conf: flag-result-digits v
-tape: @1~0~1yxwvsvrrr
-conf: unflag-result-digits v
-tape: @1~0~1yxwusvrrr
-conf: unflag-result-digits s
-tape: @1~0~1yxwurvrrr
-conf: unflag-result-digits v
-tape: @1~0~1yxwururrr
-conf: unflag-result-digits *
-tape: @1~0~1yxwururrr
-conf: find-digits *
-tape: @1~0~1yxwururrr
-conf: find-digits *
-tape: @1~0~1yxwururrr
-conf: find-digits *
-tape: @1~0~1yxwururrr
-conf: find-digits *
-tape: @1~0~1yxwururrr
-conf: find-digits *
-tape: @1~0~1yxwururrr
-conf: find-digits *
-tape: @1~0~1yxwururrr
-conf: find-digits *
-tape: @1~0~1yxwururrr
-conf: find-digits *
-tape: @1~0~1yxwururrr
-conf: find-digits *
-tape: @1~0~1yxwururrr
-conf: find-digits @
-tape: @1~0~1yxwururrr
-conf: find-1st-digit ~
-tape: @1~0~1yxwururrr
-conf: find-1st-digit ~
-tape: @1~0~1yxwururrr
-conf: find-1st-digit y
-tape: @1~0~1yxwururrr
-conf: found-1st-digit 1
-tape: @1~0~1yxwururrr
-conf: find-2nd-digit x
-tape: @1~0~1yxwururrr
-conf: found-2nd-digit ~
-tape: @1~0~1yxwururrr
-conf: add-one *
-tape: @1~0~1yxwururrr
-conf: add-one *
-tape: @1~0~1yxwururrr
-conf: add-one u
-tape: @1~0~1yxwsrurrr
-conf: carry r
-tape: @1~0~1yxwsuurrr
-conf: add-finished *
-tape: @1~0~1yxwsuurrr
-conf: add-finished *
-tape: @1~0~1yxwsuurrr
-conf: add-finished *
-tape: @1~0~1yxwsuurrr
-conf: add-finished *
-tape: @1~0~1yxwsuurrr
-conf: add-finished *
-tape: @1~0~1yxwsuurrr
-conf: add-finished *
-tape: @1~0~1yxwsuurrr
-conf: add-finished *
-tape: @1~0~1yxwsuurrr
-conf: add-finished @
-tape: @1~0~1yxwsuurrr
-conf: erase-old-x *
-tape: @1~0~1yxwsuurrr
-conf: erase-old-x *
-tape: @1~0~1yxwsuurrr
-conf: erase-old-x *
-tape: @1~0~1yxwsuurrr
-conf: erase-old-x x
-tape: @1~0~1y~wsuurrr
-conf: print-new-x y
-tape: @1~0~1z~wsuurrr
-conf: find-digits *
-tape: @1~0~1z~wsuurrr
-conf: find-digits *
-tape: @1~0~1z~wsuurrr
-conf: find-digits *
-tape: @1~0~1z~wsuurrr
-conf: find-digits @
-tape: @1~0~1z~wsuurrr
-conf: find-1st-digit ~
-tape: @1~0~1z~wsuurrr
-conf: find-1st-digit ~
-tape: @1~0~1z~wsuurrr
-conf: find-1st-digit z
-tape: @1~0~1z~wsuurrr
-conf: found-2nd-digit 1
-tape: @1~0~1z~wsuurrr
-conf: add-one *
-tape: @1~0~1z~wsuurrr
-conf: add-one *
-tape: @1~0~1z~wsuurrr
-conf: add-one *
-tape: @1~0~1z~wsuurrr
-conf: add-one *
-tape: @1~0~1z~wsuurrr
-conf: add-one u
-tape: @1~0~1z~wssurrr
-conf: carry u
-tape: @1~0~1z~wssrrrr
-conf: carry r
-tape: @1~0~1z~wssrurr
-conf: add-finished *
-tape: @1~0~1z~wssrurr
-conf: add-finished *
-tape: @1~0~1z~wssrurr
-conf: add-finished *
-tape: @1~0~1z~wssrurr
-conf: add-finished *
-tape: @1~0~1z~wssrurr
-conf: add-finished *
-tape: @1~0~1z~wssrurr
-conf: add-finished *
-tape: @1~0~1z~wssrurr
-conf: add-finished *
-tape: @1~0~1z~wssrurr
-conf: add-finished *
-tape: @1~0~1z~wssrurr
-conf: add-finished *
-tape: @1~0~1z~wssrurr
-conf: add-finished @
-tape: @1~0~1z~wssrurr
-conf: erase-old-x *
-tape: @1~0~1z~wssrurr
-conf: erase-old-x *
-tape: @1~0~1z~wssrurr
-conf: erase-old-x z
-tape: @1~0~1y~wssrurr
-conf: print-new-x ~
-tape: @1~0x1y~wssrurr
-conf: find-digits *
-tape: @1~0x1y~wssrurr
-conf: find-digits *
-tape: @1~0x1y~wssrurr
-conf: find-digits @
-tape: @1~0x1y~wssrurr
-conf: find-1st-digit ~
-tape: @1~0x1y~wssrurr
-conf: find-1st-digit x
-tape: @1~0x1y~wssrurr
-conf: found-1st-digit 0
-tape: @1~0x1y~wssrurr
-conf: add-zero *
-tape: @1~0x1y~wssrurr
-conf: add-zero *
-tape: @1~0x1y~wssrurr
-conf: add-zero *
-tape: @1~0x1y~wssrurr
-conf: add-zero *
-tape: @1~0x1y~wssrurr
-conf: add-zero *
-tape: @1~0x1y~wssrurr
-conf: add-zero *
-tape: @1~0x1y~wssrurr
-conf: add-zero r
-tape: @1~0x1y~wsssurr
-conf: add-finished *
-tape: @1~0x1y~wsssurr
-conf: add-finished *
-tape: @1~0x1y~wsssurr
-conf: add-finished *
-tape: @1~0x1y~wsssurr
-conf: add-finished *
-tape: @1~0x1y~wsssurr
-conf: add-finished *
-tape: @1~0x1y~wsssurr
-conf: add-finished *
-tape: @1~0x1y~wsssurr
-conf: add-finished *
-tape: @1~0x1y~wsssurr
-conf: add-finished *
-tape: @1~0x1y~wsssurr
-conf: add-finished @
-tape: @1~0x1y~wsssurr
-conf: erase-old-x *
-tape: @1~0x1y~wsssurr
-conf: erase-old-x x
-tape: @1~0~1y~wsssurr
-conf: print-new-x ~
-tape: @1x0~1y~wsssurr
-conf: find-digits *
-tape: @1x0~1y~wsssurr
-conf: find-digits @
-tape: @1x0~1y~wsssurr
-conf: find-1st-digit x
-tape: @1x0~1y~wsssurr
-conf: found-1st-digit 1
-tape: @1x0~1y~wsssurr
-conf: find-2nd-digit ~
-tape: @1x0~1y~wsssurr
-conf: find-2nd-digit y
-tape: @1x0~1y~wsssurr
-conf: found-2nd-digit 1
-tape: @1x0~1y~wsssurr
-conf: add-one *
-tape: @1x0~1y~wsssurr
-conf: add-one *
-tape: @1x0~1y~wsssurr
-conf: add-one *
-tape: @1x0~1y~wsssurr
-conf: add-one *
-tape: @1x0~1y~wsssurr
-conf: add-one *
-tape: @1x0~1y~wsssurr
-conf: add-one *
-tape: @1x0~1y~wsssurr
-conf: add-one u
-tape: @1x0~1y~wssssrr
-conf: carry r
-tape: @1x0~1y~wssssur
-conf: add-finished *
-tape: @1x0~1y~wssssur
-conf: add-finished *
-tape: @1x0~1y~wssssur
-conf: add-finished *
-tape: @1x0~1y~wssssur
-conf: add-finished *
-tape: @1x0~1y~wssssur
-conf: add-finished *
-tape: @1x0~1y~wssssur
-conf: add-finished *
-tape: @1x0~1y~wssssur
-conf: add-finished *
-tape: @1x0~1y~wssssur
-conf: add-finished *
-tape: @1x0~1y~wssssur
-conf: add-finished *
-tape: @1x0~1y~wssssur
-conf: add-finished *
-tape: @1x0~1y~wssssur
-conf: add-finished @
-tape: @1x0~1y~wssssur
-conf: erase-old-x x
-tape: @1~0~1y~wssssur
-conf: print-new-x @
-tape: @1~0~1y~wssssur
-conf: erase-old-y *
-tape: @1~0~1y~wssssur
-conf: erase-old-y *
-tape: @1~0~1y~wssssur
-conf: erase-old-y y
-tape: @1~0~1~~wssssur
-conf: print-new-y *
-tape: @1~0y1~~wssssur
-conf: reset-new-x *
-tape: @1~0y1~~wssssur
-conf: reset-new-x ~
-tape: @1~0y1~xwssssur
-conf: flag-result-digits *
-tape: @1~0y1~xwssssur
-conf: flag-result-digits *
-tape: @1~0y1~xwssssur
-conf: flag-result-digits s
-tape: @1~0y1~xwtsssur
-conf: unflag-result-digits s
-tape: @1~0y1~xwtrssur
-conf: unflag-result-digits s
-tape: @1~0y1~xwtrrsur
-conf: unflag-result-digits s
-tape: @1~0y1~xwtrrrur
-conf: unflag-result-digits *
-tape: @1~0y1~xwtrrrur
-conf: find-digits *
-tape: @1~0y1~xwtrrrur
-conf: find-digits *
-tape: @1~0y1~xwtrrrur
-conf: find-digits *
-tape: @1~0y1~xwtrrrur
-conf: find-digits *
-tape: @1~0y1~xwtrrrur
-conf: find-digits *
-tape: @1~0y1~xwtrrrur
-conf: find-digits *
-tape: @1~0y1~xwtrrrur
-conf: find-digits *
-tape: @1~0y1~xwtrrrur
-conf: find-digits *
-tape: @1~0y1~xwtrrrur
-conf: find-digits *
-tape: @1~0y1~xwtrrrur
-conf: find-digits *
-tape: @1~0y1~xwtrrrur
-conf: find-digits @
-tape: @1~0y1~xwtrrrur
-conf: find-1st-digit ~
-tape: @1~0y1~xwtrrrur
-conf: find-1st-digit y
-tape: @1~0y1~xwtrrrur
-conf: found-1st-digit 0
-tape: @1~0y1~xwtrrrur
-conf: add-zero *
-tape: @1~0y1~xwtrrrur
-conf: add-zero *
-tape: @1~0y1~xwtrrrur
-conf: add-zero *
-tape: @1~0y1~xwtrrrur
-conf: add-zero *
-tape: @1~0y1~xwtrrrur
-conf: add-zero *
-tape: @1~0y1~xwtrrrur
-conf: add-zero r
-tape: @1~0y1~xwtsrrur
-conf: add-finished *
-tape: @1~0y1~xwtsrrur
-conf: add-finished *
-tape: @1~0y1~xwtsrrur
-conf: add-finished *
-tape: @1~0y1~xwtsrrur
-conf: add-finished *
-tape: @1~0y1~xwtsrrur
-conf: add-finished *
-tape: @1~0y1~xwtsrrur
-conf: add-finished *
-tape: @1~0y1~xwtsrrur
-conf: add-finished *
-tape: @1~0y1~xwtsrrur
-conf: add-finished @
-tape: @1~0y1~xwtsrrur
-conf: erase-old-x *
-tape: @1~0y1~xwtsrrur
-conf: erase-old-x *
-tape: @1~0y1~xwtsrrur
-conf: erase-old-x *
-tape: @1~0y1~xwtsrrur
-conf: erase-old-x x
-tape: @1~0y1~~wtsrrur
-conf: print-new-x ~
-tape: @1~0y1x~wtsrrur
-conf: find-digits *
-tape: @1~0y1x~wtsrrur
-conf: find-digits *
-tape: @1~0y1x~wtsrrur
-conf: find-digits *
-tape: @1~0y1x~wtsrrur
-conf: find-digits @
-tape: @1~0y1x~wtsrrur
-conf: find-1st-digit ~
-tape: @1~0y1x~wtsrrur
-conf: find-1st-digit y
-tape: @1~0y1x~wtsrrur
-conf: found-1st-digit 0
-tape: @1~0y1x~wtsrrur
-conf: add-zero *
-tape: @1~0y1x~wtsrrur
-conf: add-zero *
-tape: @1~0y1x~wtsrrur
-conf: add-zero *
-tape: @1~0y1x~wtsrrur
-conf: add-zero *
-tape: @1~0y1x~wtsrrur
-conf: add-zero *
-tape: @1~0y1x~wtsrrur
-conf: add-zero *
-tape: @1~0y1x~wtsrrur
-conf: add-zero r
-tape: @1~0y1x~wtssrur
-conf: add-finished *
-tape: @1~0y1x~wtssrur
-conf: add-finished *
-tape: @1~0y1x~wtssrur
-conf: add-finished *
-tape: @1~0y1x~wtssrur
-conf: add-finished *
-tape: @1~0y1x~wtssrur
-conf: add-finished *
-tape: @1~0y1x~wtssrur
-conf: add-finished *
-tape: @1~0y1x~wtssrur
-conf: add-finished *
-tape: @1~0y1x~wtssrur
-conf: add-finished *
-tape: @1~0y1x~wtssrur
-conf: add-finished @
-tape: @1~0y1x~wtssrur
-conf: erase-old-x *
-tape: @1~0y1x~wtssrur
-conf: erase-old-x *
-tape: @1~0y1x~wtssrur
-conf: erase-old-x x
-tape: @1~0y1~~wtssrur
-conf: print-new-x y
-tape: @1~0z1~~wtssrur
-conf: find-digits *
-tape: @1~0z1~~wtssrur
-conf: find-digits *
-tape: @1~0z1~~wtssrur
-conf: find-digits @
-tape: @1~0z1~~wtssrur
-conf: find-1st-digit ~
-tape: @1~0z1~~wtssrur
-conf: find-1st-digit z
-tape: @1~0z1~~wtssrur
-conf: found-2nd-digit 0
-tape: @1~0z1~~wtssrur
-conf: add-zero *
-tape: @1~0z1~~wtssrur
-conf: add-zero *
-tape: @1~0z1~~wtssrur
-conf: add-zero *
-tape: @1~0z1~~wtssrur
-conf: add-zero *
-tape: @1~0z1~~wtssrur
-conf: add-zero *
-tape: @1~0z1~~wtssrur
-conf: add-zero *
-tape: @1~0z1~~wtssrur
-conf: add-zero *
-tape: @1~0z1~~wtssrur
-conf: add-zero r
-tape: @1~0z1~~wtsssur
-conf: add-finished *
-tape: @1~0z1~~wtsssur
-conf: add-finished *
-tape: @1~0z1~~wtsssur
-conf: add-finished *
-tape: @1~0z1~~wtsssur
-conf: add-finished *
-tape: @1~0z1~~wtsssur
-conf: add-finished *
-tape: @1~0z1~~wtsssur
-conf: add-finished *
-tape: @1~0z1~~wtsssur
-conf: add-finished *
-tape: @1~0z1~~wtsssur
-conf: add-finished *
-tape: @1~0z1~~wtsssur
-conf: add-finished *
-tape: @1~0z1~~wtsssur
-conf: add-finished @
-tape: @1~0z1~~wtsssur
-conf: erase-old-x *
-tape: @1~0z1~~wtsssur
-conf: erase-old-x z
-tape: @1~0y1~~wtsssur
-conf: print-new-x ~
-tape: @1x0y1~~wtsssur
-conf: find-digits *
-tape: @1x0y1~~wtsssur
-conf: find-digits @
-tape: @1x0y1~~wtsssur
-conf: find-1st-digit x
-tape: @1x0y1~~wtsssur
-conf: found-1st-digit 1
-tape: @1x0y1~~wtsssur
-conf: find-2nd-digit y
-tape: @1x0y1~~wtsssur
-conf: found-2nd-digit 0
-tape: @1x0y1~~wtsssur
-conf: add-zero *
-tape: @1x0y1~~wtsssur
-conf: add-zero *
-tape: @1x0y1~~wtsssur
-conf: add-zero *
-tape: @1x0y1~~wtsssur
-conf: add-zero *
-tape: @1x0y1~~wtsssur
-conf: add-zero *
-tape: @1x0y1~~wtsssur
-conf: add-zero *
-tape: @1x0y1~~wtsssur
-conf: add-zero *
-tape: @1x0y1~~wtsssur
-conf: add-zero *
-tape: @1x0y1~~wtsssur
-conf: add-zero u
-tape: @1x0y1~~wtsssvr
-conf: add-finished *
-tape: @1x0y1~~wtsssvr
-conf: add-finished *
-tape: @1x0y1~~wtsssvr
-conf: add-finished *
-tape: @1x0y1~~wtsssvr
-conf: add-finished *
-tape: @1x0y1~~wtsssvr
-conf: add-finished *
-tape: @1x0y1~~wtsssvr
-conf: add-finished *
-tape: @1x0y1~~wtsssvr
-conf: add-finished *
-tape: @1x0y1~~wtsssvr
-conf: add-finished *
-tape: @1x0y1~~wtsssvr
-conf: add-finished *
-tape: @1x0y1~~wtsssvr
-conf: add-finished *
-tape: @1x0y1~~wtsssvr
-conf: add-finished @
-tape: @1x0y1~~wtsssvr
-conf: erase-old-x x
-tape: @1~0y1~~wtsssvr
-conf: print-new-x @
-tape: @1~0y1~~wtsssvr
-conf: erase-old-y *
-tape: @1~0y1~~wtsssvr
-conf: erase-old-y y
-tape: @1~0~1~~wtsssvr
-conf: print-new-y *
-tape: @1y0~1~~wtsssvr
-conf: reset-new-x *
-tape: @1y0~1~~wtsssvr
-conf: reset-new-x *
-tape: @1y0~1~~wtsssvr
-conf: reset-new-x ~
-tape: @1y0~1~xwtsssvr
-conf: flag-result-digits *
-tape: @1y0~1~xwtsssvr
-conf: flag-result-digits *
-tape: @1y0~1~xwtsssvr
-conf: flag-result-digits *
-tape: @1y0~1~xwtsssvr
-conf: flag-result-digits s
-tape: @1y0~1~xwttssvr
-conf: unflag-result-digits s
-tape: @1y0~1~xwttrsvr
-conf: unflag-result-digits s
-tape: @1y0~1~xwttrrvr
-conf: unflag-result-digits v
-tape: @1y0~1~xwttrrur
-conf: unflag-result-digits *
-tape: @1y0~1~xwttrrur
-conf: find-digits *
-tape: @1y0~1~xwttrrur
-conf: find-digits *
-tape: @1y0~1~xwttrrur
-conf: find-digits *
-tape: @1y0~1~xwttrrur
-conf: find-digits *
-tape: @1y0~1~xwttrrur
-conf: find-digits *
-tape: @1y0~1~xwttrrur
-conf: find-digits *
-tape: @1y0~1~xwttrrur
-conf: find-digits *
-tape: @1y0~1~xwttrrur
-conf: find-digits *
-tape: @1y0~1~xwttrrur
-conf: find-digits *
-tape: @1y0~1~xwttrrur
-conf: find-digits *
-tape: @1y0~1~xwttrrur
-conf: find-digits *
-tape: @1y0~1~xwttrrur
-conf: find-digits @
-tape: @1y0~1~xwttrrur
-conf: find-1st-digit y
-tape: @1y0~1~xwttrrur
-conf: found-1st-digit 1
-tape: @1y0~1~xwttrrur
-conf: find-2nd-digit ~
-tape: @1y0~1~xwttrrur
-conf: find-2nd-digit ~
-tape: @1y0~1~xwttrrur
-conf: find-2nd-digit x
-tape: @1y0~1~xwttrrur
-conf: found-2nd-digit ~
-tape: @1y0~1~xwttrrur
-conf: add-one *
-tape: @1y0~1~xwttrrur
-conf: add-one *
-tape: @1y0~1~xwttrrur
-conf: add-one *
-tape: @1y0~1~xwttrrur
-conf: add-one *
-tape: @1y0~1~xwttrrur
-conf: add-one r
-tape: @1y0~1~xwttvrur
-conf: add-finished *
-tape: @1y0~1~xwttvrur
-conf: add-finished *
-tape: @1y0~1~xwttvrur
-conf: add-finished *
-tape: @1y0~1~xwttvrur
-conf: add-finished *
-tape: @1y0~1~xwttvrur
-conf: add-finished *
-tape: @1y0~1~xwttvrur
-conf: add-finished *
-tape: @1y0~1~xwttvrur
-conf: add-finished *
-tape: @1y0~1~xwttvrur
-conf: add-finished *
-tape: @1y0~1~xwttvrur
-conf: add-finished @
-tape: @1y0~1~xwttvrur
-conf: erase-old-x *
-tape: @1y0~1~xwttvrur
-conf: erase-old-x *
-tape: @1y0~1~xwttvrur
-conf: erase-old-x *
-tape: @1y0~1~xwttvrur
-conf: erase-old-x x
-tape: @1y0~1~~wttvrur
-conf: print-new-x ~
-tape: @1y0~1x~wttvrur
-conf: find-digits *
-tape: @1y0~1x~wttvrur
-conf: find-digits *
-tape: @1y0~1x~wttvrur
-conf: find-digits *
-tape: @1y0~1x~wttvrur
-conf: find-digits @
-tape: @1y0~1x~wttvrur
-conf: find-1st-digit y
-tape: @1y0~1x~wttvrur
-conf: found-1st-digit 1
-tape: @1y0~1x~wttvrur
-conf: find-2nd-digit ~
-tape: @1y0~1x~wttvrur
-conf: find-2nd-digit x
-tape: @1y0~1x~wttvrur
-conf: found-2nd-digit 1
-tape: @1y0~1x~wttvrur
-conf: add-one *
-tape: @1y0~1x~wttvrur
-conf: add-one *
-tape: @1y0~1x~wttvrur
-conf: add-one *
-tape: @1y0~1x~wttvrur
-conf: add-one *
-tape: @1y0~1x~wttvrur
-conf: add-one *
-tape: @1y0~1x~wttvrur
-conf: add-one *
-tape: @1y0~1x~wttvrur
-conf: add-one r
-tape: @1y0~1x~wttvvur
-conf: add-finished *
-tape: @1y0~1x~wttvvur
-conf: add-finished *
-tape: @1y0~1x~wttvvur
-conf: add-finished *
-tape: @1y0~1x~wttvvur
-conf: add-finished *
-tape: @1y0~1x~wttvvur
-conf: add-finished *
-tape: @1y0~1x~wttvvur
-conf: add-finished *
-tape: @1y0~1x~wttvvur
-conf: add-finished *
-tape: @1y0~1x~wttvvur
-conf: add-finished *
-tape: @1y0~1x~wttvvur
-conf: add-finished *
-tape: @1y0~1x~wttvvur
-conf: add-finished @
-tape: @1y0~1x~wttvvur
-conf: erase-old-x *
-tape: @1y0~1x~wttvvur
-conf: erase-old-x *
-tape: @1y0~1x~wttvvur
-conf: erase-old-x x
-tape: @1y0~1~~wttvvur
-conf: print-new-x ~
-tape: @1y0x1~~wttvvur
-conf: find-digits *
-tape: @1y0x1~~wttvvur
-conf: find-digits *
-tape: @1y0x1~~wttvvur
-conf: find-digits @
-tape: @1y0x1~~wttvvur
-conf: find-1st-digit y
-tape: @1y0x1~~wttvvur
-conf: found-1st-digit 1
-tape: @1y0x1~~wttvvur
-conf: find-2nd-digit x
-tape: @1y0x1~~wttvvur
-conf: found-2nd-digit 0
-tape: @1y0x1~~wttvvur
-conf: add-zero *
-tape: @1y0x1~~wttvvur
-conf: add-zero *
-tape: @1y0x1~~wttvvur
-conf: add-zero *
-tape: @1y0x1~~wttvvur
-conf: add-zero *
-tape: @1y0x1~~wttvvur
-conf: add-zero *
-tape: @1y0x1~~wttvvur
-conf: add-zero *
-tape: @1y0x1~~wttvvur
-conf: add-zero *
-tape: @1y0x1~~wttvvur
-conf: add-zero *
-tape: @1y0x1~~wttvvur
-conf: add-zero u
-tape: @1y0x1~~wttvvvr
-conf: add-finished *
-tape: @1y0x1~~wttvvvr
-conf: add-finished *
-tape: @1y0x1~~wttvvvr
-conf: add-finished *
-tape: @1y0x1~~wttvvvr
-conf: add-finished *
-tape: @1y0x1~~wttvvvr
-conf: add-finished *
-tape: @1y0x1~~wttvvvr
-conf: add-finished *
-tape: @1y0x1~~wttvvvr
-conf: add-finished *
-tape: @1y0x1~~wttvvvr
-conf: add-finished *
-tape: @1y0x1~~wttvvvr
-conf: add-finished *
-tape: @1y0x1~~wttvvvr
-conf: add-finished *
-tape: @1y0x1~~wttvvvr
-conf: add-finished @
-tape: @1y0x1~~wttvvvr
-conf: erase-old-x *
-tape: @1y0x1~~wttvvvr
-conf: erase-old-x x
-tape: @1y0~1~~wttvvvr
-conf: print-new-x y
-tape: @1z0~1~~wttvvvr
-conf: find-digits *
-tape: @1z0~1~~wttvvvr
-conf: find-digits @
-tape: @1z0~1~~wttvvvr
-conf: find-1st-digit z
-tape: @1z0~1~~wttvvvr
-conf: found-2nd-digit 1
-tape: @1z0~1~~wttvvvr
-conf: add-one *
-tape: @1z0~1~~wttvvvr
-conf: add-one *
-tape: @1z0~1~~wttvvvr
-conf: add-one *
-tape: @1z0~1~~wttvvvr
-conf: add-one *
-tape: @1z0~1~~wttvvvr
-conf: add-one *
-tape: @1z0~1~~wttvvvr
-conf: add-one *
-tape: @1z0~1~~wttvvvr
-conf: add-one *
-tape: @1z0~1~~wttvvvr
-conf: add-one *
-tape: @1z0~1~~wttvvvr
-conf: add-one *
-tape: @1z0~1~~wttvvvr
-conf: add-one *
-tape: @1z0~1~~wttvvvr
-conf: add-one r
-tape: @1z0~1~~wttvvvv
-conf: add-finished *
-tape: @1z0~1~~wttvvvv
-conf: add-finished *
-tape: @1z0~1~~wttvvvv
-conf: add-finished *
-tape: @1z0~1~~wttvvvv
-conf: add-finished *
-tape: @1z0~1~~wttvvvv
-conf: add-finished *
-tape: @1z0~1~~wttvvvv
-conf: add-finished *
-tape: @1z0~1~~wttvvvv
-conf: add-finished *
-tape: @1z0~1~~wttvvvv
-conf: add-finished *
-tape: @1z0~1~~wttvvvv
-conf: add-finished *
-tape: @1z0~1~~wttvvvv
-conf: add-finished *
-tape: @1z0~1~~wttvvvv
-conf: add-finished *
-tape: @1z0~1~~wttvvvv
-conf: add-finished @
-tape: @1z0~1~~wttvvvv
-conf: erase-old-x z
-tape: @1y0~1~~wttvvvv
-conf: print-new-x @
-tape: @1y0~1~~wttvvvv
-conf: erase-old-y y
-tape: @1~0~1~~wttvvvv
-conf: print-new-y @
-tape: @1~0~1~~wttvvvv
-conf: new-digit-is-one *
-tape: @1~0~1~~wttvvvv
-conf: new-digit-is-one @
-tape: @1~0~1~~wttvvvv
-conf: print-one-digit 1
-tape: @1~0~1~~wttvvvv
-conf: print-one-digit 0
-tape: @1~0~1~~wttvvvv
-conf: print-one-digit 1
-tape: @1~0~1~~wttvvvv
-conf: print-one-digit ~
-tape: @1~0~1~1~wttvvvv
-conf: cleanup *
-tape: @1~0~1~1~~ttvvvv
-conf: cleanup *
-tape: @1~0~1~1~~~tvvvv
-conf: cleanup *
-tape: @1~0~1~1~~~~vvvv
-conf: cleanup *
-tape: @1~0~1~1~~~~~vvv
-conf: cleanup *
-tape: @1~0~1~1~~~~~~vv
-conf: cleanup *
-tape: @1~0~1~1~~~~~~~v
-conf: cleanup *
-tape: @1~0~1~1~~~~~~~~
-conf: cleanup ~
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new *
-tape: @1~0~1~1~~~~~~~~
-conf: new @
-tape: @1~0~1~1~~~~~~~~
-conf: mark-digits 1
-tape: @1x0~1~1~~~~~~~~
-conf: mark-digits 0
-tape: @1x0x1~1~~~~~~~~
-conf: mark-digits 1
-tape: @1x0x1x1~~~~~~~~
-conf: mark-digits 1
-tape: @1x0x1x1x~~~~~~~
-conf: mark-digits ~
-tape: @1x0x1x1xzr~~~~~
-conf: find-x *
-tape: @1x0x1x1xzr~~~~~
-conf: find-x *
-tape: @1x0x1x1xzr~~~~~
-conf: find-x x
-tape: @1x0x1x1~zr~~~~~
-conf: first-r *
-tape: @1x0x1x1~zr~~~~~
-conf: first-r *
-tape: @1x0x1x1~zr~~~~~
+ops : R,Px,R
+head:    v (mark-digits)
+tape: @1x~
+ops : R,Pz,R,R,Pr
+head:       v (find-x)
+tape: @1x~z~r
+ops : L,L
+head:     v (find-x)
+tape: @1x~z~r
+ops : L,L
+head:   v (find-x)
+tape: @1x~z~r
+ops : E
+head:   v (first-r)
+tape: @1~~z~r
+ops : R,R
+head:     v (first-r)
+tape: @1~~z~r
+ops : R,R
+head:       v (first-r)
+tape: @1~~z~r
+ops : R,R
+head:         v (last-r)
+tape: @1~~z~r~~
+ops : Pr,R,R,Pr
+head:           v (find-x)
+tape: @1~~z~r~r~r
+ops : L,L
+head:         v (find-x)
+tape: @1~~z~r~r~r
+ops : L,L
+head:       v (find-x)
+tape: @1~~z~r~r~r
+ops : L,L
+head:     v (find-x)
+tape: @1~~z~r~r~r
+ops : L,L
+head:   v (find-x)
+tape: @1~~z~r~r~r
+ops : L,L
+head: v (find-x)
+tape: @1~~z~r~r~r
+ops : ,
+head: v (find-digits)
+tape: @1~~z~r~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~~z~r~r~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~~z~r~r~r
+ops : L
+head:    v (found-2nd-digit)
+tape: @1~~z~r~r~r
+ops : R
+head:     v (add-one)
+tape: @1~~z~r~r~r
+ops : R,R
+head:       v (add-one)
+tape: @1~~z~r~r~r
+ops : Pv
+head:       v (add-finished)
+tape: @1~~z~v~r~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~~z~v~r~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~~z~v~r~r
+ops : L,L
+head: v (add-finished)
+tape: @1~~z~v~r~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~~z~v~r~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~~z~v~r~r
+ops : Py,L,L
+head:   v (print-new-x)
+tape: @1~~y~v~r~r
+ops : Px
+head:   v (find-digits)
+tape: @1x~y~v~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1x~y~v~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1x~y~v~r~r
+ops : L
+head:  v (found-1st-digit)
+tape: @1x~y~v~r~r
+ops : R,R,R
+head:     v (find-2nd-digit)
+tape: @1x~y~v~r~r
+ops : L
+head:    v (found-2nd-digit)
+tape: @1x~y~v~r~r
+ops : R
+head:     v (add-one)
+tape: @1x~y~v~r~r
+ops : R,R
+head:       v (add-one)
+tape: @1x~y~v~r~r
+ops : R,R
+head:         v (add-one)
+tape: @1x~y~v~r~r
+ops : Pv
+head:         v (add-finished)
+tape: @1x~y~v~v~r
+ops : L,L
+head:       v (add-finished)
+tape: @1x~y~v~v~r
+ops : L,L
+head:     v (add-finished)
+tape: @1x~y~v~v~r
+ops : L,L
+head:   v (add-finished)
+tape: @1x~y~v~v~r
+ops : L,L
+head: v (add-finished)
+tape: @1x~y~v~v~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1x~y~v~v~r
+ops : E,L,L
+head: v (print-new-x)
+tape: @1~~y~v~v~r
+ops : R,R
+head:   v (erase-old-y)
+tape: @1~~y~v~v~r
+ops : R,R
+head:     v (erase-old-y)
+tape: @1~~y~v~v~r
+ops : E,L,L
+head:   v (print-new-y)
+tape: @1~~~~v~v~r
+ops : Py,R
+head:    v (reset-new-x)
+tape: @1y~~~v~v~r
+ops : R,Px
+head:     v (flag-result-digits)
+tape: @1y~x~v~v~r
+ops : R,R
+head:       v (flag-result-digits)
+tape: @1y~x~v~v~r
+ops : Pw,R,R
+head:         v (unflag-result-digits)
+tape: @1y~x~w~v~r
+ops : Pu,R,R
+head:           v (unflag-result-digits)
+tape: @1y~x~w~u~r
+ops : ,
+head:           v (find-digits)
+tape: @1y~x~w~u~r
+ops : L,L
+head:         v (find-digits)
+tape: @1y~x~w~u~r
+ops : L,L
+head:       v (find-digits)
+tape: @1y~x~w~u~r
+ops : L,L
+head:     v (find-digits)
+tape: @1y~x~w~u~r
+ops : L,L
+head:   v (find-digits)
+tape: @1y~x~w~u~r
+ops : L,L
+head: v (find-digits)
+tape: @1y~x~w~u~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1y~x~w~u~r
+ops : L
+head:  v (found-1st-digit)
+tape: @1y~x~w~u~r
+ops : R,R,R
+head:     v (find-2nd-digit)
+tape: @1y~x~w~u~r
+ops : L
+head:    v (found-2nd-digit)
+tape: @1y~x~w~u~r
+ops : R
+head:     v (add-one)
+tape: @1y~x~w~u~r
+ops : R,R
+head:       v (add-one)
+tape: @1y~x~w~u~r
+ops : R,R
+head:         v (add-one)
+tape: @1y~x~w~u~r
+ops : Ps,R,R
+head:           v (carry)
+tape: @1y~x~w~s~r
+ops : Pu
+head:           v (add-finished)
+tape: @1y~x~w~s~u
+ops : L,L
+head:         v (add-finished)
+tape: @1y~x~w~s~u
+ops : L,L
+head:       v (add-finished)
+tape: @1y~x~w~s~u
+ops : L,L
+head:     v (add-finished)
+tape: @1y~x~w~s~u
+ops : L,L
+head:   v (add-finished)
+tape: @1y~x~w~s~u
+ops : L,L
+head: v (add-finished)
+tape: @1y~x~w~s~u
+ops : R,R
+head:   v (erase-old-x)
+tape: @1y~x~w~s~u
+ops : R,R
+head:     v (erase-old-x)
+tape: @1y~x~w~s~u
+ops : E,L,L
+head:   v (print-new-x)
+tape: @1y~~~w~s~u
+ops : Pz
+head:   v (find-digits)
+tape: @1z~~~w~s~u
+ops : L,L
+head: v (find-digits)
+tape: @1z~~~w~s~u
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1z~~~w~s~u
+ops : L
+head:  v (found-2nd-digit)
+tape: @1z~~~w~s~u
+ops : R
+head:   v (add-one)
+tape: @1z~~~w~s~u
+ops : R,R
+head:     v (add-one)
+tape: @1z~~~w~s~u
+ops : R,R
+head:       v (add-one)
+tape: @1z~~~w~s~u
+ops : R,R
+head:         v (add-one)
+tape: @1z~~~w~s~u
+ops : R,R
+head:           v (add-one)
+tape: @1z~~~w~s~u
+ops : Ps,R,R
+head:             v (carry)
+tape: @1z~~~w~s~s~~
+ops : Pu
+head:             v (new-digit-is-zero)
+tape: @1z~~~w~s~s~u
+ops : L
+head:            v (new-digit-is-zero)
+tape: @1z~~~w~s~s~u
+ops : L
+head:           v (new-digit-is-zero)
+tape: @1z~~~w~s~s~u
+ops : L
+head:          v (new-digit-is-zero)
+tape: @1z~~~w~s~s~u
+ops : L
+head:         v (new-digit-is-zero)
+tape: @1z~~~w~s~s~u
+ops : L
+head:        v (new-digit-is-zero)
+tape: @1z~~~w~s~s~u
+ops : L
+head:       v (new-digit-is-zero)
+tape: @1z~~~w~s~s~u
+ops : L
+head:      v (new-digit-is-zero)
+tape: @1z~~~w~s~s~u
+ops : L
+head:     v (new-digit-is-zero)
+tape: @1z~~~w~s~s~u
+ops : L
+head:    v (new-digit-is-zero)
+tape: @1z~~~w~s~s~u
+ops : L
+head:   v (new-digit-is-zero)
+tape: @1z~~~w~s~s~u
+ops : L
+head:  v (new-digit-is-zero)
+tape: @1z~~~w~s~s~u
+ops : L
+head: v (new-digit-is-zero)
+tape: @1z~~~w~s~s~u
+ops : R
+head:  v (print-zero-digit)
+tape: @1z~~~w~s~s~u
+ops : R,E,R
+head:    v (print-zero-digit)
+tape: @1~~~~w~s~s~u
+ops : P0,R,R,R
+head:       v (cleanup)
+tape: @1~0~~w~s~s~u
+ops : E,R,R
+head:         v (cleanup)
+tape: @1~0~~~~s~s~u
+ops : E,R,R
+head:           v (cleanup)
+tape: @1~0~~~~~~s~u
+ops : E,R,R
+head:             v (cleanup)
+tape: @1~0~~~~~~~~u
+ops : E,R,R
+head:               v (cleanup)
+tape: @1~0~~~~~~~~~~~
+ops : ,
+head:               v (new)
+tape: @1~0~~~~~~~~~~~
+ops : L
+head:              v (new)
+tape: @1~0~~~~~~~~~~
+ops : L
+head:             v (new)
+tape: @1~0~~~~~~~~~
+ops : L
+head:            v (new)
+tape: @1~0~~~~~~~~~
+ops : L
+head:           v (new)
+tape: @1~0~~~~~~~~~
+ops : L
+head:          v (new)
+tape: @1~0~~~~~~~~~
+ops : L
+head:         v (new)
+tape: @1~0~~~~~~~~~
+ops : L
+head:        v (new)
+tape: @1~0~~~~~~~~~
+ops : L
+head:       v (new)
+tape: @1~0~~~~~~~~~
+ops : L
+head:      v (new)
+tape: @1~0~~~~~~~~~
+ops : L
+head:     v (new)
+tape: @1~0~~~~~~~~~
+ops : L
+head:    v (new)
+tape: @1~0~~~~~~~~~
+ops : L
+head:   v (new)
+tape: @1~0~~~~~~~~~
+ops : L
+head:  v (new)
+tape: @1~0~~~~~~~~~
+ops : L
+head: v (new)
+tape: @1~0~~~~~~~~~
+ops : R
+head:  v (mark-digits)
+tape: @1~0~~~~~~~~~
+ops : R,Px,R
+head:    v (mark-digits)
+tape: @1x0~~~~~~~~~
+ops : R,Px,R
+head:      v (mark-digits)
+tape: @1x0x~~~~~~~~
+ops : R,Pz,R,R,Pr
+head:         v (find-x)
+tape: @1x0x~z~r~~~~
+ops : L,L
+head:       v (find-x)
+tape: @1x0x~z~r~~~~
+ops : L,L
+head:     v (find-x)
+tape: @1x0x~z~r~~~~
+ops : E
+head:     v (first-r)
+tape: @1x0~~z~r~~~~
+ops : R,R
+head:       v (first-r)
+tape: @1x0~~z~r~~~~
+ops : R,R
+head:         v (first-r)
+tape: @1x0~~z~r~~~~
+ops : R,R
+head:           v (last-r)
+tape: @1x0~~z~r~~~~
+ops : Pr,R,R,Pr
+head:             v (find-x)
+tape: @1x0~~z~r~r~r
+ops : L,L
+head:           v (find-x)
+tape: @1x0~~z~r~r~r
+ops : L,L
+head:         v (find-x)
+tape: @1x0~~z~r~r~r
+ops : L,L
+head:       v (find-x)
+tape: @1x0~~z~r~r~r
+ops : L,L
+head:     v (find-x)
+tape: @1x0~~z~r~r~r
+ops : L,L
+head:   v (find-x)
+tape: @1x0~~z~r~r~r
+ops : E
+head:   v (first-r)
+tape: @1~0~~z~r~r~r
+ops : R,R
+head:     v (first-r)
+tape: @1~0~~z~r~r~r
+ops : R,R
+head:       v (first-r)
+tape: @1~0~~z~r~r~r
+ops : R,R
+head:         v (first-r)
+tape: @1~0~~z~r~r~r
+ops : R,R
+head:           v (last-r)
+tape: @1~0~~z~r~r~r
+ops : R,R
+head:             v (last-r)
+tape: @1~0~~z~r~r~r
+ops : R,R
+head:               v (last-r)
+tape: @1~0~~z~r~r~r~~
+ops : Pr,R,R,Pr
+head:                 v (find-x)
+tape: @1~0~~z~r~r~r~r~r
+ops : L,L
+head:               v (find-x)
+tape: @1~0~~z~r~r~r~r~r
+ops : L,L
+head:             v (find-x)
+tape: @1~0~~z~r~r~r~r~r
+ops : L,L
+head:           v (find-x)
+tape: @1~0~~z~r~r~r~r~r
+ops : L,L
+head:         v (find-x)
+tape: @1~0~~z~r~r~r~r~r
+ops : L,L
+head:       v (find-x)
+tape: @1~0~~z~r~r~r~r~r
+ops : L,L
+head:     v (find-x)
+tape: @1~0~~z~r~r~r~r~r
+ops : L,L
+head:   v (find-x)
+tape: @1~0~~z~r~r~r~r~r
+ops : L,L
+head: v (find-x)
+tape: @1~0~~z~r~r~r~r~r
+ops : ,
+head: v (find-digits)
+tape: @1~0~~z~r~r~r~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~0~~z~r~r~r~r~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~0~~z~r~r~r~r~r
+ops : R,R
+head:       v (find-1st-digit)
+tape: @1~0~~z~r~r~r~r~r
+ops : L
+head:      v (found-2nd-digit)
+tape: @1~0~~z~r~r~r~r~r
+ops : R
+head:       v (add-one)
+tape: @1~0~~z~r~r~r~r~r
+ops : R,R
+head:         v (add-one)
+tape: @1~0~~z~r~r~r~r~r
+ops : Pv
+head:         v (add-finished)
+tape: @1~0~~z~v~r~r~r~r
+ops : L,L
+head:       v (add-finished)
+tape: @1~0~~z~v~r~r~r~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~0~~z~v~r~r~r~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~0~~z~v~r~r~r~r
+ops : L,L
+head: v (add-finished)
+tape: @1~0~~z~v~r~r~r~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~0~~z~v~r~r~r~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~0~~z~v~r~r~r~r
+ops : R,R
+head:       v (erase-old-x)
+tape: @1~0~~z~v~r~r~r~r
+ops : Py,L,L
+head:     v (print-new-x)
+tape: @1~0~~y~v~r~r~r~r
+ops : Px
+head:     v (find-digits)
+tape: @1~0x~y~v~r~r~r~r
+ops : L,L
+head:   v (find-digits)
+tape: @1~0x~y~v~r~r~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1~0x~y~v~r~r~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~0x~y~v~r~r~r~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~0x~y~v~r~r~r~r
+ops : L
+head:    v (found-1st-digit)
+tape: @1~0x~y~v~r~r~r~r
+ops : R
+head:     v (add-zero)
+tape: @1~0x~y~v~r~r~r~r
+ops : R,R
+head:       v (add-zero)
+tape: @1~0x~y~v~r~r~r~r
+ops : R,R
+head:         v (add-zero)
+tape: @1~0x~y~v~r~r~r~r
+ops : R,R
+head:           v (add-zero)
+tape: @1~0x~y~v~r~r~r~r
+ops : Ps
+head:           v (add-finished)
+tape: @1~0x~y~v~s~r~r~r
+ops : L,L
+head:         v (add-finished)
+tape: @1~0x~y~v~s~r~r~r
+ops : L,L
+head:       v (add-finished)
+tape: @1~0x~y~v~s~r~r~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~0x~y~v~s~r~r~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~0x~y~v~s~r~r~r
+ops : L,L
+head: v (add-finished)
+tape: @1~0x~y~v~s~r~r~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~0x~y~v~s~r~r~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~0x~y~v~s~r~r~r
+ops : E,L,L
+head:   v (print-new-x)
+tape: @1~0~~y~v~s~r~r~r
+ops : Px
+head:   v (find-digits)
+tape: @1x0~~y~v~s~r~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1x0~~y~v~s~r~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1x0~~y~v~s~r~r~r
+ops : L
+head:  v (found-1st-digit)
+tape: @1x0~~y~v~s~r~r~r
+ops : R,R,R
+head:     v (find-2nd-digit)
+tape: @1x0~~y~v~s~r~r~r
+ops : R,R
+head:       v (find-2nd-digit)
+tape: @1x0~~y~v~s~r~r~r
+ops : L
+head:      v (found-2nd-digit)
+tape: @1x0~~y~v~s~r~r~r
+ops : R
+head:       v (add-one)
+tape: @1x0~~y~v~s~r~r~r
+ops : R,R
+head:         v (add-one)
+tape: @1x0~~y~v~s~r~r~r
+ops : R,R
+head:           v (add-one)
+tape: @1x0~~y~v~s~r~r~r
+ops : R,R
+head:             v (add-one)
+tape: @1x0~~y~v~s~r~r~r
+ops : Pv
+head:             v (add-finished)
+tape: @1x0~~y~v~s~v~r~r
+ops : L,L
+head:           v (add-finished)
+tape: @1x0~~y~v~s~v~r~r
+ops : L,L
+head:         v (add-finished)
+tape: @1x0~~y~v~s~v~r~r
+ops : L,L
+head:       v (add-finished)
+tape: @1x0~~y~v~s~v~r~r
+ops : L,L
+head:     v (add-finished)
+tape: @1x0~~y~v~s~v~r~r
+ops : L,L
+head:   v (add-finished)
+tape: @1x0~~y~v~s~v~r~r
+ops : L,L
+head: v (add-finished)
+tape: @1x0~~y~v~s~v~r~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1x0~~y~v~s~v~r~r
+ops : E,L,L
+head: v (print-new-x)
+tape: @1~0~~y~v~s~v~r~r
+ops : R,R
+head:   v (erase-old-y)
+tape: @1~0~~y~v~s~v~r~r
+ops : R,R
+head:     v (erase-old-y)
+tape: @1~0~~y~v~s~v~r~r
+ops : R,R
+head:       v (erase-old-y)
+tape: @1~0~~y~v~s~v~r~r
+ops : E,L,L
+head:     v (print-new-y)
+tape: @1~0~~~~v~s~v~r~r
+ops : Py,R
+head:      v (reset-new-x)
+tape: @1~0y~~~v~s~v~r~r
+ops : R,Px
+head:       v (flag-result-digits)
+tape: @1~0y~x~v~s~v~r~r
+ops : R,R
+head:         v (flag-result-digits)
+tape: @1~0y~x~v~s~v~r~r
+ops : Pw,R,R
+head:           v (unflag-result-digits)
+tape: @1~0y~x~w~s~v~r~r
+ops : Pr,R,R
+head:             v (unflag-result-digits)
+tape: @1~0y~x~w~r~v~r~r
+ops : Pu,R,R
+head:               v (unflag-result-digits)
+tape: @1~0y~x~w~r~u~r~r
+ops : ,
+head:               v (find-digits)
+tape: @1~0y~x~w~r~u~r~r
+ops : L,L
+head:             v (find-digits)
+tape: @1~0y~x~w~r~u~r~r
+ops : L,L
+head:           v (find-digits)
+tape: @1~0y~x~w~r~u~r~r
+ops : L,L
+head:         v (find-digits)
+tape: @1~0y~x~w~r~u~r~r
+ops : L,L
+head:       v (find-digits)
+tape: @1~0y~x~w~r~u~r~r
+ops : L,L
+head:     v (find-digits)
+tape: @1~0y~x~w~r~u~r~r
+ops : L,L
+head:   v (find-digits)
+tape: @1~0y~x~w~r~u~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1~0y~x~w~r~u~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~0y~x~w~r~u~r~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~0y~x~w~r~u~r~r
+ops : L
+head:    v (found-1st-digit)
+tape: @1~0y~x~w~r~u~r~r
+ops : R
+head:     v (add-zero)
+tape: @1~0y~x~w~r~u~r~r
+ops : R,R
+head:       v (add-zero)
+tape: @1~0y~x~w~r~u~r~r
+ops : R,R
+head:         v (add-zero)
+tape: @1~0y~x~w~r~u~r~r
+ops : R,R
+head:           v (add-zero)
+tape: @1~0y~x~w~r~u~r~r
+ops : Ps
+head:           v (add-finished)
+tape: @1~0y~x~w~s~u~r~r
+ops : L,L
+head:         v (add-finished)
+tape: @1~0y~x~w~s~u~r~r
+ops : L,L
+head:       v (add-finished)
+tape: @1~0y~x~w~s~u~r~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~0y~x~w~s~u~r~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~0y~x~w~s~u~r~r
+ops : L,L
+head: v (add-finished)
+tape: @1~0y~x~w~s~u~r~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~0y~x~w~s~u~r~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~0y~x~w~s~u~r~r
+ops : R,R
+head:       v (erase-old-x)
+tape: @1~0y~x~w~s~u~r~r
+ops : E,L,L
+head:     v (print-new-x)
+tape: @1~0y~~~w~s~u~r~r
+ops : Pz
+head:     v (find-digits)
+tape: @1~0z~~~w~s~u~r~r
+ops : L,L
+head:   v (find-digits)
+tape: @1~0z~~~w~s~u~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1~0z~~~w~s~u~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~0z~~~w~s~u~r~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~0z~~~w~s~u~r~r
+ops : L
+head:    v (found-2nd-digit)
+tape: @1~0z~~~w~s~u~r~r
+ops : R
+head:     v (add-zero)
+tape: @1~0z~~~w~s~u~r~r
+ops : R,R
+head:       v (add-zero)
+tape: @1~0z~~~w~s~u~r~r
+ops : R,R
+head:         v (add-zero)
+tape: @1~0z~~~w~s~u~r~r
+ops : R,R
+head:           v (add-zero)
+tape: @1~0z~~~w~s~u~r~r
+ops : R,R
+head:             v (add-zero)
+tape: @1~0z~~~w~s~u~r~r
+ops : Pv
+head:             v (add-finished)
+tape: @1~0z~~~w~s~v~r~r
+ops : L,L
+head:           v (add-finished)
+tape: @1~0z~~~w~s~v~r~r
+ops : L,L
+head:         v (add-finished)
+tape: @1~0z~~~w~s~v~r~r
+ops : L,L
+head:       v (add-finished)
+tape: @1~0z~~~w~s~v~r~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~0z~~~w~s~v~r~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~0z~~~w~s~v~r~r
+ops : L,L
+head: v (add-finished)
+tape: @1~0z~~~w~s~v~r~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~0z~~~w~s~v~r~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~0z~~~w~s~v~r~r
+ops : Py,L,L
+head:   v (print-new-x)
+tape: @1~0y~~~w~s~v~r~r
+ops : Px
+head:   v (find-digits)
+tape: @1x0y~~~w~s~v~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1x0y~~~w~s~v~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1x0y~~~w~s~v~r~r
+ops : L
+head:  v (found-1st-digit)
+tape: @1x0y~~~w~s~v~r~r
+ops : R,R,R
+head:     v (find-2nd-digit)
+tape: @1x0y~~~w~s~v~r~r
+ops : L
+head:    v (found-2nd-digit)
+tape: @1x0y~~~w~s~v~r~r
+ops : R
+head:     v (add-zero)
+tape: @1x0y~~~w~s~v~r~r
+ops : R,R
+head:       v (add-zero)
+tape: @1x0y~~~w~s~v~r~r
+ops : R,R
+head:         v (add-zero)
+tape: @1x0y~~~w~s~v~r~r
+ops : R,R
+head:           v (add-zero)
+tape: @1x0y~~~w~s~v~r~r
+ops : R,R
+head:             v (add-zero)
+tape: @1x0y~~~w~s~v~r~r
+ops : R,R
+head:               v (add-zero)
+tape: @1x0y~~~w~s~v~r~r
+ops : Ps
+head:               v (add-finished)
+tape: @1x0y~~~w~s~v~s~r
+ops : L,L
+head:             v (add-finished)
+tape: @1x0y~~~w~s~v~s~r
+ops : L,L
+head:           v (add-finished)
+tape: @1x0y~~~w~s~v~s~r
+ops : L,L
+head:         v (add-finished)
+tape: @1x0y~~~w~s~v~s~r
+ops : L,L
+head:       v (add-finished)
+tape: @1x0y~~~w~s~v~s~r
+ops : L,L
+head:     v (add-finished)
+tape: @1x0y~~~w~s~v~s~r
+ops : L,L
+head:   v (add-finished)
+tape: @1x0y~~~w~s~v~s~r
+ops : L,L
+head: v (add-finished)
+tape: @1x0y~~~w~s~v~s~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1x0y~~~w~s~v~s~r
+ops : E,L,L
+head: v (print-new-x)
+tape: @1~0y~~~w~s~v~s~r
+ops : R,R
+head:   v (erase-old-y)
+tape: @1~0y~~~w~s~v~s~r
+ops : R,R
+head:     v (erase-old-y)
+tape: @1~0y~~~w~s~v~s~r
+ops : E,L,L
+head:   v (print-new-y)
+tape: @1~0~~~~w~s~v~s~r
+ops : Py,R
+head:    v (reset-new-x)
+tape: @1y0~~~~w~s~v~s~r
+ops : R,R
+head:      v (reset-new-x)
+tape: @1y0~~~~w~s~v~s~r
+ops : R,Px
+head:       v (flag-result-digits)
+tape: @1y0~~x~w~s~v~s~r
+ops : R,R
+head:         v (flag-result-digits)
+tape: @1y0~~x~w~s~v~s~r
+ops : R,R
+head:           v (flag-result-digits)
+tape: @1y0~~x~w~s~v~s~r
+ops : Pt,R,R
+head:             v (unflag-result-digits)
+tape: @1y0~~x~w~t~v~s~r
+ops : Pu,R,R
+head:               v (unflag-result-digits)
+tape: @1y0~~x~w~t~u~s~r
+ops : Pr,R,R
+head:                 v (unflag-result-digits)
+tape: @1y0~~x~w~t~u~r~r
+ops : ,
+head:                 v (find-digits)
+tape: @1y0~~x~w~t~u~r~r
+ops : L,L
+head:               v (find-digits)
+tape: @1y0~~x~w~t~u~r~r
+ops : L,L
+head:             v (find-digits)
+tape: @1y0~~x~w~t~u~r~r
+ops : L,L
+head:           v (find-digits)
+tape: @1y0~~x~w~t~u~r~r
+ops : L,L
+head:         v (find-digits)
+tape: @1y0~~x~w~t~u~r~r
+ops : L,L
+head:       v (find-digits)
+tape: @1y0~~x~w~t~u~r~r
+ops : L,L
+head:     v (find-digits)
+tape: @1y0~~x~w~t~u~r~r
+ops : L,L
+head:   v (find-digits)
+tape: @1y0~~x~w~t~u~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1y0~~x~w~t~u~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1y0~~x~w~t~u~r~r
+ops : L
+head:  v (found-1st-digit)
+tape: @1y0~~x~w~t~u~r~r
+ops : R,R,R
+head:     v (find-2nd-digit)
+tape: @1y0~~x~w~t~u~r~r
+ops : R,R
+head:       v (find-2nd-digit)
+tape: @1y0~~x~w~t~u~r~r
+ops : L
+head:      v (found-2nd-digit)
+tape: @1y0~~x~w~t~u~r~r
+ops : R
+head:       v (add-one)
+tape: @1y0~~x~w~t~u~r~r
+ops : R,R
+head:         v (add-one)
+tape: @1y0~~x~w~t~u~r~r
+ops : R,R
+head:           v (add-one)
+tape: @1y0~~x~w~t~u~r~r
+ops : R,R
+head:             v (add-one)
+tape: @1y0~~x~w~t~u~r~r
+ops : Ps,R,R
+head:               v (carry)
+tape: @1y0~~x~w~t~s~r~r
+ops : Pu
+head:               v (add-finished)
+tape: @1y0~~x~w~t~s~u~r
+ops : L,L
+head:             v (add-finished)
+tape: @1y0~~x~w~t~s~u~r
+ops : L,L
+head:           v (add-finished)
+tape: @1y0~~x~w~t~s~u~r
+ops : L,L
+head:         v (add-finished)
+tape: @1y0~~x~w~t~s~u~r
+ops : L,L
+head:       v (add-finished)
+tape: @1y0~~x~w~t~s~u~r
+ops : L,L
+head:     v (add-finished)
+tape: @1y0~~x~w~t~s~u~r
+ops : L,L
+head:   v (add-finished)
+tape: @1y0~~x~w~t~s~u~r
+ops : L,L
+head: v (add-finished)
+tape: @1y0~~x~w~t~s~u~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1y0~~x~w~t~s~u~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1y0~~x~w~t~s~u~r
+ops : R,R
+head:       v (erase-old-x)
+tape: @1y0~~x~w~t~s~u~r
+ops : E,L,L
+head:     v (print-new-x)
+tape: @1y0~~~~w~t~s~u~r
+ops : Px
+head:     v (find-digits)
+tape: @1y0x~~~w~t~s~u~r
+ops : L,L
+head:   v (find-digits)
+tape: @1y0x~~~w~t~s~u~r
+ops : L,L
+head: v (find-digits)
+tape: @1y0x~~~w~t~s~u~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1y0x~~~w~t~s~u~r
+ops : L
+head:  v (found-1st-digit)
+tape: @1y0x~~~w~t~s~u~r
+ops : R,R,R
+head:     v (find-2nd-digit)
+tape: @1y0x~~~w~t~s~u~r
+ops : L
+head:    v (found-2nd-digit)
+tape: @1y0x~~~w~t~s~u~r
+ops : R
+head:     v (add-zero)
+tape: @1y0x~~~w~t~s~u~r
+ops : R,R
+head:       v (add-zero)
+tape: @1y0x~~~w~t~s~u~r
+ops : R,R
+head:         v (add-zero)
+tape: @1y0x~~~w~t~s~u~r
+ops : R,R
+head:           v (add-zero)
+tape: @1y0x~~~w~t~s~u~r
+ops : R,R
+head:             v (add-zero)
+tape: @1y0x~~~w~t~s~u~r
+ops : R,R
+head:               v (add-zero)
+tape: @1y0x~~~w~t~s~u~r
+ops : Pv
+head:               v (add-finished)
+tape: @1y0x~~~w~t~s~v~r
+ops : L,L
+head:             v (add-finished)
+tape: @1y0x~~~w~t~s~v~r
+ops : L,L
+head:           v (add-finished)
+tape: @1y0x~~~w~t~s~v~r
+ops : L,L
+head:         v (add-finished)
+tape: @1y0x~~~w~t~s~v~r
+ops : L,L
+head:       v (add-finished)
+tape: @1y0x~~~w~t~s~v~r
+ops : L,L
+head:     v (add-finished)
+tape: @1y0x~~~w~t~s~v~r
+ops : L,L
+head:   v (add-finished)
+tape: @1y0x~~~w~t~s~v~r
+ops : L,L
+head: v (add-finished)
+tape: @1y0x~~~w~t~s~v~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1y0x~~~w~t~s~v~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1y0x~~~w~t~s~v~r
+ops : E,L,L
+head:   v (print-new-x)
+tape: @1y0~~~~w~t~s~v~r
+ops : Pz
+head:   v (find-digits)
+tape: @1z0~~~~w~t~s~v~r
+ops : L,L
+head: v (find-digits)
+tape: @1z0~~~~w~t~s~v~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1z0~~~~w~t~s~v~r
+ops : L
+head:  v (found-2nd-digit)
+tape: @1z0~~~~w~t~s~v~r
+ops : R
+head:   v (add-one)
+tape: @1z0~~~~w~t~s~v~r
+ops : R,R
+head:     v (add-one)
+tape: @1z0~~~~w~t~s~v~r
+ops : R,R
+head:       v (add-one)
+tape: @1z0~~~~w~t~s~v~r
+ops : R,R
+head:         v (add-one)
+tape: @1z0~~~~w~t~s~v~r
+ops : R,R
+head:           v (add-one)
+tape: @1z0~~~~w~t~s~v~r
+ops : R,R
+head:             v (add-one)
+tape: @1z0~~~~w~t~s~v~r
+ops : R,R
+head:               v (add-one)
+tape: @1z0~~~~w~t~s~v~r
+ops : R,R
+head:                 v (add-one)
+tape: @1z0~~~~w~t~s~v~r
+ops : Pv
+head:                 v (add-finished)
+tape: @1z0~~~~w~t~s~v~v
+ops : L,L
+head:               v (add-finished)
+tape: @1z0~~~~w~t~s~v~v
+ops : L,L
+head:             v (add-finished)
+tape: @1z0~~~~w~t~s~v~v
+ops : L,L
+head:           v (add-finished)
+tape: @1z0~~~~w~t~s~v~v
+ops : L,L
+head:         v (add-finished)
+tape: @1z0~~~~w~t~s~v~v
+ops : L,L
+head:       v (add-finished)
+tape: @1z0~~~~w~t~s~v~v
+ops : L,L
+head:     v (add-finished)
+tape: @1z0~~~~w~t~s~v~v
+ops : L,L
+head:   v (add-finished)
+tape: @1z0~~~~w~t~s~v~v
+ops : L,L
+head: v (add-finished)
+tape: @1z0~~~~w~t~s~v~v
+ops : R,R
+head:   v (erase-old-x)
+tape: @1z0~~~~w~t~s~v~v
+ops : Py,L,L
+head: v (print-new-x)
+tape: @1y0~~~~w~t~s~v~v
+ops : R,R
+head:   v (erase-old-y)
+tape: @1y0~~~~w~t~s~v~v
+ops : E,L,L
+head: v (print-new-y)
+tape: @1~0~~~~w~t~s~v~v
+ops : R
+head:  v (new-digit-is-one)
+tape: @1~0~~~~w~t~s~v~v
+ops : L
+head: v (new-digit-is-one)
+tape: @1~0~~~~w~t~s~v~v
+ops : R
+head:  v (print-one-digit)
+tape: @1~0~~~~w~t~s~v~v
+ops : R,E,R
+head:    v (print-one-digit)
+tape: @1~0~~~~w~t~s~v~v
+ops : R,E,R
+head:      v (print-one-digit)
+tape: @1~0~~~~w~t~s~v~v
+ops : P1,R,R,R
+head:         v (cleanup)
+tape: @1~0~1~~w~t~s~v~v
+ops : E,R,R
+head:           v (cleanup)
+tape: @1~0~1~~~~t~s~v~v
+ops : E,R,R
+head:             v (cleanup)
+tape: @1~0~1~~~~~~s~v~v
+ops : E,R,R
+head:               v (cleanup)
+tape: @1~0~1~~~~~~~~v~v
+ops : E,R,R
+head:                 v (cleanup)
+tape: @1~0~1~~~~~~~~~~v
+ops : E,R,R
+head:                   v (cleanup)
+tape: @1~0~1~~~~~~~~~~~~~
+ops : ,
+head:                   v (new)
+tape: @1~0~1~~~~~~~~~~~~~
+ops : L
+head:                  v (new)
+tape: @1~0~1~~~~~~~~~~~~
+ops : L
+head:                 v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:                v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:               v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:              v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:             v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:            v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:           v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:          v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:         v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:        v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:       v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:      v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:     v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:    v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:   v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head:  v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : L
+head: v (new)
+tape: @1~0~1~~~~~~~~~~~
+ops : R
+head:  v (mark-digits)
+tape: @1~0~1~~~~~~~~~~~
+ops : R,Px,R
+head:    v (mark-digits)
+tape: @1x0~1~~~~~~~~~~~
+ops : R,Px,R
+head:      v (mark-digits)
+tape: @1x0x1~~~~~~~~~~~
+ops : R,Px,R
+head:        v (mark-digits)
+tape: @1x0x1x~~~~~~~~~~
+ops : R,Pz,R,R,Pr
+head:           v (find-x)
+tape: @1x0x1x~z~r~~~~~~
+ops : L,L
+head:         v (find-x)
+tape: @1x0x1x~z~r~~~~~~
+ops : L,L
+head:       v (find-x)
+tape: @1x0x1x~z~r~~~~~~
+ops : E
+head:       v (first-r)
+tape: @1x0x1~~z~r~~~~~~
+ops : R,R
+head:         v (first-r)
+tape: @1x0x1~~z~r~~~~~~
+ops : R,R
+head:           v (first-r)
+tape: @1x0x1~~z~r~~~~~~
+ops : R,R
+head:             v (last-r)
+tape: @1x0x1~~z~r~~~~~~
+ops : Pr,R,R,Pr
+head:               v (find-x)
+tape: @1x0x1~~z~r~r~r~~
+ops : L,L
+head:             v (find-x)
+tape: @1x0x1~~z~r~r~r~~
+ops : L,L
+head:           v (find-x)
+tape: @1x0x1~~z~r~r~r~~
+ops : L,L
+head:         v (find-x)
+tape: @1x0x1~~z~r~r~r~~
+ops : L,L
+head:       v (find-x)
+tape: @1x0x1~~z~r~r~r~~
+ops : L,L
+head:     v (find-x)
+tape: @1x0x1~~z~r~r~r~~
+ops : E
+head:     v (first-r)
+tape: @1x0~1~~z~r~r~r~~
+ops : R,R
+head:       v (first-r)
+tape: @1x0~1~~z~r~r~r~~
+ops : R,R
+head:         v (first-r)
+tape: @1x0~1~~z~r~r~r~~
+ops : R,R
+head:           v (first-r)
+tape: @1x0~1~~z~r~r~r~~
+ops : R,R
+head:             v (last-r)
+tape: @1x0~1~~z~r~r~r~~
+ops : R,R
+head:               v (last-r)
+tape: @1x0~1~~z~r~r~r~~
+ops : R,R
+head:                 v (last-r)
+tape: @1x0~1~~z~r~r~r~~
+ops : Pr,R,R,Pr
+head:                   v (find-x)
+tape: @1x0~1~~z~r~r~r~r~r
+ops : L,L
+head:                 v (find-x)
+tape: @1x0~1~~z~r~r~r~r~r
+ops : L,L
+head:               v (find-x)
+tape: @1x0~1~~z~r~r~r~r~r
+ops : L,L
+head:             v (find-x)
+tape: @1x0~1~~z~r~r~r~r~r
+ops : L,L
+head:           v (find-x)
+tape: @1x0~1~~z~r~r~r~r~r
+ops : L,L
+head:         v (find-x)
+tape: @1x0~1~~z~r~r~r~r~r
+ops : L,L
+head:       v (find-x)
+tape: @1x0~1~~z~r~r~r~r~r
+ops : L,L
+head:     v (find-x)
+tape: @1x0~1~~z~r~r~r~r~r
+ops : L,L
+head:   v (find-x)
+tape: @1x0~1~~z~r~r~r~r~r
+ops : E
+head:   v (first-r)
+tape: @1~0~1~~z~r~r~r~r~r
+ops : R,R
+head:     v (first-r)
+tape: @1~0~1~~z~r~r~r~r~r
+ops : R,R
+head:       v (first-r)
+tape: @1~0~1~~z~r~r~r~r~r
+ops : R,R
+head:         v (first-r)
+tape: @1~0~1~~z~r~r~r~r~r
+ops : R,R
+head:           v (first-r)
+tape: @1~0~1~~z~r~r~r~r~r
+ops : R,R
+head:             v (last-r)
+tape: @1~0~1~~z~r~r~r~r~r
+ops : R,R
+head:               v (last-r)
+tape: @1~0~1~~z~r~r~r~r~r
+ops : R,R
+head:                 v (last-r)
+tape: @1~0~1~~z~r~r~r~r~r
+ops : R,R
+head:                   v (last-r)
+tape: @1~0~1~~z~r~r~r~r~r
+ops : R,R
+head:                     v (last-r)
+tape: @1~0~1~~z~r~r~r~r~r~~
+ops : Pr,R,R,Pr
+head:                       v (find-x)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : L,L
+head:                     v (find-x)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : L,L
+head:                   v (find-x)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : L,L
+head:                 v (find-x)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : L,L
+head:               v (find-x)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : L,L
+head:             v (find-x)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : L,L
+head:           v (find-x)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : L,L
+head:         v (find-x)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : L,L
+head:       v (find-x)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : L,L
+head:     v (find-x)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : L,L
+head:   v (find-x)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : L,L
+head: v (find-x)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : ,
+head: v (find-digits)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : R,R
+head:       v (find-1st-digit)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : R,R
+head:         v (find-1st-digit)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : L
+head:        v (found-2nd-digit)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : R
+head:         v (add-one)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : R,R
+head:           v (add-one)
+tape: @1~0~1~~z~r~r~r~r~r~r~r
+ops : Pv
+head:           v (add-finished)
+tape: @1~0~1~~z~v~r~r~r~r~r~r
+ops : L,L
+head:         v (add-finished)
+tape: @1~0~1~~z~v~r~r~r~r~r~r
+ops : L,L
+head:       v (add-finished)
+tape: @1~0~1~~z~v~r~r~r~r~r~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~0~1~~z~v~r~r~r~r~r~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~0~1~~z~v~r~r~r~r~r~r
+ops : L,L
+head: v (add-finished)
+tape: @1~0~1~~z~v~r~r~r~r~r~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~0~1~~z~v~r~r~r~r~r~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~0~1~~z~v~r~r~r~r~r~r
+ops : R,R
+head:       v (erase-old-x)
+tape: @1~0~1~~z~v~r~r~r~r~r~r
+ops : R,R
+head:         v (erase-old-x)
+tape: @1~0~1~~z~v~r~r~r~r~r~r
+ops : Py,L,L
+head:       v (print-new-x)
+tape: @1~0~1~~y~v~r~r~r~r~r~r
+ops : Px
+head:       v (find-digits)
+tape: @1~0~1x~y~v~r~r~r~r~r~r
+ops : L,L
+head:     v (find-digits)
+tape: @1~0~1x~y~v~r~r~r~r~r~r
+ops : L,L
+head:   v (find-digits)
+tape: @1~0~1x~y~v~r~r~r~r~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1~0~1x~y~v~r~r~r~r~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~0~1x~y~v~r~r~r~r~r~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~0~1x~y~v~r~r~r~r~r~r
+ops : R,R
+head:       v (find-1st-digit)
+tape: @1~0~1x~y~v~r~r~r~r~r~r
+ops : L
+head:      v (found-1st-digit)
+tape: @1~0~1x~y~v~r~r~r~r~r~r
+ops : R,R,R
+head:         v (find-2nd-digit)
+tape: @1~0~1x~y~v~r~r~r~r~r~r
+ops : L
+head:        v (found-2nd-digit)
+tape: @1~0~1x~y~v~r~r~r~r~r~r
+ops : R
+head:         v (add-one)
+tape: @1~0~1x~y~v~r~r~r~r~r~r
+ops : R,R
+head:           v (add-one)
+tape: @1~0~1x~y~v~r~r~r~r~r~r
+ops : R,R
+head:             v (add-one)
+tape: @1~0~1x~y~v~r~r~r~r~r~r
+ops : Pv
+head:             v (add-finished)
+tape: @1~0~1x~y~v~v~r~r~r~r~r
+ops : L,L
+head:           v (add-finished)
+tape: @1~0~1x~y~v~v~r~r~r~r~r
+ops : L,L
+head:         v (add-finished)
+tape: @1~0~1x~y~v~v~r~r~r~r~r
+ops : L,L
+head:       v (add-finished)
+tape: @1~0~1x~y~v~v~r~r~r~r~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~0~1x~y~v~v~r~r~r~r~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~0~1x~y~v~v~r~r~r~r~r
+ops : L,L
+head: v (add-finished)
+tape: @1~0~1x~y~v~v~r~r~r~r~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~0~1x~y~v~v~r~r~r~r~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~0~1x~y~v~v~r~r~r~r~r
+ops : R,R
+head:       v (erase-old-x)
+tape: @1~0~1x~y~v~v~r~r~r~r~r
+ops : E,L,L
+head:     v (print-new-x)
+tape: @1~0~1~~y~v~v~r~r~r~r~r
+ops : Px
+head:     v (find-digits)
+tape: @1~0x1~~y~v~v~r~r~r~r~r
+ops : L,L
+head:   v (find-digits)
+tape: @1~0x1~~y~v~v~r~r~r~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1~0x1~~y~v~v~r~r~r~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~0x1~~y~v~v~r~r~r~r~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~0x1~~y~v~v~r~r~r~r~r
+ops : L
+head:    v (found-1st-digit)
+tape: @1~0x1~~y~v~v~r~r~r~r~r
+ops : R
+head:     v (add-zero)
+tape: @1~0x1~~y~v~v~r~r~r~r~r
+ops : R,R
+head:       v (add-zero)
+tape: @1~0x1~~y~v~v~r~r~r~r~r
+ops : R,R
+head:         v (add-zero)
+tape: @1~0x1~~y~v~v~r~r~r~r~r
+ops : R,R
+head:           v (add-zero)
+tape: @1~0x1~~y~v~v~r~r~r~r~r
+ops : R,R
+head:             v (add-zero)
+tape: @1~0x1~~y~v~v~r~r~r~r~r
+ops : R,R
+head:               v (add-zero)
+tape: @1~0x1~~y~v~v~r~r~r~r~r
+ops : Ps
+head:               v (add-finished)
+tape: @1~0x1~~y~v~v~s~r~r~r~r
+ops : L,L
+head:             v (add-finished)
+tape: @1~0x1~~y~v~v~s~r~r~r~r
+ops : L,L
+head:           v (add-finished)
+tape: @1~0x1~~y~v~v~s~r~r~r~r
+ops : L,L
+head:         v (add-finished)
+tape: @1~0x1~~y~v~v~s~r~r~r~r
+ops : L,L
+head:       v (add-finished)
+tape: @1~0x1~~y~v~v~s~r~r~r~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~0x1~~y~v~v~s~r~r~r~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~0x1~~y~v~v~s~r~r~r~r
+ops : L,L
+head: v (add-finished)
+tape: @1~0x1~~y~v~v~s~r~r~r~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~0x1~~y~v~v~s~r~r~r~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~0x1~~y~v~v~s~r~r~r~r
+ops : E,L,L
+head:   v (print-new-x)
+tape: @1~0~1~~y~v~v~s~r~r~r~r
+ops : Px
+head:   v (find-digits)
+tape: @1x0~1~~y~v~v~s~r~r~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1x0~1~~y~v~v~s~r~r~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1x0~1~~y~v~v~s~r~r~r~r
+ops : L
+head:  v (found-1st-digit)
+tape: @1x0~1~~y~v~v~s~r~r~r~r
+ops : R,R,R
+head:     v (find-2nd-digit)
+tape: @1x0~1~~y~v~v~s~r~r~r~r
+ops : R,R
+head:       v (find-2nd-digit)
+tape: @1x0~1~~y~v~v~s~r~r~r~r
+ops : R,R
+head:         v (find-2nd-digit)
+tape: @1x0~1~~y~v~v~s~r~r~r~r
+ops : L
+head:        v (found-2nd-digit)
+tape: @1x0~1~~y~v~v~s~r~r~r~r
+ops : R
+head:         v (add-one)
+tape: @1x0~1~~y~v~v~s~r~r~r~r
+ops : R,R
+head:           v (add-one)
+tape: @1x0~1~~y~v~v~s~r~r~r~r
+ops : R,R
+head:             v (add-one)
+tape: @1x0~1~~y~v~v~s~r~r~r~r
+ops : R,R
+head:               v (add-one)
+tape: @1x0~1~~y~v~v~s~r~r~r~r
+ops : R,R
+head:                 v (add-one)
+tape: @1x0~1~~y~v~v~s~r~r~r~r
+ops : Pv
+head:                 v (add-finished)
+tape: @1x0~1~~y~v~v~s~v~r~r~r
+ops : L,L
+head:               v (add-finished)
+tape: @1x0~1~~y~v~v~s~v~r~r~r
+ops : L,L
+head:             v (add-finished)
+tape: @1x0~1~~y~v~v~s~v~r~r~r
+ops : L,L
+head:           v (add-finished)
+tape: @1x0~1~~y~v~v~s~v~r~r~r
+ops : L,L
+head:         v (add-finished)
+tape: @1x0~1~~y~v~v~s~v~r~r~r
+ops : L,L
+head:       v (add-finished)
+tape: @1x0~1~~y~v~v~s~v~r~r~r
+ops : L,L
+head:     v (add-finished)
+tape: @1x0~1~~y~v~v~s~v~r~r~r
+ops : L,L
+head:   v (add-finished)
+tape: @1x0~1~~y~v~v~s~v~r~r~r
+ops : L,L
+head: v (add-finished)
+tape: @1x0~1~~y~v~v~s~v~r~r~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1x0~1~~y~v~v~s~v~r~r~r
+ops : E,L,L
+head: v (print-new-x)
+tape: @1~0~1~~y~v~v~s~v~r~r~r
+ops : R,R
+head:   v (erase-old-y)
+tape: @1~0~1~~y~v~v~s~v~r~r~r
+ops : R,R
+head:     v (erase-old-y)
+tape: @1~0~1~~y~v~v~s~v~r~r~r
+ops : R,R
+head:       v (erase-old-y)
+tape: @1~0~1~~y~v~v~s~v~r~r~r
+ops : R,R
+head:         v (erase-old-y)
+tape: @1~0~1~~y~v~v~s~v~r~r~r
+ops : E,L,L
+head:       v (print-new-y)
+tape: @1~0~1~~~~v~v~s~v~r~r~r
+ops : Py,R
+head:        v (reset-new-x)
+tape: @1~0~1y~~~v~v~s~v~r~r~r
+ops : R,Px
+head:         v (flag-result-digits)
+tape: @1~0~1y~x~v~v~s~v~r~r~r
+ops : R,R
+head:           v (flag-result-digits)
+tape: @1~0~1y~x~v~v~s~v~r~r~r
+ops : Pw,R,R
+head:             v (unflag-result-digits)
+tape: @1~0~1y~x~w~v~s~v~r~r~r
+ops : Pu,R,R
+head:               v (unflag-result-digits)
+tape: @1~0~1y~x~w~u~s~v~r~r~r
+ops : Pr,R,R
+head:                 v (unflag-result-digits)
+tape: @1~0~1y~x~w~u~r~v~r~r~r
+ops : Pu,R,R
+head:                   v (unflag-result-digits)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : ,
+head:                   v (find-digits)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : L,L
+head:                 v (find-digits)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : L,L
+head:               v (find-digits)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : L,L
+head:             v (find-digits)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : L,L
+head:           v (find-digits)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : L,L
+head:         v (find-digits)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : L,L
+head:       v (find-digits)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : L,L
+head:     v (find-digits)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : L,L
+head:   v (find-digits)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : R,R
+head:       v (find-1st-digit)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : L
+head:      v (found-1st-digit)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : R,R,R
+head:         v (find-2nd-digit)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : L
+head:        v (found-2nd-digit)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : R
+head:         v (add-one)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : R,R
+head:           v (add-one)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : R,R
+head:             v (add-one)
+tape: @1~0~1y~x~w~u~r~u~r~r~r
+ops : Ps,R,R
+head:               v (carry)
+tape: @1~0~1y~x~w~s~r~u~r~r~r
+ops : Pu
+head:               v (add-finished)
+tape: @1~0~1y~x~w~s~u~u~r~r~r
+ops : L,L
+head:             v (add-finished)
+tape: @1~0~1y~x~w~s~u~u~r~r~r
+ops : L,L
+head:           v (add-finished)
+tape: @1~0~1y~x~w~s~u~u~r~r~r
+ops : L,L
+head:         v (add-finished)
+tape: @1~0~1y~x~w~s~u~u~r~r~r
+ops : L,L
+head:       v (add-finished)
+tape: @1~0~1y~x~w~s~u~u~r~r~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~0~1y~x~w~s~u~u~r~r~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~0~1y~x~w~s~u~u~r~r~r
+ops : L,L
+head: v (add-finished)
+tape: @1~0~1y~x~w~s~u~u~r~r~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~0~1y~x~w~s~u~u~r~r~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~0~1y~x~w~s~u~u~r~r~r
+ops : R,R
+head:       v (erase-old-x)
+tape: @1~0~1y~x~w~s~u~u~r~r~r
+ops : R,R
+head:         v (erase-old-x)
+tape: @1~0~1y~x~w~s~u~u~r~r~r
+ops : E,L,L
+head:       v (print-new-x)
+tape: @1~0~1y~~~w~s~u~u~r~r~r
+ops : Pz
+head:       v (find-digits)
+tape: @1~0~1z~~~w~s~u~u~r~r~r
+ops : L,L
+head:     v (find-digits)
+tape: @1~0~1z~~~w~s~u~u~r~r~r
+ops : L,L
+head:   v (find-digits)
+tape: @1~0~1z~~~w~s~u~u~r~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1~0~1z~~~w~s~u~u~r~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~0~1z~~~w~s~u~u~r~r~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~0~1z~~~w~s~u~u~r~r~r
+ops : R,R
+head:       v (find-1st-digit)
+tape: @1~0~1z~~~w~s~u~u~r~r~r
+ops : L
+head:      v (found-2nd-digit)
+tape: @1~0~1z~~~w~s~u~u~r~r~r
+ops : R
+head:       v (add-one)
+tape: @1~0~1z~~~w~s~u~u~r~r~r
+ops : R,R
+head:         v (add-one)
+tape: @1~0~1z~~~w~s~u~u~r~r~r
+ops : R,R
+head:           v (add-one)
+tape: @1~0~1z~~~w~s~u~u~r~r~r
+ops : R,R
+head:             v (add-one)
+tape: @1~0~1z~~~w~s~u~u~r~r~r
+ops : R,R
+head:               v (add-one)
+tape: @1~0~1z~~~w~s~u~u~r~r~r
+ops : Ps,R,R
+head:                 v (carry)
+tape: @1~0~1z~~~w~s~s~u~r~r~r
+ops : Pr,R,R
+head:                   v (carry)
+tape: @1~0~1z~~~w~s~s~r~r~r~r
+ops : Pu
+head:                   v (add-finished)
+tape: @1~0~1z~~~w~s~s~r~u~r~r
+ops : L,L
+head:                 v (add-finished)
+tape: @1~0~1z~~~w~s~s~r~u~r~r
+ops : L,L
+head:               v (add-finished)
+tape: @1~0~1z~~~w~s~s~r~u~r~r
+ops : L,L
+head:             v (add-finished)
+tape: @1~0~1z~~~w~s~s~r~u~r~r
+ops : L,L
+head:           v (add-finished)
+tape: @1~0~1z~~~w~s~s~r~u~r~r
+ops : L,L
+head:         v (add-finished)
+tape: @1~0~1z~~~w~s~s~r~u~r~r
+ops : L,L
+head:       v (add-finished)
+tape: @1~0~1z~~~w~s~s~r~u~r~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~0~1z~~~w~s~s~r~u~r~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~0~1z~~~w~s~s~r~u~r~r
+ops : L,L
+head: v (add-finished)
+tape: @1~0~1z~~~w~s~s~r~u~r~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~0~1z~~~w~s~s~r~u~r~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~0~1z~~~w~s~s~r~u~r~r
+ops : R,R
+head:       v (erase-old-x)
+tape: @1~0~1z~~~w~s~s~r~u~r~r
+ops : Py,L,L
+head:     v (print-new-x)
+tape: @1~0~1y~~~w~s~s~r~u~r~r
+ops : Px
+head:     v (find-digits)
+tape: @1~0x1y~~~w~s~s~r~u~r~r
+ops : L,L
+head:   v (find-digits)
+tape: @1~0x1y~~~w~s~s~r~u~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1~0x1y~~~w~s~s~r~u~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~0x1y~~~w~s~s~r~u~r~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~0x1y~~~w~s~s~r~u~r~r
+ops : L
+head:    v (found-1st-digit)
+tape: @1~0x1y~~~w~s~s~r~u~r~r
+ops : R
+head:     v (add-zero)
+tape: @1~0x1y~~~w~s~s~r~u~r~r
+ops : R,R
+head:       v (add-zero)
+tape: @1~0x1y~~~w~s~s~r~u~r~r
+ops : R,R
+head:         v (add-zero)
+tape: @1~0x1y~~~w~s~s~r~u~r~r
+ops : R,R
+head:           v (add-zero)
+tape: @1~0x1y~~~w~s~s~r~u~r~r
+ops : R,R
+head:             v (add-zero)
+tape: @1~0x1y~~~w~s~s~r~u~r~r
+ops : R,R
+head:               v (add-zero)
+tape: @1~0x1y~~~w~s~s~r~u~r~r
+ops : R,R
+head:                 v (add-zero)
+tape: @1~0x1y~~~w~s~s~r~u~r~r
+ops : Ps
+head:                 v (add-finished)
+tape: @1~0x1y~~~w~s~s~s~u~r~r
+ops : L,L
+head:               v (add-finished)
+tape: @1~0x1y~~~w~s~s~s~u~r~r
+ops : L,L
+head:             v (add-finished)
+tape: @1~0x1y~~~w~s~s~s~u~r~r
+ops : L,L
+head:           v (add-finished)
+tape: @1~0x1y~~~w~s~s~s~u~r~r
+ops : L,L
+head:         v (add-finished)
+tape: @1~0x1y~~~w~s~s~s~u~r~r
+ops : L,L
+head:       v (add-finished)
+tape: @1~0x1y~~~w~s~s~s~u~r~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~0x1y~~~w~s~s~s~u~r~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~0x1y~~~w~s~s~s~u~r~r
+ops : L,L
+head: v (add-finished)
+tape: @1~0x1y~~~w~s~s~s~u~r~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~0x1y~~~w~s~s~s~u~r~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~0x1y~~~w~s~s~s~u~r~r
+ops : E,L,L
+head:   v (print-new-x)
+tape: @1~0~1y~~~w~s~s~s~u~r~r
+ops : Px
+head:   v (find-digits)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : L,L
+head: v (find-digits)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : L
+head:  v (found-1st-digit)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : R,R,R
+head:     v (find-2nd-digit)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : R,R
+head:       v (find-2nd-digit)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : L
+head:      v (found-2nd-digit)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : R
+head:       v (add-one)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : R,R
+head:         v (add-one)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : R,R
+head:           v (add-one)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : R,R
+head:             v (add-one)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : R,R
+head:               v (add-one)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : R,R
+head:                 v (add-one)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : R,R
+head:                   v (add-one)
+tape: @1x0~1y~~~w~s~s~s~u~r~r
+ops : Ps,R,R
+head:                     v (carry)
+tape: @1x0~1y~~~w~s~s~s~s~r~r
+ops : Pu
+head:                     v (add-finished)
+tape: @1x0~1y~~~w~s~s~s~s~u~r
+ops : L,L
+head:                   v (add-finished)
+tape: @1x0~1y~~~w~s~s~s~s~u~r
+ops : L,L
+head:                 v (add-finished)
+tape: @1x0~1y~~~w~s~s~s~s~u~r
+ops : L,L
+head:               v (add-finished)
+tape: @1x0~1y~~~w~s~s~s~s~u~r
+ops : L,L
+head:             v (add-finished)
+tape: @1x0~1y~~~w~s~s~s~s~u~r
+ops : L,L
+head:           v (add-finished)
+tape: @1x0~1y~~~w~s~s~s~s~u~r
+ops : L,L
+head:         v (add-finished)
+tape: @1x0~1y~~~w~s~s~s~s~u~r
+ops : L,L
+head:       v (add-finished)
+tape: @1x0~1y~~~w~s~s~s~s~u~r
+ops : L,L
+head:     v (add-finished)
+tape: @1x0~1y~~~w~s~s~s~s~u~r
+ops : L,L
+head:   v (add-finished)
+tape: @1x0~1y~~~w~s~s~s~s~u~r
+ops : L,L
+head: v (add-finished)
+tape: @1x0~1y~~~w~s~s~s~s~u~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1x0~1y~~~w~s~s~s~s~u~r
+ops : E,L,L
+head: v (print-new-x)
+tape: @1~0~1y~~~w~s~s~s~s~u~r
+ops : R,R
+head:   v (erase-old-y)
+tape: @1~0~1y~~~w~s~s~s~s~u~r
+ops : R,R
+head:     v (erase-old-y)
+tape: @1~0~1y~~~w~s~s~s~s~u~r
+ops : R,R
+head:       v (erase-old-y)
+tape: @1~0~1y~~~w~s~s~s~s~u~r
+ops : E,L,L
+head:     v (print-new-y)
+tape: @1~0~1~~~~w~s~s~s~s~u~r
+ops : Py,R
+head:      v (reset-new-x)
+tape: @1~0y1~~~~w~s~s~s~s~u~r
+ops : R,R
+head:        v (reset-new-x)
+tape: @1~0y1~~~~w~s~s~s~s~u~r
+ops : R,Px
+head:         v (flag-result-digits)
+tape: @1~0y1~~x~w~s~s~s~s~u~r
+ops : R,R
+head:           v (flag-result-digits)
+tape: @1~0y1~~x~w~s~s~s~s~u~r
+ops : R,R
+head:             v (flag-result-digits)
+tape: @1~0y1~~x~w~s~s~s~s~u~r
+ops : Pt,R,R
+head:               v (unflag-result-digits)
+tape: @1~0y1~~x~w~t~s~s~s~u~r
+ops : Pr,R,R
+head:                 v (unflag-result-digits)
+tape: @1~0y1~~x~w~t~r~s~s~u~r
+ops : Pr,R,R
+head:                   v (unflag-result-digits)
+tape: @1~0y1~~x~w~t~r~r~s~u~r
+ops : Pr,R,R
+head:                     v (unflag-result-digits)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : ,
+head:                     v (find-digits)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : L,L
+head:                   v (find-digits)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : L,L
+head:                 v (find-digits)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : L,L
+head:               v (find-digits)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : L,L
+head:             v (find-digits)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : L,L
+head:           v (find-digits)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : L,L
+head:         v (find-digits)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : L,L
+head:       v (find-digits)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : L,L
+head:     v (find-digits)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : L,L
+head:   v (find-digits)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : L,L
+head: v (find-digits)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : L
+head:    v (found-1st-digit)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : R
+head:     v (add-zero)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : R,R
+head:       v (add-zero)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : R,R
+head:         v (add-zero)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : R,R
+head:           v (add-zero)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : R,R
+head:             v (add-zero)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : R,R
+head:               v (add-zero)
+tape: @1~0y1~~x~w~t~r~r~r~u~r
+ops : Ps
+head:               v (add-finished)
+tape: @1~0y1~~x~w~t~s~r~r~u~r
+ops : L,L
+head:             v (add-finished)
+tape: @1~0y1~~x~w~t~s~r~r~u~r
+ops : L,L
+head:           v (add-finished)
+tape: @1~0y1~~x~w~t~s~r~r~u~r
+ops : L,L
+head:         v (add-finished)
+tape: @1~0y1~~x~w~t~s~r~r~u~r
+ops : L,L
+head:       v (add-finished)
+tape: @1~0y1~~x~w~t~s~r~r~u~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~0y1~~x~w~t~s~r~r~u~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~0y1~~x~w~t~s~r~r~u~r
+ops : L,L
+head: v (add-finished)
+tape: @1~0y1~~x~w~t~s~r~r~u~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~0y1~~x~w~t~s~r~r~u~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~0y1~~x~w~t~s~r~r~u~r
+ops : R,R
+head:       v (erase-old-x)
+tape: @1~0y1~~x~w~t~s~r~r~u~r
+ops : R,R
+head:         v (erase-old-x)
+tape: @1~0y1~~x~w~t~s~r~r~u~r
+ops : E,L,L
+head:       v (print-new-x)
+tape: @1~0y1~~~~w~t~s~r~r~u~r
+ops : Px
+head:       v (find-digits)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : L,L
+head:     v (find-digits)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : L,L
+head:   v (find-digits)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : L,L
+head: v (find-digits)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : L
+head:    v (found-1st-digit)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : R
+head:     v (add-zero)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : R,R
+head:       v (add-zero)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : R,R
+head:         v (add-zero)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : R,R
+head:           v (add-zero)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : R,R
+head:             v (add-zero)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : R,R
+head:               v (add-zero)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : R,R
+head:                 v (add-zero)
+tape: @1~0y1x~~~w~t~s~r~r~u~r
+ops : Ps
+head:                 v (add-finished)
+tape: @1~0y1x~~~w~t~s~s~r~u~r
+ops : L,L
+head:               v (add-finished)
+tape: @1~0y1x~~~w~t~s~s~r~u~r
+ops : L,L
+head:             v (add-finished)
+tape: @1~0y1x~~~w~t~s~s~r~u~r
+ops : L,L
+head:           v (add-finished)
+tape: @1~0y1x~~~w~t~s~s~r~u~r
+ops : L,L
+head:         v (add-finished)
+tape: @1~0y1x~~~w~t~s~s~r~u~r
+ops : L,L
+head:       v (add-finished)
+tape: @1~0y1x~~~w~t~s~s~r~u~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~0y1x~~~w~t~s~s~r~u~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~0y1x~~~w~t~s~s~r~u~r
+ops : L,L
+head: v (add-finished)
+tape: @1~0y1x~~~w~t~s~s~r~u~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~0y1x~~~w~t~s~s~r~u~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~0y1x~~~w~t~s~s~r~u~r
+ops : R,R
+head:       v (erase-old-x)
+tape: @1~0y1x~~~w~t~s~s~r~u~r
+ops : E,L,L
+head:     v (print-new-x)
+tape: @1~0y1~~~~w~t~s~s~r~u~r
+ops : Pz
+head:     v (find-digits)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : L,L
+head:   v (find-digits)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : L,L
+head: v (find-digits)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : R,R
+head:     v (find-1st-digit)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : L
+head:    v (found-2nd-digit)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : R
+head:     v (add-zero)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : R,R
+head:       v (add-zero)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : R,R
+head:         v (add-zero)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : R,R
+head:           v (add-zero)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : R,R
+head:             v (add-zero)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : R,R
+head:               v (add-zero)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : R,R
+head:                 v (add-zero)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : R,R
+head:                   v (add-zero)
+tape: @1~0z1~~~~w~t~s~s~r~u~r
+ops : Ps
+head:                   v (add-finished)
+tape: @1~0z1~~~~w~t~s~s~s~u~r
+ops : L,L
+head:                 v (add-finished)
+tape: @1~0z1~~~~w~t~s~s~s~u~r
+ops : L,L
+head:               v (add-finished)
+tape: @1~0z1~~~~w~t~s~s~s~u~r
+ops : L,L
+head:             v (add-finished)
+tape: @1~0z1~~~~w~t~s~s~s~u~r
+ops : L,L
+head:           v (add-finished)
+tape: @1~0z1~~~~w~t~s~s~s~u~r
+ops : L,L
+head:         v (add-finished)
+tape: @1~0z1~~~~w~t~s~s~s~u~r
+ops : L,L
+head:       v (add-finished)
+tape: @1~0z1~~~~w~t~s~s~s~u~r
+ops : L,L
+head:     v (add-finished)
+tape: @1~0z1~~~~w~t~s~s~s~u~r
+ops : L,L
+head:   v (add-finished)
+tape: @1~0z1~~~~w~t~s~s~s~u~r
+ops : L,L
+head: v (add-finished)
+tape: @1~0z1~~~~w~t~s~s~s~u~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1~0z1~~~~w~t~s~s~s~u~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1~0z1~~~~w~t~s~s~s~u~r
+ops : Py,L,L
+head:   v (print-new-x)
+tape: @1~0y1~~~~w~t~s~s~s~u~r
+ops : Px
+head:   v (find-digits)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : L,L
+head: v (find-digits)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : L
+head:  v (found-1st-digit)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : R,R,R
+head:     v (find-2nd-digit)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : L
+head:    v (found-2nd-digit)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : R
+head:     v (add-zero)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : R,R
+head:       v (add-zero)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : R,R
+head:         v (add-zero)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : R,R
+head:           v (add-zero)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : R,R
+head:             v (add-zero)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : R,R
+head:               v (add-zero)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : R,R
+head:                 v (add-zero)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : R,R
+head:                   v (add-zero)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : R,R
+head:                     v (add-zero)
+tape: @1x0y1~~~~w~t~s~s~s~u~r
+ops : Pv
+head:                     v (add-finished)
+tape: @1x0y1~~~~w~t~s~s~s~v~r
+ops : L,L
+head:                   v (add-finished)
+tape: @1x0y1~~~~w~t~s~s~s~v~r
+ops : L,L
+head:                 v (add-finished)
+tape: @1x0y1~~~~w~t~s~s~s~v~r
+ops : L,L
+head:               v (add-finished)
+tape: @1x0y1~~~~w~t~s~s~s~v~r
+ops : L,L
+head:             v (add-finished)
+tape: @1x0y1~~~~w~t~s~s~s~v~r
+ops : L,L
+head:           v (add-finished)
+tape: @1x0y1~~~~w~t~s~s~s~v~r
+ops : L,L
+head:         v (add-finished)
+tape: @1x0y1~~~~w~t~s~s~s~v~r
+ops : L,L
+head:       v (add-finished)
+tape: @1x0y1~~~~w~t~s~s~s~v~r
+ops : L,L
+head:     v (add-finished)
+tape: @1x0y1~~~~w~t~s~s~s~v~r
+ops : L,L
+head:   v (add-finished)
+tape: @1x0y1~~~~w~t~s~s~s~v~r
+ops : L,L
+head: v (add-finished)
+tape: @1x0y1~~~~w~t~s~s~s~v~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1x0y1~~~~w~t~s~s~s~v~r
+ops : E,L,L
+head: v (print-new-x)
+tape: @1~0y1~~~~w~t~s~s~s~v~r
+ops : R,R
+head:   v (erase-old-y)
+tape: @1~0y1~~~~w~t~s~s~s~v~r
+ops : R,R
+head:     v (erase-old-y)
+tape: @1~0y1~~~~w~t~s~s~s~v~r
+ops : E,L,L
+head:   v (print-new-y)
+tape: @1~0~1~~~~w~t~s~s~s~v~r
+ops : Py,R
+head:    v (reset-new-x)
+tape: @1y0~1~~~~w~t~s~s~s~v~r
+ops : R,R
+head:      v (reset-new-x)
+tape: @1y0~1~~~~w~t~s~s~s~v~r
+ops : R,R
+head:        v (reset-new-x)
+tape: @1y0~1~~~~w~t~s~s~s~v~r
+ops : R,Px
+head:         v (flag-result-digits)
+tape: @1y0~1~~x~w~t~s~s~s~v~r
+ops : R,R
+head:           v (flag-result-digits)
+tape: @1y0~1~~x~w~t~s~s~s~v~r
+ops : R,R
+head:             v (flag-result-digits)
+tape: @1y0~1~~x~w~t~s~s~s~v~r
+ops : R,R
+head:               v (flag-result-digits)
+tape: @1y0~1~~x~w~t~s~s~s~v~r
+ops : Pt,R,R
+head:                 v (unflag-result-digits)
+tape: @1y0~1~~x~w~t~t~s~s~v~r
+ops : Pr,R,R
+head:                   v (unflag-result-digits)
+tape: @1y0~1~~x~w~t~t~r~s~v~r
+ops : Pr,R,R
+head:                     v (unflag-result-digits)
+tape: @1y0~1~~x~w~t~t~r~r~v~r
+ops : Pu,R,R
+head:                       v (unflag-result-digits)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : ,
+head:                       v (find-digits)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : L,L
+head:                     v (find-digits)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : L,L
+head:                   v (find-digits)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : L,L
+head:                 v (find-digits)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : L,L
+head:               v (find-digits)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : L,L
+head:             v (find-digits)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : L,L
+head:           v (find-digits)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : L,L
+head:         v (find-digits)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : L,L
+head:       v (find-digits)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : L,L
+head:     v (find-digits)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : L,L
+head:   v (find-digits)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : L,L
+head: v (find-digits)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : L
+head:  v (found-1st-digit)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : R,R,R
+head:     v (find-2nd-digit)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : R,R
+head:       v (find-2nd-digit)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : R,R
+head:         v (find-2nd-digit)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : L
+head:        v (found-2nd-digit)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : R
+head:         v (add-one)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : R,R
+head:           v (add-one)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : R,R
+head:             v (add-one)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : R,R
+head:               v (add-one)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : R,R
+head:                 v (add-one)
+tape: @1y0~1~~x~w~t~t~r~r~u~r
+ops : Pv
+head:                 v (add-finished)
+tape: @1y0~1~~x~w~t~t~v~r~u~r
+ops : L,L
+head:               v (add-finished)
+tape: @1y0~1~~x~w~t~t~v~r~u~r
+ops : L,L
+head:             v (add-finished)
+tape: @1y0~1~~x~w~t~t~v~r~u~r
+ops : L,L
+head:           v (add-finished)
+tape: @1y0~1~~x~w~t~t~v~r~u~r
+ops : L,L
+head:         v (add-finished)
+tape: @1y0~1~~x~w~t~t~v~r~u~r
+ops : L,L
+head:       v (add-finished)
+tape: @1y0~1~~x~w~t~t~v~r~u~r
+ops : L,L
+head:     v (add-finished)
+tape: @1y0~1~~x~w~t~t~v~r~u~r
+ops : L,L
+head:   v (add-finished)
+tape: @1y0~1~~x~w~t~t~v~r~u~r
+ops : L,L
+head: v (add-finished)
+tape: @1y0~1~~x~w~t~t~v~r~u~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1y0~1~~x~w~t~t~v~r~u~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1y0~1~~x~w~t~t~v~r~u~r
+ops : R,R
+head:       v (erase-old-x)
+tape: @1y0~1~~x~w~t~t~v~r~u~r
+ops : R,R
+head:         v (erase-old-x)
+tape: @1y0~1~~x~w~t~t~v~r~u~r
+ops : E,L,L
+head:       v (print-new-x)
+tape: @1y0~1~~~~w~t~t~v~r~u~r
+ops : Px
+head:       v (find-digits)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : L,L
+head:     v (find-digits)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : L,L
+head:   v (find-digits)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : L,L
+head: v (find-digits)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : L
+head:  v (found-1st-digit)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : R,R,R
+head:     v (find-2nd-digit)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : R,R
+head:       v (find-2nd-digit)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : L
+head:      v (found-2nd-digit)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : R
+head:       v (add-one)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : R,R
+head:         v (add-one)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : R,R
+head:           v (add-one)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : R,R
+head:             v (add-one)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : R,R
+head:               v (add-one)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : R,R
+head:                 v (add-one)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : R,R
+head:                   v (add-one)
+tape: @1y0~1x~~~w~t~t~v~r~u~r
+ops : Pv
+head:                   v (add-finished)
+tape: @1y0~1x~~~w~t~t~v~v~u~r
+ops : L,L
+head:                 v (add-finished)
+tape: @1y0~1x~~~w~t~t~v~v~u~r
+ops : L,L
+head:               v (add-finished)
+tape: @1y0~1x~~~w~t~t~v~v~u~r
+ops : L,L
+head:             v (add-finished)
+tape: @1y0~1x~~~w~t~t~v~v~u~r
+ops : L,L
+head:           v (add-finished)
+tape: @1y0~1x~~~w~t~t~v~v~u~r
+ops : L,L
+head:         v (add-finished)
+tape: @1y0~1x~~~w~t~t~v~v~u~r
+ops : L,L
+head:       v (add-finished)
+tape: @1y0~1x~~~w~t~t~v~v~u~r
+ops : L,L
+head:     v (add-finished)
+tape: @1y0~1x~~~w~t~t~v~v~u~r
+ops : L,L
+head:   v (add-finished)
+tape: @1y0~1x~~~w~t~t~v~v~u~r
+ops : L,L
+head: v (add-finished)
+tape: @1y0~1x~~~w~t~t~v~v~u~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1y0~1x~~~w~t~t~v~v~u~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1y0~1x~~~w~t~t~v~v~u~r
+ops : R,R
+head:       v (erase-old-x)
+tape: @1y0~1x~~~w~t~t~v~v~u~r
+ops : E,L,L
+head:     v (print-new-x)
+tape: @1y0~1~~~~w~t~t~v~v~u~r
+ops : Px
+head:     v (find-digits)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : L,L
+head:   v (find-digits)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : L,L
+head: v (find-digits)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : L
+head:  v (found-1st-digit)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : R,R,R
+head:     v (find-2nd-digit)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : L
+head:    v (found-2nd-digit)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : R
+head:     v (add-zero)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : R,R
+head:       v (add-zero)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : R,R
+head:         v (add-zero)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : R,R
+head:           v (add-zero)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : R,R
+head:             v (add-zero)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : R,R
+head:               v (add-zero)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : R,R
+head:                 v (add-zero)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : R,R
+head:                   v (add-zero)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : R,R
+head:                     v (add-zero)
+tape: @1y0x1~~~~w~t~t~v~v~u~r
+ops : Pv
+head:                     v (add-finished)
+tape: @1y0x1~~~~w~t~t~v~v~v~r
+ops : L,L
+head:                   v (add-finished)
+tape: @1y0x1~~~~w~t~t~v~v~v~r
+ops : L,L
+head:                 v (add-finished)
+tape: @1y0x1~~~~w~t~t~v~v~v~r
+ops : L,L
+head:               v (add-finished)
+tape: @1y0x1~~~~w~t~t~v~v~v~r
+ops : L,L
+head:             v (add-finished)
+tape: @1y0x1~~~~w~t~t~v~v~v~r
+ops : L,L
+head:           v (add-finished)
+tape: @1y0x1~~~~w~t~t~v~v~v~r
+ops : L,L
+head:         v (add-finished)
+tape: @1y0x1~~~~w~t~t~v~v~v~r
+ops : L,L
+head:       v (add-finished)
+tape: @1y0x1~~~~w~t~t~v~v~v~r
+ops : L,L
+head:     v (add-finished)
+tape: @1y0x1~~~~w~t~t~v~v~v~r
+ops : L,L
+head:   v (add-finished)
+tape: @1y0x1~~~~w~t~t~v~v~v~r
+ops : L,L
+head: v (add-finished)
+tape: @1y0x1~~~~w~t~t~v~v~v~r
+ops : R,R
+head:   v (erase-old-x)
+tape: @1y0x1~~~~w~t~t~v~v~v~r
+ops : R,R
+head:     v (erase-old-x)
+tape: @1y0x1~~~~w~t~t~v~v~v~r
+ops : E,L,L
+head:   v (print-new-x)
+tape: @1y0~1~~~~w~t~t~v~v~v~r
+ops : Pz
+head:   v (find-digits)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : L,L
+head: v (find-digits)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : R,R
+head:   v (find-1st-digit)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : L
+head:  v (found-2nd-digit)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : R
+head:   v (add-one)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : R,R
+head:     v (add-one)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : R,R
+head:       v (add-one)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : R,R
+head:         v (add-one)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : R,R
+head:           v (add-one)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : R,R
+head:             v (add-one)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : R,R
+head:               v (add-one)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : R,R
+head:                 v (add-one)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : R,R
+head:                   v (add-one)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : R,R
+head:                     v (add-one)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : R,R
+head:                       v (add-one)
+tape: @1z0~1~~~~w~t~t~v~v~v~r
+ops : Pv
+head:                       v (add-finished)
+tape: @1z0~1~~~~w~t~t~v~v~v~v
+ops : L,L
+head:                     v (add-finished)
+tape: @1z0~1~~~~w~t~t~v~v~v~v
+ops : L,L
+head:                   v (add-finished)
+tape: @1z0~1~~~~w~t~t~v~v~v~v
+ops : L,L
+head:                 v (add-finished)
+tape: @1z0~1~~~~w~t~t~v~v~v~v
+ops : L,L
+head:               v (add-finished)
+tape: @1z0~1~~~~w~t~t~v~v~v~v
+ops : L,L
+head:             v (add-finished)
+tape: @1z0~1~~~~w~t~t~v~v~v~v
+ops : L,L
+head:           v (add-finished)
+tape: @1z0~1~~~~w~t~t~v~v~v~v
+ops : L,L
+head:         v (add-finished)
+tape: @1z0~1~~~~w~t~t~v~v~v~v
+ops : L,L
+head:       v (add-finished)
+tape: @1z0~1~~~~w~t~t~v~v~v~v
+ops : L,L
+head:     v (add-finished)
+tape: @1z0~1~~~~w~t~t~v~v~v~v
+ops : L,L
+head:   v (add-finished)
+tape: @1z0~1~~~~w~t~t~v~v~v~v
+ops : L,L
+head: v (add-finished)
+tape: @1z0~1~~~~w~t~t~v~v~v~v
+ops : R,R
+head:   v (erase-old-x)
+tape: @1z0~1~~~~w~t~t~v~v~v~v
+ops : Py,L,L
+head: v (print-new-x)
+tape: @1y0~1~~~~w~t~t~v~v~v~v
+ops : R,R
+head:   v (erase-old-y)
+tape: @1y0~1~~~~w~t~t~v~v~v~v
+ops : E,L,L
+head: v (print-new-y)
+tape: @1~0~1~~~~w~t~t~v~v~v~v
+ops : R
+head:  v (new-digit-is-one)
+tape: @1~0~1~~~~w~t~t~v~v~v~v
+ops : L
+head: v (new-digit-is-one)
+tape: @1~0~1~~~~w~t~t~v~v~v~v
+ops : R
+head:  v (print-one-digit)
+tape: @1~0~1~~~~w~t~t~v~v~v~v
+ops : R,E,R
+head:    v (print-one-digit)
+tape: @1~0~1~~~~w~t~t~v~v~v~v
+ops : R,E,R
+head:      v (print-one-digit)
+tape: @1~0~1~~~~w~t~t~v~v~v~v
+ops : R,E,R
+head:        v (print-one-digit)
+tape: @1~0~1~~~~w~t~t~v~v~v~v
+ops : P1,R,R,R
+head:           v (cleanup)
+tape: @1~0~1~1~~w~t~t~v~v~v~v
+ops : E,R,R
+head:             v (cleanup)
+tape: @1~0~1~1~~~~t~t~v~v~v~v
+ops : E,R,R
+head:               v (cleanup)
+tape: @1~0~1~1~~~~~~t~v~v~v~v
+ops : E,R,R
+head:                 v (cleanup)
+tape: @1~0~1~1~~~~~~~~v~v~v~v
+ops : E,R,R
+head:                   v (cleanup)
+tape: @1~0~1~1~~~~~~~~~~v~v~v
+ops : E,R,R
+head:                     v (cleanup)
+tape: @1~0~1~1~~~~~~~~~~~~v~v
+ops : E,R,R
+head:                       v (cleanup)
+tape: @1~0~1~1~~~~~~~~~~~~~~v
+ops : E,R,R
+head:                         v (cleanup)
+tape: @1~0~1~1~~~~~~~~~~~~~~~~~
+ops : ,
+head:                         v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~~~
+ops : L
+head:                        v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~~
+ops : L
+head:                       v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:                      v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:                     v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:                    v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:                   v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:                  v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:                 v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:                v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:               v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:              v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:             v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:            v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:           v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:          v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:         v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:        v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:       v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:      v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:     v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:    v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:   v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head:  v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : L
+head: v (new)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : R
+head:  v (mark-digits)
+tape: @1~0~1~1~~~~~~~~~~~~~~~
+ops : R,Px,R
+head:    v (mark-digits)
+tape: @1x0~1~1~~~~~~~~~~~~~~~
+ops : R,Px,R
+head:      v (mark-digits)
+tape: @1x0x1~1~~~~~~~~~~~~~~~
+ops : R,Px,R
+head:        v (mark-digits)
+tape: @1x0x1x1~~~~~~~~~~~~~~~
+ops : R,Px,R
+head:          v (mark-digits)
+tape: @1x0x1x1x~~~~~~~~~~~~~~
+ops : R,Pz,R,R,Pr
+head:             v (find-x)
+tape: @1x0x1x1x~z~r~~~~~~~~~~
+ops : L,L
+head:           v (find-x)
+tape: @1x0x1x1x~z~r~~~~~~~~~~
+ops : L,L
+head:         v (find-x)
+tape: @1x0x1x1x~z~r~~~~~~~~~~
+ops : E
+head:         v (first-r)
+tape: @1x0x1x1~~z~r~~~~~~~~~~
+ops : R,R
+head:           v (first-r)
+tape: @1x0x1x1~~z~r~~~~~~~~~~
+ops : R,R
+head:             v (first-r)
+tape: @1x0x1x1~~z~r~~~~~~~~~~
