@@ -1,4 +1,4 @@
-# based on
+# based on Hopcroft and Ullman's Universal Turing Machine
 #   http://www.rdrop.com/~half/General/UTM/
 #   http://cs.oswego.edu/~farina/utm.html
 1 0 P0,R 1
