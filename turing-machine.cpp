@@ -25,6 +25,7 @@
 #include <map>
 #include <vector>
 #include <queue>
+#include <algorithm>
 
 using namespace std;
 
@@ -50,6 +51,7 @@ struct Machine {
     void load_program() {
         cin.sync_with_stdio(false);
         string line;
+        string input;
         while (getline(cin, line)) {
             // skip empty lines
             if (line.length() == 0) {
@@ -61,26 +63,28 @@ struct Machine {
                 continue;
             }
 
-            // initial tap appears after ---
-            if (line.compare("---") == 0) {
-                getline(cin, line);
-                for (int i = 0; i < line.length(); i++) {
-                    tape[i] = line.at(i);
+            size_t n = std::count(line.begin(), line.end(), ' ');
+            // part of the machine table
+            if (n == 3) {
+                istringstream iss(line);
+                string state, symbol, ops, fstate;
+                iss >> state >> symbol >> ops >> fstate;
+
+                if (curr.length() == 0) {
+                    curr = state;
                 }
-                break;
+
+                Configuration c = {state, symbol.at(0)};
+                Action a = {ops, fstate};
+                program[c] = a;
+            // part of the input
+            } else {
+                input += line;
             }
+        }
 
-            istringstream iss(line);
-            string state, symbol, ops, fstate;
-            iss >> state >> symbol >> ops >> fstate;
-
-            if (curr.length() == 0) {
-                curr = state;
-            }
-
-            Configuration c = {state, symbol.at(0)};
-            Action a = {ops, fstate};
-            program[c] = a;
+        for (int i = 0; i < input.length(); i++) {
+            tape[i] = input.at(i);
         }
     }
 
