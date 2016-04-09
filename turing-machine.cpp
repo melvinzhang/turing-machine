@@ -99,15 +99,32 @@ struct Machine {
 
     void print_tape() {
         cout << "tape: ";
-        for (auto it = tape.begin(); it != tape.end(); it++) {
-            cout << it->second;
+        const int first = min(tp, tape.begin()->first);
+        const int last  = max(tp, tape.rbegin()->first);
+        for (int i = first; i <= last; i++) {
+            cout << read_tape(i);
         }
         cout << endl;
     }
 
-    char read_tape() {
-        if (tape.count(tp)) {
-            return tape[tp];
+    void print_head() {
+        cout << "head: ";
+        const int first = min(tp, tape.begin()->first);
+        const int last  = tp;
+        for (int i = first; i <= last; i++) {
+            if (i == tp) {
+                cout << 'v';
+                cout << " (" << curr << ")";
+            } else {
+                cout << ' ';
+            }
+        }
+        cout << endl;
+    }
+
+    char read_tape(int p) {
+        if (tape.count(p)) {
+            return tape[p];
         } else {
             return '~';
         }
@@ -143,13 +160,11 @@ struct Machine {
     void run(int max) {
         int cnt = 0;
         while (cnt < max) {
-            Configuration c = {curr, read_tape()};
+            Configuration c = {curr, read_tape(tp)};
             if (program.count(c) == 0) {
                 c = {curr, '*'};
             }
             if (program.count(c) == 0) {
-                c = {curr, read_tape()};
-                print_config(c);
                 break;
             }
             Action a = program[c];
@@ -157,13 +172,18 @@ struct Machine {
             curr = a.state;
 
             cnt++;
-            print_config(c);
+            print_action(a);
+            print_head();
             print_tape();
         }
     }
 
     void print_config(Configuration c) {
         cout << "conf: " << c.state << " " << c.symbol << endl;
+    }
+
+    void print_action(Action a) {
+        cout << "ops : " << a.ops << endl;
     }
 };
 
