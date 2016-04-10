@@ -1,16 +1,16 @@
 SHELL=/bin/bash
 
-a.out: turing-machine.cpp
-	g++ --std=c++11 $^
+tm: turing-machine.cpp
+	g++ --std=c++11 $^ -o $@
 
-%.run: a.out %.tm
-	cat $*.tm | ./a.out
+%.run: tm %.tm
+	cat $*.tm | ./tm
 
-%.out: a.out %.tm
-	cat $*.tm | ./a.out > $@
+%.out: tm %.tm
+	cat $*.tm | ./tm > $@
 
-%.test: a.out %.tm
-	diff <(cat $*.tm | ./a.out) $*.out
+%.test: tm %.tm
+	diff <(cat $*.tm | ./tm) $*.out
 
 output:
 	for i in *.tm; do make `basename $$i .tm`.out; done
@@ -21,5 +21,5 @@ tests:
 utm.tm: states.utm
 	awk -f states2tm.awk < $^  > $@
 
-%.run: a.out %.tape
-	cat utm.tm $*.tape | ./a.out 10000
+%.run: tm %.tape
+	cat utm.tm $*.tape | ./tm 10000
