@@ -26,7 +26,8 @@
 #include <vector>
 #include <queue>
 #include <algorithm>
-#include <unistd.h>
+#include <thread>
+#include <chrono>
 
 using namespace std;
 
@@ -182,7 +183,7 @@ struct Machine {
     }
 
     void clear_previous(int fps) {
-        usleep(1000000 / fps);
+        this_thread::sleep_for(chrono::microseconds(1000000 / fps));
         for (int i = 0; i < 3; i++) {
             cout << "\x1B[1A"; // Move the cursor up one line
             cout << "\x1B[2K"; // Erase the entire current line
