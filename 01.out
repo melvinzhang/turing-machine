@@ -1,0 +1,19 @@
+1 0 R 2
+1 ~ P1,R 3
+2 1 R 1
+
+ops : R
+head:  v (2)
+tape: 010100
+ops : R
+head:   v (1)
+tape: 010100
+ops : R
+head:    v (2)
+tape: 010100
+ops : R
+head:     v (1)
+tape: 010100
+ops : R
+head:      v (2)
+tape: 010100
