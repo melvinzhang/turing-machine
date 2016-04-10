@@ -64,17 +64,16 @@ struct Machine {
                 continue;
             }
 
-            size_t n = std::count(line.begin(), line.end(), ' ');
-            // part of the machine table
-            if (n == 3) {
-                istringstream iss(line);
-                string state, symbol, ops, fstate;
-                iss >> state >> symbol >> ops >> fstate;
+            // try to parse line as a machine table
+            istringstream iss(line);
+            string state, symbol, ops, fstate;
+            iss >> state >> symbol >> ops >> fstate;
 
+            // part of the machine table
+            if (fstate.length() > 0) {
                 if (curr.length() == 0) {
                     curr = state;
                 }
-
                 Configuration c = {state, symbol.at(0)};
                 Action a = {ops, fstate};
                 program[c] = a;
