@@ -9,8 +9,8 @@
  * op:
  *   L - move left one step
  *   R - move right one step
- *   P<symbol> - print symbol on tap
- *   E - erase symbol from tap
+ *   P<symbol> - print symbol on tape
+ *   E - erase symbol from tape
  * symbol:
  *   ~ - matches blank cell
  *   * - matches any symbol
