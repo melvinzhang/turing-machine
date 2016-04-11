@@ -45,8 +45,8 @@ struct Action {
 };
 
 struct Machine {
-    int tp = 0;
-    string curr;
+    int pos = 0;
+    string mstate;
     map< Configuration, Action > program;
     map< int, char > tape;
 
@@ -72,8 +72,8 @@ struct Machine {
 
             // part of the machine table
             if (fstate.length() > 0) {
-                if (curr.length() == 0) {
-                    curr = state;
+                if (mstate.length() == 0) {
+                    mstate = state;
                 }
                 Configuration c = {state, symbol.at(0)};
                 Action a = {ops, fstate};
@@ -100,8 +100,8 @@ struct Machine {
 
     void print_tape() {
         cout << "tape: ";
-        const int first = min(tp, tape.begin()->first);
-        const int last  = max(tp, tape.rbegin()->first);
+        const int first = min(pos, tape.begin()->first);
+        const int last  = max(pos, tape.rbegin()->first);
         for (int i = first; i <= last; i++) {
             cout << read_tape(i);
         }
@@ -110,12 +110,12 @@ struct Machine {
 
     void print_head() {
         cout << "head: ";
-        const int first = min(tp, tape.begin()->first);
-        const int last  = tp;
+        const int first = min(pos, tape.begin()->first);
+        const int last  = pos;
         for (int i = first; i <= last; i++) {
-            if (i == tp) {
+            if (i == pos) {
                 cout << 'v';
-                cout << " (" << curr << ")";
+                cout << " (" << mstate << ")";
             } else {
                 cout << ' ';
             }
@@ -136,17 +136,17 @@ struct Machine {
             char op = ops.at(i);
             switch (op) {
                 case 'R':
-                    tp++;
+                    pos++;
                     break;
                 case 'L':
-                    tp--;
+                    pos--;
                     break;
                 case 'E':
-                    tape[tp] = '~';
+                    tape[pos] = '~';
                     break;
                 case 'P':
                     i++;
-                    tape[tp] = ops.at(i);
+                    tape[pos] = ops.at(i);
                     break;
                 case ',':
                     break;
@@ -155,22 +155,22 @@ struct Machine {
                     exit(1);
             }
         }
-        return tp;
+        return pos;
     }
 
     void run(int max, int fps) {
         int cnt = 0;
         while (cnt < max) {
-            Configuration c = {curr, read_tape(tp)};
+            Configuration c = {mstate, read_tape(pos)};
             if (program.count(c) == 0) {
-                c = {curr, '*'};
+                c = {mstate, '*'};
             }
             if (program.count(c) == 0) {
                 break;
             }
             Action a = program[c];
-            tp = perform_ops(a.ops);
-            curr = a.state;
+            pos = perform_ops(a.ops);
+            mstate = a.state;
 
             cnt++;
             if (cnt > 1 && fps > 0) {
