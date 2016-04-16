@@ -1,4 +1,4 @@
-# Project Title
+# Turing Machine Emulator
 
 A Turing Machine emulator written in C++ 11
 
