@@ -4,16 +4,22 @@
 
 ops : R
 head:  v (2)
-tape: 010100
+tape: 010101
 ops : R
 head:   v (1)
-tape: 010100
+tape: 010101
 ops : R
 head:    v (2)
-tape: 010100
+tape: 010101
 ops : R
 head:     v (1)
-tape: 010100
+tape: 010101
 ops : R
 head:      v (2)
-tape: 010100
+tape: 010101
+ops : R
+head:       v (1)
+tape: 010101~
+ops : P1,R
+head:        v (3)
+tape: 0101011~
