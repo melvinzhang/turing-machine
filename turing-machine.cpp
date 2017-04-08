@@ -176,7 +176,14 @@ struct Machine {
             if (cnt > 1 && fps > 0) {
                 clear_previous(fps);
             }
-            print_action(a);
+            if (fps >= 0) {
+                print_action(a);
+                print_head();
+                print_tape();
+            }
+        }
+        if (fps < 0) {
+            cout << "step: " << cnt << endl;
             print_head();
             print_tape();
         }
