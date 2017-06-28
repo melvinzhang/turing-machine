@@ -30,7 +30,7 @@ cat s3p1.tm | ./tm 30 5
 
 The input is read from stdin. The above runs the program that prints `010101...` for 30 steps at 5 frames per second.
 
-![Running s3p1.tm](http://melvinzh.sdf.org/s3p1d.gif)
+![Running s3p1.tm](http://melvinzh.sdf.org/s3p1e.gif)
 
 ## Running the second program in Turing 1936
 ```
